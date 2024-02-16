@@ -79,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				C4483EBF2B7FA8F700D08632 /* main.cpp */,
-				C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */,
 				C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */,
 				C4483EDE2B7FAB2900D08632 /* boolean.cpp */,
 				C4483EE12B7FAB3F00D08632 /* tipoNodo.cpp */,
@@ -91,8 +90,9 @@
 				C4483EE52B7FAB4D00D08632 /* arbolDeExp.hpp */,
 				C4483EE22B7FAB3F00D08632 /* tipoNodo.hpp */,
 				C4483EDF2B7FAB2900D08632 /* boolean.hpp */,
-				C4483EDC2B7FAB1A00D08632 /* tipoExp.hpp */,
+				C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */,
 				C4483ED92B7FAB0C00D08632 /* stringDinamico.hpp */,
+				C4483EDC2B7FAB1A00D08632 /* tipoExp.hpp */,
 			);
 			path = Taller;
 			sourceTree = "<group>";
