@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C4483EC02B7FA8F700D08632 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EBF2B7FA8F700D08632 /* main.cpp */; };
+		C4483EDA2B7FAB0C00D08632 /* stringDinamico.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */; };
+		C4483EDD2B7FAB1A00D08632 /* tipoExp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */; };
+		C4483EE02B7FAB2900D08632 /* boolean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EDE2B7FAB2900D08632 /* boolean.cpp */; };
+		C4483EE32B7FAB3F00D08632 /* tipoNodo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EE12B7FAB3F00D08632 /* tipoNodo.cpp */; };
+		C4483EE62B7FAB4D00D08632 /* arbolDeExp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EE42B7FAB4D00D08632 /* arbolDeExp.cpp */; };
+		C4483EE92B7FAB5D00D08632 /* expresion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EE72B7FAB5D00D08632 /* expresion.cpp */; };
+		C4483EEC2B7FAB6C00D08632 /* listaDeExpresiones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EEA2B7FAB6C00D08632 /* listaDeExpresiones.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,20 @@
 /* Begin PBXFileReference section */
 		C4483EBC2B7FA8F700D08632 /* Taller */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Taller; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4483EBF2B7FA8F700D08632 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stringDinamico.cpp; sourceTree = "<group>"; };
+		C4483ED92B7FAB0C00D08632 /* stringDinamico.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stringDinamico.hpp; sourceTree = "<group>"; };
+		C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tipoExp.cpp; sourceTree = "<group>"; };
+		C4483EDC2B7FAB1A00D08632 /* tipoExp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tipoExp.hpp; sourceTree = "<group>"; };
+		C4483EDE2B7FAB2900D08632 /* boolean.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boolean.cpp; sourceTree = "<group>"; };
+		C4483EDF2B7FAB2900D08632 /* boolean.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = boolean.hpp; sourceTree = "<group>"; };
+		C4483EE12B7FAB3F00D08632 /* tipoNodo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tipoNodo.cpp; sourceTree = "<group>"; };
+		C4483EE22B7FAB3F00D08632 /* tipoNodo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tipoNodo.hpp; sourceTree = "<group>"; };
+		C4483EE42B7FAB4D00D08632 /* arbolDeExp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = arbolDeExp.cpp; sourceTree = "<group>"; };
+		C4483EE52B7FAB4D00D08632 /* arbolDeExp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = arbolDeExp.hpp; sourceTree = "<group>"; };
+		C4483EE72B7FAB5D00D08632 /* expresion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = expresion.cpp; sourceTree = "<group>"; };
+		C4483EE82B7FAB5D00D08632 /* expresion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = expresion.hpp; sourceTree = "<group>"; };
+		C4483EEA2B7FAB6C00D08632 /* listaDeExpresiones.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listaDeExpresiones.cpp; sourceTree = "<group>"; };
+		C4483EEB2B7FAB6C00D08632 /* listaDeExpresiones.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = listaDeExpresiones.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +79,20 @@
 			isa = PBXGroup;
 			children = (
 				C4483EBF2B7FA8F700D08632 /* main.cpp */,
+				C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */,
+				C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */,
+				C4483EDE2B7FAB2900D08632 /* boolean.cpp */,
+				C4483EE12B7FAB3F00D08632 /* tipoNodo.cpp */,
+				C4483EE42B7FAB4D00D08632 /* arbolDeExp.cpp */,
+				C4483EE72B7FAB5D00D08632 /* expresion.cpp */,
+				C4483EEA2B7FAB6C00D08632 /* listaDeExpresiones.cpp */,
+				C4483EEB2B7FAB6C00D08632 /* listaDeExpresiones.hpp */,
+				C4483EE82B7FAB5D00D08632 /* expresion.hpp */,
+				C4483EE52B7FAB4D00D08632 /* arbolDeExp.hpp */,
+				C4483EE22B7FAB3F00D08632 /* tipoNodo.hpp */,
+				C4483EDF2B7FAB2900D08632 /* boolean.hpp */,
+				C4483EDC2B7FAB1A00D08632 /* tipoExp.hpp */,
+				C4483ED92B7FAB0C00D08632 /* stringDinamico.hpp */,
 			);
 			path = Taller;
 			sourceTree = "<group>";
@@ -119,7 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4483EE02B7FAB2900D08632 /* boolean.cpp in Sources */,
+				C4483EE92B7FAB5D00D08632 /* expresion.cpp in Sources */,
+				C4483EEC2B7FAB6C00D08632 /* listaDeExpresiones.cpp in Sources */,
+				C4483EE62B7FAB4D00D08632 /* arbolDeExp.cpp in Sources */,
+				C4483EDA2B7FAB0C00D08632 /* stringDinamico.cpp in Sources */,
+				C4483EDD2B7FAB1A00D08632 /* tipoExp.cpp in Sources */,
 				C4483EC02B7FA8F700D08632 /* main.cpp in Sources */,
+				C4483EE32B7FAB3F00D08632 /* tipoNodo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
