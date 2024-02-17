@@ -75,3 +75,52 @@ boolean streq (string s1, string s2)
     }
         return iguales;
     }
+
+boolean esVacio (string s){
+    if (s[0]=='\0'){
+        return TRUE;
+    }else
+        return FALSE;
+}
+
+void eliminarBlancosPrincipio(string s, string &sb){
+    if (esVacio(s)==FALSE){
+        int i=0;
+        while(s[i]==' '){
+            i++;
+        }
+        delete[]sb;
+        sb=new char[strlar(s)+1];
+        while(s[i]!='\0'){
+            sb[i]=s[i];
+            i++;
+        }
+        sb[i]='\0';
+    }
+}
+
+void dividirString (string s, string &primero, string &resto){
+    if (esVacio(s)==FALSE){
+        int i=0;
+        while(s[i]!=' '){
+            i++;
+        }
+        delete[]primero;
+        primero=new char[i+1];
+    }
+    int i=0;
+    while(s[i]!=' '){
+        primero[i]=s[i];
+        i++;
+    }
+    primero[i]='\0';
+    delete[]resto;
+    resto=new char[strlar(s)-i];
+    int b=0;
+    while(s[i]!='\0'){
+        resto[b]=s[i];
+        i++;
+        b++;
+        resto[b]='\0';
+    }
+}
