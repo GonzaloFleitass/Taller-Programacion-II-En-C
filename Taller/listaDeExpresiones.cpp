@@ -10,6 +10,7 @@ void crearLista(Lista &a){
     a=NULL;
 }
 void insertFrontExp(Lista &a, Expresion b){
+    
     Lista aux=new Nodo;
     aux->info=b;
     aux->sig=a;

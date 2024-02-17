@@ -5,21 +5,21 @@
 //  Created by Gonzalo Fleitas on 16/2/24.
 //
 
-#ifndef listastring.hpp
-#define listastring.hpp
+#ifndef listastring//.hpp
+#define listastring//.hpp
 
 #include <stdio.h>
-#include <stringDinamico.h>
-#include <boolean.h>
+#include "stringDinamico.hpp"
+#include "boolean.hpp"
 
 typedef struct NodoL { 
-     string s; 
-     NodoL *sig; 
-    } Nodo; 
+     string info; 
+     NodoL * sig;
+    } Nodo;
 
- typedef Nodo * listastring;  
+typedef Nodo * listaString;
 
-void partirstring(string s, listastring &l);
-void insback (string s, listastring &l);
+void partirstring(string primero, listaString &l);
+void insback (string s, listaString &l);
  
 #endif /* listastring.hpp */

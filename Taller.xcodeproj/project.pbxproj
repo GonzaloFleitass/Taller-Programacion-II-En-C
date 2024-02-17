@@ -15,6 +15,7 @@
 		C4483EE62B7FAB4D00D08632 /* arbolDeExp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EE42B7FAB4D00D08632 /* arbolDeExp.cpp */; };
 		C4483EE92B7FAB5D00D08632 /* expresion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EE72B7FAB5D00D08632 /* expresion.cpp */; };
 		C4483EEC2B7FAB6C00D08632 /* listaDeExpresiones.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EEA2B7FAB6C00D08632 /* listaDeExpresiones.cpp */; };
+		C4483EEF2B81163200D08632 /* listastring.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4483EEE2B81163200D08632 /* listastring.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		C4483EE82B7FAB5D00D08632 /* expresion.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = expresion.hpp; sourceTree = "<group>"; };
 		C4483EEA2B7FAB6C00D08632 /* listaDeExpresiones.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listaDeExpresiones.cpp; sourceTree = "<group>"; };
 		C4483EEB2B7FAB6C00D08632 /* listaDeExpresiones.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = listaDeExpresiones.hpp; sourceTree = "<group>"; };
+		C4483EED2B81161600D08632 /* listastring.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = listastring.hpp; sourceTree = "<group>"; };
+		C4483EEE2B81163200D08632 /* listastring.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listastring.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 		C4483EBE2B7FA8F700D08632 /* Taller */ = {
 			isa = PBXGroup;
 			children = (
+				C4483EED2B81161600D08632 /* listastring.hpp */,
 				C4483EBF2B7FA8F700D08632 /* main.cpp */,
 				C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */,
 				C4483EDE2B7FAB2900D08632 /* boolean.cpp */,
@@ -90,9 +94,10 @@
 				C4483EE52B7FAB4D00D08632 /* arbolDeExp.hpp */,
 				C4483EE22B7FAB3F00D08632 /* tipoNodo.hpp */,
 				C4483EDF2B7FAB2900D08632 /* boolean.hpp */,
-				C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */,
 				C4483ED92B7FAB0C00D08632 /* stringDinamico.hpp */,
+				C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */,
 				C4483EDC2B7FAB1A00D08632 /* tipoExp.hpp */,
+				C4483EEE2B81163200D08632 /* listastring.cpp */,
 			);
 			path = Taller;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			files = (
 				C4483EE02B7FAB2900D08632 /* boolean.cpp in Sources */,
 				C4483EE92B7FAB5D00D08632 /* expresion.cpp in Sources */,
+				C4483EEF2B81163200D08632 /* listastring.cpp in Sources */,
 				C4483EEC2B7FAB6C00D08632 /* listaDeExpresiones.cpp in Sources */,
 				C4483EE62B7FAB4D00D08632 /* arbolDeExp.cpp in Sources */,
 				C4483EDA2B7FAB0C00D08632 /* stringDinamico.cpp in Sources */,
