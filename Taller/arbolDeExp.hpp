@@ -18,7 +18,7 @@ nodoA * hder;
 } abb;
 typedef abb * AbbExp;
 
-void mostrarExpresion(AbbExp a);
+void mostrarExpresionOrden(AbbExp a);
 void agregarParentesis(AbbExp a);
 void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
 char darRaiz(AbbExp a);

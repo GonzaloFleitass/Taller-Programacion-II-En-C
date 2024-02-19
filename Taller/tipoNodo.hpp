@@ -13,12 +13,13 @@ typedef struct {
 int numero;
 tipoExp discriminante;
 union{
-boolean bol;
-char operador;
-char parentesis;
-}datos;
+        boolean bol;
+        char operador;
+        char parentesis;
+    }datos;
 }tipoNodo;
 
+void mostrarNodo (tipoNodo n);
 void cargarBol(boolean a,tipoNodo &b);
 void cargarOperado(char op, tipoNodo &b);
 #endif /* tipoNodo_hpp */

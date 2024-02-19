@@ -6,11 +6,21 @@
 //
 
 #include "arbolDeExp.hpp"
-void mostrarExpresion(AbbExp a){
-    
+
+
+void mostrarExpresionOrden(AbbExp a){
+    if (a!=NULL){
+        mostrarExpresionOrden(a->hizq);
+        mostrarnodo(a->TiNod);
+        mostrarExpresionOrden(a->hder);
+    }
 }
+
 void agregarParentesis(AbbExp a);
 void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
 char darRaiz(AbbExp a);
 boolean evaluateAbbs(AbbExp a);
+
+
+
 #endif /* arbolDeExp_hpp */
