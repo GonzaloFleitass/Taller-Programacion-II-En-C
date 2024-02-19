@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include "stringDinamico.hpp"
-typedef enum{BOOLEAN,OPERADOR}tipoExp;
+typedef enum{BOOLEAN,OPERADOR, PARENTESISA, PARENTESISC}tipoExp;
 
 tipoExp darExp(string a);
 #endif /* tipoExp_hpp */
