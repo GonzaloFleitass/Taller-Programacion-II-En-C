@@ -7,9 +7,9 @@
 
 #ifndef expresion_hpp
 #define expresion_hpp
-
 #include <stdio.h>
 #include "arbolDeExp.hpp"
+
 typedef struct {
 int num;
 AbbExp b;
@@ -19,4 +19,5 @@ int darNum(Expresion a);
 AbbExp darexp(Expresion a, AbbExp b);
 void crearExpresion(AbbExp b, int num);
 void MostrarAbbExp(AbbExp b);
+
 #endif /* expresion_hpp */
