@@ -11,12 +11,14 @@
 #include <stdio.h>
 #include "tipoNodo.hpp"
 #include "boolean.hpp"
+
 typedef struct nodoA {
 tipoNodo TiNod;
 nodoA * hizq;
 nodoA * hder;
 } abb;
 typedef abb * AbbExp;
+
 void mostrarExpresion(AbbExp a);
 void agregarParentesis(AbbExp a);
 void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
