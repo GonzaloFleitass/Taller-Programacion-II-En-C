@@ -12,5 +12,5 @@
 #include "stringDinamico.hpp"
 typedef enum{BOOLEAN,OPERADOR, PARENTESISA, PARENTESISC}tipoExp;
 
-tipoExp darExp(int a);
+int darExp(TipoExp a);
 #endif /* tipoExp_hpp */
