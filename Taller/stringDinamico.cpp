@@ -99,21 +99,22 @@ void eliminarBlancosPrincipio(string s, string &sb){
     }
 }
 
-void dividirString (string s, string &primero, string &resto){
+
+void dividirString (string s, string &separado, string &resto){
     if (esVacio(s)==FALSE){
         int i=0;
-        while(s[i]!=' '){
+        while(s[i]!=' '||s[i]!='\0'){
             i++;
         }
-        delete[]primero;
-        primero=new char[i+1];
+        delete[]separado;
+        separado=new char[i+1];
     }
     int i=0;
-    while(s[i]!=' '){
-        primero[i]=s[i];
+    while(s[i]!=' '||s[i]!='\0'){
+        separado[i]=s[i];
         i++;
     }
-    primero[i]='\0';
+    separado[i]='\0';
     delete[]resto;
     resto=new char[strlar(s)-i];
     int b=0;
@@ -124,3 +125,5 @@ void dividirString (string s, string &primero, string &resto){
         resto[b]='\0';
     }
 }
+
+

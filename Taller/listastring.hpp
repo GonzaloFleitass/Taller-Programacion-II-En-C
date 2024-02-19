@@ -19,7 +19,9 @@ typedef struct NodoL {
 
 typedef Nodo * listaString;
 
-void partirstring(string primero, listaString &l);
+
 void insback (string s, listaString &l);
+void partirstring(string s, listaString &l);
+
  
 #endif /* listastring.hpp */

@@ -21,7 +21,6 @@ void scan (string &s);//Carga un String
 boolean streq (string s1, string s2);//reciba dos strings y devuelva TRUE si ambos strings son iguales o FALSE en caso contrario.
 boolean esVacio (string s);//Determina si el string es vacio;
 void eliminarBlancosPrincipio(string s, string &sb);//Copia hacia sb los caracteres de s,pero sin los blancos que s puede tener al principio, Precondicion s no es vacio.
-void dividirString (string s, string &primero, string &resto);//divide el string en dos, el primeor guarda la primer palabra de s, y en el segundo el resto del string, pre condicion, s noes vacio
-
+void dividirString (string s, string &separado, string &resto);//divide el string en dos, el primeor guarda la primer palabra de s, y en el segundo el resto del string, pre condicion, s noes vacio
 
 #endif /* stringDinamico_hpp */
