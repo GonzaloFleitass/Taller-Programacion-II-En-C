@@ -7,6 +7,7 @@
 #include "tipoExp.hpp"
 
 int darExp(TipoExp a){
-  return a;}
+  return a;
+}
 
 
