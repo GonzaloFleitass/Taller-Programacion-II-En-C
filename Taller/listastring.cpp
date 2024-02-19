@@ -40,5 +40,6 @@ void partirstring(string s, listaString &l){
     }
         l = l->sig;
 }
+
     
         

@@ -127,3 +127,26 @@ void dividirString (string s, string &separado, string &resto){
 }
 
 
+
+int devolverTipoUnion(string s){
+    int num;
+    if(s[0]=='t'){
+        num=0;
+    }else{
+        if(s[0]=='f'){
+            num=  1;
+        }else {
+            if(s[0]=='a'){
+                num=2;
+            }else{
+                if(s[0]=='o'){
+                    num=3;
+                }
+                else
+                    num=4;
+                
+            }
+        }
+    }
+    return num;
+}

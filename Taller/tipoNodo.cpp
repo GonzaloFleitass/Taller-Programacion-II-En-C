@@ -6,3 +6,8 @@
 //
 
 #include "tipoNodo.hpp"
+
+void cargarBol(string a,tipoNodo &b){
+ 
+        
+}
