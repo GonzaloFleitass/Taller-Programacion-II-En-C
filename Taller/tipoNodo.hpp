@@ -19,6 +19,6 @@ char parentesis;
 }datos;
 }tipoNodo;
 
-void cargarBol(string a,tipoNodo &b);
+void cargarBol(boolean,tipoNodo &b);
 void cargarOperado(char op, tipoNodo &b);
 #endif /* tipoNodo_hpp */
