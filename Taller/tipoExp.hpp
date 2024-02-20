@@ -13,4 +13,5 @@
 typedef enum{BOOLEAN,OPERADOR, PARENTESISA, PARENTESISC}tipoExp;
 
 int darExp(TipoExp a);
+void mostrarOperador(char c);
 #endif /* tipoExp_hpp */
