@@ -19,4 +19,12 @@ boolean not(boolean a) {
     return (a == TRUE) ? FALSE : TRUE;
 }
 
+void mostrarBool (boolean a){
+    if ( a == TRUE){
+            printf( "TRUE");
+                } else {   
+                            printf ("FASLSE");
+    }
+}
+
 
