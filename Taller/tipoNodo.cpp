@@ -17,7 +17,7 @@ void cargarOperado(char op, tipoNodo &b){
 }
     
 void mostrarNodo(tipoNodo a){
-    
+  
     if(a.discriminante==BOOLEAN){
         mostrarBool(a.datos.bol);
     }else{

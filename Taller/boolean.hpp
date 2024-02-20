@@ -10,9 +10,9 @@
 
 #include <stdio.h>
 typedef enum {FALSE,TRUE}boolean;
-boolean and (boolean a, boolean b);
-boolean not (boolean a);
-boolean or ( boolean a, boolean b);
+boolean andd (boolean a, boolean b);
+boolean notd (boolean a);
+boolean ord ( boolean a, boolean b);
 void mostrarBool (boolean a);
 #endif /* boolean_hpp */
 

@@ -10,7 +10,7 @@ void mostrarExpresion(AbbExp a){
     
     
 }
-void agregarParentesis(AbbExp a)
+void agregarParentesis(AbbExp a);
 void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
 char darRaiz(AbbExp a);
 boolean evaluateAbbs(AbbExp a);

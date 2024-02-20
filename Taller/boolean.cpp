@@ -7,15 +7,15 @@
 
 #include "boolean.hpp"
 
-boolean and(boolean a, boolean b) {
+boolean andd(boolean a, boolean b) {
     return (a == TRUE && b == TRUE) ? TRUE : FALSE;
 }
 
-boolean or(boolean a, boolean b) {
+boolean ord(boolean a, boolean b) {
     return (a == TRUE || b == TRUE) ? TRUE : FALSE;
 }
 
-boolean not(boolean a) {
+boolean notd(boolean a) {
     return (a == TRUE) ? FALSE : TRUE;
 }
 
@@ -23,7 +23,7 @@ void mostrarBool (boolean a){
     if ( a == TRUE){
             printf( "TRUE");
                 } else {   
-                            printf ("FASLSE");
+                            printf ("FALSE");
     }
 }
 

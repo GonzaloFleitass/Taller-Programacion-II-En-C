@@ -6,7 +6,7 @@
 //
 #include "tipoExp.hpp"
 
-int darExp(TipoExp a){
+int darExp(tipoExp a){
   return a;
 }
 
@@ -18,11 +18,11 @@ void mostrarOperador(char c){
                                 }
 
 
-void mostrarParentesis (char c){  
-        if (c == '(') {
-          printf ("("); }else{ 
-          printf (")");
-        }
+void mostrarParentesisa (char c){
+          printf ("(");
+        
 }
 
-
+void mostrarParentesisc (char c){
+    printf (")");
+}
