@@ -21,4 +21,5 @@ char parentesis;
 
 void cargarBol(boolean,tipoNodo &b);
 void cargarOperado(char op, tipoNodo &b);
+void mostrarNodo(tipoNodo a);
 #endif /* tipoNodo_hpp */
