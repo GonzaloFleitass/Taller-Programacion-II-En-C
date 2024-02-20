@@ -18,4 +18,11 @@ void mostrarOperador(char c){
                                 }
 
 
+void mostrarParentesis (char c){  
+        if (c == '(') {
+          printf ("("); }else{ 
+          printf (")");
+        }
+}
+
 
