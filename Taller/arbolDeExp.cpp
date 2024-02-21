@@ -36,7 +36,7 @@ void agregarParentesisFin(AbbExp &a){
     
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     e= new abb;
-    cargarOperado(c, a->TiNod);
+    cargarOperado(c, e->TiNod);
     e->hizq=a;
     e->hder=b;
     agregarParentesisA(e);
