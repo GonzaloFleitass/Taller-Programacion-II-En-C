@@ -46,5 +46,3 @@ char darRaiz(AbbExp a);
 boolean evaluateAbbs(AbbExp a);
 
 
-
-#endif /* arbolDeExp_hpp */
