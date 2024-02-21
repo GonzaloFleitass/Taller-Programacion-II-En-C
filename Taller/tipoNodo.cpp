@@ -17,12 +17,14 @@ void cargarOperado(char op, tipoNodo &b){
     b.datos.operador=op;
 }
 
+
 void cargarParentesisA (tipoNodo &b){
     b.datos.parentesis='(';
 }
 void cargarParentesisFin (tipoNodo &b){
     b.datos.parentesis=')';
 }
+
 
 
 void mostrarNodo(tipoNodo a){

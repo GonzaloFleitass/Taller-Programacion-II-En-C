@@ -31,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		396BCBC82B858D5900199092 /* Taller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Taller.entitlements; sourceTree = "<group>"; };
 		C4483EBC2B7FA8F700D08632 /* Taller */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Taller; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4483EBF2B7FA8F700D08632 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4483ED82B7FAB0C00D08632 /* stringDinamico.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stringDinamico.cpp; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		C4483EBE2B7FA8F700D08632 /* Taller */ = {
 			isa = PBXGroup;
 			children = (
+				396BCBC82B858D5900199092 /* Taller.entitlements */,
 				C4483EED2B81161600D08632 /* listastring.hpp */,
 				C4483EBF2B7FA8F700D08632 /* main.cpp */,
 				C4483EDB2B7FAB1A00D08632 /* tipoExp.cpp */,
@@ -292,22 +294,26 @@
 		C4483EC42B7FA8F700D08632 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Taller/Taller.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F878S4GD94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		C4483EC52B7FA8F700D08632 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Taller/Taller.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F878S4GD94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

@@ -8,7 +8,6 @@
 #include "arbolDeExp.hpp"
 
 
-
 void mostrarExpresionOrden(AbbExp a){
     if (a!=NULL){
         mostrarExpresionOrden(a->hizq);
@@ -30,7 +29,7 @@ void agregarParentesisFin(AbbExp &a){
         agregarParentesisA(a->hder);
             }
         a = new abb;
-        cargarParentesisFin(<#tipoNodo &b#>)(a->TiNod);
+        cargarParentesisFin(a->TiNod);
         a->hizq =NULL;
         a->hder =NULL;
         }
