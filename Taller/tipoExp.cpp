@@ -6,8 +6,23 @@
 //
 #include "tipoExp.hpp"
 
-int darExp(TipoExp a){
+int darExp(tipoExp a){
   return a;
 }
 
+void mostrarOperador(char c){
+      if ( c == 'a'){
+        printf("AND");} else if ( c == 'n' ){
+        printf ("NOT"); } else { printf("OR");
+                               }
+                                }
 
+
+void mostrarParentesisa (char c){
+          printf ("(");
+        
+}
+
+void mostrarParentesisc (char c){
+    printf (")");
+}

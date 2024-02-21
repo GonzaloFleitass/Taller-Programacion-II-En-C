@@ -11,15 +11,22 @@
 
 void insback (string separado, listaString &l){
     listaString aux=l;
-    while(aux->sig!=NULL){
+    if(l==NULL){
+        l=new Nodo;
+        strcop(separado,l->info);
+        l->sig=NULL;
+    }else{
+        
+        while(aux->sig!=NULL){
+            aux=aux->sig;
+        }
+        aux->sig=new Nodo;
         aux=aux->sig;
+        strcop (separado, aux->info);
+        aux->sig=NULL;
+        
     }
-    aux->sig=new Nodo;
-    aux=aux->sig;
-    strcop (separado, aux->info);
-    aux->sig=NULL;
-        l=aux;
-    }
+}
 
 
 
@@ -30,15 +37,16 @@ void partirstring(string s, listaString &l){
         strcrear (separado);
         strcrear (resto);
     if (esVacio(s)==FALSE){
-        while (l->sig!= NULL){
-            while(esVacio(resto)==FALSE){
-                eliminarBlancosPrincipio(s, &sb);
-                dividirString(sb , &separado, &resto);
+        do {
+               eliminarBlancosPrincipio(s, sb);
+                dividirString(sb , separado, resto);
                 insback(separado, l);
-            }
-        }
+                s = resto;
+        }while(esVacio(resto)==FALSE);
+                
+        
     }
-        l = l->sig;
 }
+
     
         

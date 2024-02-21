@@ -90,12 +90,14 @@ void eliminarBlancosPrincipio(string s, string &sb){
             i++;
         }
         delete[]sb;
-        sb=new char[strlar(s)+1];
+        sb=new char[strlar(s)-i+1]; //strlar cuenta el largo y le descuento la cantidad de espacios
+        int j=0;
         while(s[i]!='\0'){
-            sb[i]=s[i];
+            sb[j]=s[i];
+            j++;
             i++;
         }
-        sb[i]='\0';
+        sb[j]='\0';
     }
 }
 
@@ -103,18 +105,25 @@ void eliminarBlancosPrincipio(string s, string &sb){
 void dividirString (string s, string &separado, string &resto){
     if (esVacio(s)==FALSE){
         int i=0;
-        while(s[i]!=' '||s[i]!='\0'){
+        
+        //cuento el largo de la primer palabra
+        while(s[i]!=' '&&s[i]!='\0'){
             i++;
         }
+        
+        //libero memoria anterior y reservo para tama;o de primer palabra
         delete[]separado;
         separado=new char[i+1];
     }
+    //copio primer palabra a separado
     int i=0;
-    while(s[i]!=' '||s[i]!='\0'){
+    while(s[i]!=' '&&s[i]!='\0'){
         separado[i]=s[i];
         i++;
     }
     separado[i]='\0';
+    
+    //libero memoria anterior y reservo para tama;o de resto
     delete[]resto;
     resto=new char[strlar(s)-i];
     int b=0;
@@ -126,4 +135,28 @@ void dividirString (string s, string &separado, string &resto){
     }
 }
 
+
+
+int devolverTipoUnion(string s){
+    int num;
+    if(s[0]=='t'){
+        num=0;
+    }else{
+        if(s[0]=='f'){
+            num=  1;
+        }else {
+            if(s[0]=='a'){
+                num=2;
+            }else{
+                if(s[0]=='o'){
+                    num=3;
+                }
+                else
+                    num=4;
+                
+            }
+        }
+    }
+    return num;
+}
 

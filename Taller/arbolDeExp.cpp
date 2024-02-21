@@ -8,15 +8,33 @@
 #include "arbolDeExp.hpp"
 
 
+
 void mostrarExpresionOrden(AbbExp a){
     if (a!=NULL){
         mostrarExpresionOrden(a->hizq);
-        mostrarnodo(a->TiNod);
+        mostrarNodo(a->TiNod);
         mostrarExpresionOrden(a->hder);
     }
 }
-
-void agregarParentesis(AbbExp a);
+void agregarParentesisA(AbbExp &a){
+    if(a!=NULL){
+        agregarParentesisA(a->hizq);
+            }
+        a = new abb;
+        cargarParentesisA(a->TiNod);
+        a->hizq =NULL;
+        a->hder =NULL;
+        }
+void agregarParentesisFin(AbbExp &a){
+    if(a!=NULL){
+        agregarParentesisA(a->hder);
+            }
+        a = new abb;
+        cargarParentesisFin(<#tipoNodo &b#>)(a->TiNod);
+        a->hizq =NULL;
+        a->hder =NULL;
+        }
+    
 void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
 char darRaiz(AbbExp a);
 boolean evaluateAbbs(AbbExp a);

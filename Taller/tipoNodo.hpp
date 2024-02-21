@@ -19,7 +19,11 @@ union{
     }datos;
 }tipoNodo;
 
-void mostrarNodo (tipoNodo n);
+
 void cargarBol(boolean a,tipoNodo &b);
 void cargarOperado(string op, tipoNodo &b);
+void cargarParentesisA (tipoNodo &b);
+void cargarParentesisFin (tipoNodo &b);
+void mostrarNodo(tipoNodo a);
+
 #endif /* tipoNodo_hpp */
