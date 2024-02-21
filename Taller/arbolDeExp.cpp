@@ -34,7 +34,14 @@ void agregarParentesisFin(AbbExp &a){
         a->hder =NULL;
         }
     
-void cons(AbbExp a, AbbExp b, char c,AbbExp &e);
+void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
+    e= new abb;
+    cargarOperado(c, a->TiNod);
+    e->hizq=a;
+    e->hder=b;
+    agregarParentesisA(e);
+    agregarParentesisFin(e);
+}
 char darRaiz(AbbExp a);
 boolean evaluateAbbs(AbbExp a);
 
