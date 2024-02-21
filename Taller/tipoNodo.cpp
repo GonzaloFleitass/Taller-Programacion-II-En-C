@@ -7,6 +7,7 @@
 
 #include "tipoNodo.hpp"
 
+
 void cargarBol(boolean a,tipoNodo &b){
 
     b.datos.bol=a;
@@ -15,7 +16,17 @@ void cargarBol(boolean a,tipoNodo &b){
 void cargarOperado(char op, tipoNodo &b){
     b.datos.operador=op;
 }
-    
+
+
+void cargarParentesisA (tipoNodo &b){
+    b.datos.parentesis='(';
+}
+void cargarParentesisFin (tipoNodo &b){
+    b.datos.parentesis=')';
+}
+
+
+
 void mostrarNodo(tipoNodo a){
   
     if(a.discriminante==BOOLEAN){
