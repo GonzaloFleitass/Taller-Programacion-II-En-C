@@ -12,12 +12,12 @@
 
 typedef struct {
 int num;
-AbbExp b;
+AbbExp info;
 }Expresion;
 
 int darNum(Expresion a);
 AbbExp darexp(Expresion a, AbbExp b);
-void crearExpresion(AbbExp b, int num);
-void MostrarAbbExp(AbbExp b);
+void crearExpresion(Expresion);
+void MostrarExp(Expresion b);
 
 #endif /* expresion_hpp */

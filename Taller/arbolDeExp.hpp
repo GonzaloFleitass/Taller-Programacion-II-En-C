@@ -17,7 +17,7 @@ nodoA * hizq;
 nodoA * hder;
 } abb;
 typedef abb * AbbExp;
-
+void cargarExpresion(AbbExp &a);
 void mostrarExpresionOrden(AbbExp a);
 void agregarParentesisA(AbbExp &a);
 void agregarParentesisFin(AbbExp &a);
