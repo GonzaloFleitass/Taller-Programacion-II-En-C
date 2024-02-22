@@ -16,20 +16,20 @@ void mostrarExpresionOrden(AbbExp a){
     }
 }
 void agregarParentesisA(AbbExp &a){
-    if(a!=NULL){
+    if(a->hizq!=NULL){
         agregarParentesisA(a->hizq);
             }
         a = new abb;
-        cargarParentesisA(a->TiNod);
+        cargarParentesis('(',a->TiNod);
         a->hizq =NULL;
         a->hder =NULL;
         }
 void agregarParentesisFin(AbbExp &a){
-    if(a!=NULL){
+    if(a->hder!=NULL){
         agregarParentesisA(a->hder);
             }
         a = new abb;
-        cargarParentesisFin(a->TiNod);
+        cargarParentesis(')',a->TiNod);
         a->hizq =NULL;
         a->hder =NULL;
         }
