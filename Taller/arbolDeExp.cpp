@@ -43,15 +43,10 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     agregarParentesisFin(e);
 }
 
-boolean darBoolizq (AbbExp a){
-    if(a->hizq!=NULL){
-        return darBoolizq(a->hizq) && darBoolizq(a->hizq);
-        
-    }
-    
-}
+
 
 boolean evaluateAbbs(AbbExp a){
+    
     switch (darTipoExp(darDiscriminante((a->TiNod)))) {
         case VALOR:
             return devuelveBoolean(a->TiNod);
@@ -59,15 +54,27 @@ boolean evaluateAbbs(AbbExp a){
         case OPERADOR:
             switch (darOperador(a->TiNod)) {
                 case 'a':
-                    return evaluateAbbs(a->hizq);
+                    return boolean(evaluateAbbs(a->hizq)&&evaluateAbbs(a->hder));
+                    break;
+                case 'o':
+                    return boolean(evaluateAbbs(a->hizq)||evaluateAbbs(a->hder));
                     break;
                     
-                default:
+                case 'n':
+                    return evaluateAbbs(a->hder);
+                    
+                        
+                    
                     break;
+                
             }
-        default:
+        case PARENTESIS:
             break;
     }
+    return evaluateAbbs(a->hizq);
+    return evaluateAbbs(a->hder);
 }
+    
+    
 
 
