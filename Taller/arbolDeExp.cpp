@@ -61,10 +61,7 @@ boolean evaluateAbbs(AbbExp a){
                     break;
                     
                 case 'n':
-                    return evaluateAbbs(a->hder);
-                    
-                        
-                    
+                    return boolean(!evaluateAbbs(a->hder));
                     break;
                 
             }
