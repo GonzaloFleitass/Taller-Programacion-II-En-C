@@ -24,5 +24,6 @@ void agregarParentesisFin(AbbExp &a);
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
+void cargarnumero-----------
 
 #endif /* arbolDeExp_hpp */

@@ -29,5 +29,5 @@ tipoExp darRaiz(tipoNodo a);
 tipoExp darDiscriminante(tipoNodo a);
 boolean devuelveBoolean (tipoNodo a);
 char darOperador (tipoNodo a);
-
+void cargarnumero(tipoNodo a);------------
 #endif /* tipoNodo_hpp */
