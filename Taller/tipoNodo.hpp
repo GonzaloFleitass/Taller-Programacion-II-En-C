@@ -23,10 +23,10 @@ union{
 
 void cargarBol(boolean a,tipoNodo &b);//Carga el dato boolean. 
 void cargarOperado(char op, tipoNodo &b);//Carga el dato operador. 
-void cargarParentesis(char a,tipoNodo &b);
-void mostrarNodo(tipoNodo a);
+void cargarParentesis(char a,tipoNodo &b);//Carga el dato parentesis.
+void mostrarNodo(tipoNodo a);//Muestra el dato almacenado en el nodo.
 tipoExp darRaiz(tipoNodo a);
-tipoExp darDiscriminante(tipoNodo a);
+tipoExp darDiscriminante(tipoNodo a);//Devuelve el tipo de expresion (Discriminante)
 boolean devuelveBoolean (tipoNodo a);
 char darOperador (tipoNodo a);
 
