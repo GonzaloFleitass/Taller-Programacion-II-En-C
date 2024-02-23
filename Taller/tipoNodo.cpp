@@ -47,4 +47,21 @@ void mostrarNodo(tipoNodo a){
             break;
     }
 }
-     
+   
+
+tipoExp darRaiz(tipoNodo a){
+    return darTipoExp(a.discriminante);
+    }
+   
+tipoExp darDiscriminante(tipoNodo a){
+    return a.discriminante;
+}
+
+boolean devuelveBoolean (tipoNodo a){
+    return a.datos.bol;
+}
+
+char darOperador (tipoNodo a){
+    return a.datos.operador;
+}
+

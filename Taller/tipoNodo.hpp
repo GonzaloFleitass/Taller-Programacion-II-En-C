@@ -24,8 +24,10 @@ union{
 void cargarBol(boolean a,tipoNodo &b);
 void cargarOperado(char op, tipoNodo &b);
 void cargarParentesis(char a,tipoNodo &b);
-;void mostrarNodo(tipoNodo a);
-
-
+void mostrarNodo(tipoNodo a);
+tipoExp darRaiz(tipoNodo a);
+tipoExp darDiscriminante(tipoNodo a);
+boolean devuelveBoolean (tipoNodo a);
+char darOperador (tipoNodo a);
 
 #endif /* tipoNodo_hpp */

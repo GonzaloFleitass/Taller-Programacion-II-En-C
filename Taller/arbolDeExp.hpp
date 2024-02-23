@@ -15,13 +15,14 @@ typedef struct nodoA {
 tipoNodo TiNod;
 nodoA * hizq;
 nodoA * hder;
-} abb;
-typedef abb * AbbExp;
+} nodo;
+typedef nodo * AbbExp;
 void cargarExpresion(AbbExp &a);
 void mostrarExpresionOrden(AbbExp a);
 void agregarParentesisA(AbbExp &a);
 void agregarParentesisFin(AbbExp &a);
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e);
-char darRaiz(AbbExp a);
+boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
+
 #endif /* arbolDeExp_hpp */
