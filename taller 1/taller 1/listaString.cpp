@@ -6,6 +6,9 @@
 //
 
 #include "listaString.hpp"
+void Crear (listaString &l){
+    l=NULL;
+}
 
 void insback (string separado, listaString &l){
     listaString aux=l;
@@ -29,7 +32,7 @@ void insback (string separado, listaString &l){
 
 
 
-void partirstring(string s, listaString &l){
+void partirString(string s, listaString &l){
     string sb,separado,resto;
         strcrear (sb);
         strcrear (separado);
@@ -109,6 +112,14 @@ void cargarPalabras(listaString &l){
 }
 int conversorcai (char c){
     int i;
-    i = c - '0';
-    return i;
+    i =c - '0';
+    
+    
+    return i;
+}
+void MostrarLista(listaString l){
+    while(l->sig!=NULL){
+        print(l->info);
+        l=l->sig;
+    }
 }

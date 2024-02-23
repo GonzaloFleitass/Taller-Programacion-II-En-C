@@ -6,10 +6,21 @@
 //
 
 #include <stdio.h>
-
+#include "listaString.hpp"
 
 
 int main() {
+    string s;
+    strcrear (s);
+    listaString l;
+    Crear(l);
+    cargarPalabras(l);
+    MostrarLista(l);
+}
+    
+    
+    
+    /*
     int salirprograma = 0;
     
     printf (" BOOLEAN CREATOR PRO ");
@@ -22,3 +33,4 @@ int main() {
     
     return 0;
 }
+*/

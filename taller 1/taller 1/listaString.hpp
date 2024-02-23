@@ -17,10 +17,11 @@ typedef struct NodoL {
 
 typedef Nodo * listaString;
 
-
+void Crear (listaString &l);
+void MostrarLista(listaString l);
 void insback (string s, listaString &l);
-void partirstring(string s, listaString &l);
+void partirString(string s, listaString &l);
 void cargarPalabras(listaString &l);
-int conversorcai (char c);
+int conversorcai(char c);
 
 #endif /* listaString_hpp */

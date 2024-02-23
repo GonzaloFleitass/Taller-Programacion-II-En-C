@@ -4,7 +4,7 @@
 //
 //  Created by Gonzalo Fleitas on 23/2/24.
 //
-/*
+
 #include "listaDeExpresiones.hpp"
 void crearLista(Lista &a){
     a=NULL;
@@ -27,4 +27,4 @@ boolean existeEnList(Lista a, int b){
     }
     return existe;
 }
-*/
+
