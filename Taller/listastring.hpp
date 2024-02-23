@@ -23,5 +23,6 @@ typedef Nodo * listaString;
 void insback (string s, listaString &l);
 void partirstring(string s, listaString &l);
 void cargarPalabras(listaString &l);
- 
+int conversorcai(char c);
+
 #endif /* listastring.hpp */
