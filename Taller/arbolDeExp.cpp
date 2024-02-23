@@ -81,6 +81,13 @@ boolean evaluateAbbs(AbbExp a){
     return evaluateAbbs(a->hder);
 }
     
-    
+void cargarnumeroAbb(AbbExp &a){
+    int i=0;
+    if(a->hizq!=NULL){
+        cargarnumeroAbb(a->hizq);
+        cargarnumero(darNumeroo(a), i);
+        
+    }
+}
 
 

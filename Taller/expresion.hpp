@@ -15,6 +15,7 @@ int num;
 AbbExp info;
 }Expresion;
 
+
 int darNum(Expresion a);
 AbbExp darexp(Expresion a, AbbExp b);
 void crearExpresion(Expresion);

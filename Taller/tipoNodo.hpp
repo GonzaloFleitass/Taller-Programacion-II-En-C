@@ -29,5 +29,6 @@ tipoExp darRaiz(tipoNodo a);
 tipoExp darDiscriminante(tipoNodo a);//Devuelve el tipo de expresion (Discriminante)
 boolean devuelveBoolean (tipoNodo a);
 char darOperador (tipoNodo a);
-void cargarnumero(tipoNodo a);------------
+void cargarnumero(tipoNodo a,int i);
+int darNumero(tipoNodo a);
 #endif /* tipoNodo_hpp */

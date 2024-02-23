@@ -25,6 +25,6 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e);
 void consCompoun(AbbExp a, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
-void cargarnumero-----------
+void cargarnumeroAbb(AbbExp a);
 
 #endif /* arbolDeExp_hpp */
