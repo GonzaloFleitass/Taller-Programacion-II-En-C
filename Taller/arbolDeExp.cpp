@@ -43,6 +43,15 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     agregarParentesisFin(e);
 }
 
+void consCompoun(AbbExp a, char c,AbbExp &e){
+        e= new nodo;
+        cargarOperado(c, e->TiNod);
+        e->hizq=NULL;
+        e->hder=a;
+        agregarParentesisA(e);
+        agregarParentesisFin(e);
+    }
+
 
 
 boolean evaluateAbbs(AbbExp a){

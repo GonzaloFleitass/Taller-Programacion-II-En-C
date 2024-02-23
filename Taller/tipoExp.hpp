@@ -12,6 +12,6 @@
 #include "stringDinamico.hpp"
 typedef enum{VALOR,OPERADOR,PARENTESIS}tipoExp;
 
-tipoExp darTipoExp (tipoExp a);
+tipoExp darTipoExp (tipoExp a);//Devuelve el tipo de expresion. 
 
 #endif /* tipoExp_hpp */
