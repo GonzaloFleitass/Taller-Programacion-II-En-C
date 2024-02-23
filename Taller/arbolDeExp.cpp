@@ -92,6 +92,8 @@ void cargarnumeroAbb(AbbExp &a){
 
 void enumerarNodosEnOrden(AbbExp &a) {
     if (a != NULL) {
+         int contador =0;
+
         enumerarNodosEnOrden(a->hizq); // Recorrer el subárbol izquierdo
         cargarnumero(a->TiNod, ++contador); // Asignar el número id al nodo actual
         enumerarNodosEnOrden(a->hder); // Recorrer el subárbol derecho
