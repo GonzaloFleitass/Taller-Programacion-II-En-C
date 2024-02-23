@@ -22,5 +22,5 @@ boolean streq (string s1, string s2);//reciba dos strings y devuelva TRUE si amb
 boolean esVacio (string s);//Determina si el string es vacio;
 void eliminarBlancosPrincipio(string s, string &sb);//Copia hacia sb los caracteres de s,pero sin los blancos que s puede tener al principio, Precondicion s no es vacio.
 void dividirString (string s, string &separado, string &resto);//divide el string en dos, el primeor guarda la primer palabra de s, y en el segundo el resto del string, pre condicion, s noes vacio
-int devolverTipoUnion(string s);
+int devolverTipoUnion(string s);//Devuelve tipo de expresion (Union discriminada).
 #endif /* stringDinamico_hpp */
