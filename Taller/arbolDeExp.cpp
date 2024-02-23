@@ -81,22 +81,15 @@ boolean evaluateAbbs(AbbExp a){
     return evaluateAbbs(a->hder);
 }
     
-void cargarnumeroAbb(AbbExp &a){
-    int i=0;
-    if(a->hizq!=NULL){
-        cargarnumeroAbb(a->hizq);
-        cargarnumero(darNumeroo(a), i);
-        
-    }
-}
+void enumerarNodosEnOrden(AbbExp &a){
 
-void enumerarNodosEnOrden(AbbExp &a) {
+    int contador = 0;
+    
     if (a != NULL) {
-         int contador =0;
-
         enumerarNodosEnOrden(a->hizq); // Recorrer el subárbol izquierdo
         cargarnumero(a->TiNod, ++contador); // Asignar el número id al nodo actual
         enumerarNodosEnOrden(a->hder); // Recorrer el subárbol derecho
     }
+    
 }
 
