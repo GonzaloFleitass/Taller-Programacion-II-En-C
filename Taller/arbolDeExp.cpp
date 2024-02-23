@@ -98,7 +98,3 @@ void enumerarNodosEnOrden(AbbExp &a) {
     }
 }
 
-// Función para asignar el número id al nodo
-void cargarnumero(tipoNodo &a, int i) {
-    a.numero = i;
-}
