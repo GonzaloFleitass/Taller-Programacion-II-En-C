@@ -65,7 +65,7 @@ char darOperador (tipoNodo a){
     return a.datos.operador;
 }
 
-void cargarnumero(tipoNodo a,int i){
+void cargarnumero(tipoNodo &a,int i){
     a.numero=i;
 }
 int darNumero(tipoNodo a){
