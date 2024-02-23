@@ -21,8 +21,8 @@ union{
 
 
 
-void cargarBol(boolean a,tipoNodo &b);
-void cargarOperado(char op, tipoNodo &b);
+void cargarBol(boolean a,tipoNodo &b);//Carga el dato boolean. 
+void cargarOperado(char op, tipoNodo &b);//Carga el dato operador. 
 void cargarParentesis(char a,tipoNodo &b);
 void mostrarNodo(tipoNodo a);
 tipoExp darRaiz(tipoNodo a);
