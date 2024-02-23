@@ -48,6 +48,11 @@ void partirstring(string s, listaString &l){
     }
 }
 
+int conversorcai (char c){
+    int i;
+    i = c - '0';
+    return i;
+}
     
 void cargarPalabras(listaString &l){
     string a,c,e,s,L,m;
