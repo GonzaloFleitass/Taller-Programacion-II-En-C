@@ -6,7 +6,7 @@
 //
 
 #include <stdio.h>
-<<<<<<< HEAD
+
 #include "listaString.hpp"
 
 
