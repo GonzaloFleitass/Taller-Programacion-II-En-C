@@ -28,6 +28,9 @@ int main(){
     partirstring(s, l);
     mostrarlistastring(l);
    
+
+
+
     
    // do {}
 
