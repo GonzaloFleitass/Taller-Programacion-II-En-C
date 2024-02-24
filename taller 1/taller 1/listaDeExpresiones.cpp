@@ -4,9 +4,9 @@
 //
 //  Created by Gonzalo Fleitas on 23/2/24.
 //
-/*
+
 #include "listaDeExpresiones.hpp"
-void crearLista(Lista &a){
+void crearListaExp(Lista &a){
     a=NULL;
 }
 void insertFrontExp(Lista &a, Expresion b){
