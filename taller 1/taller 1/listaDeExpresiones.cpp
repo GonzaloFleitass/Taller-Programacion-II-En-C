@@ -28,9 +28,24 @@ boolean existeEnList(Lista a, int b){
     return existe;
 }
 
+<<<<<<< HEAD
 boolean esvacia(Lista a){
  if(a==NULL)
     return TRUE;
  else;
     return FALSE;
 }
+=======
+
+
+
+boolean esvacia(Lista a){
+    if(a==NULL){
+        return TRUE;
+    }else{
+        return FALSE;
+            }
+}
+
+
+>>>>>>> 7cbcbc435985635cb676617a85e6bd7d69491cb9
