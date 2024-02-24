@@ -4,25 +4,7 @@
 //
 //  Created by Gonzalo Fleitas on 23/2/24.
 //
-
-#include <stdio.h>
-<<<<<<< HEAD
-#include "listaString.hpp"
-
-
-int main() {
-    string s;
-    strcrear (s);
-    listaString l;
-    Crear(l);
-    cargarPalabras(l);
-    MostrarLista(l);
-}
     
-    
-    
-    /*
-=======
 #include "stringDinamico.hpp"
 #include "listaString.hpp"
 
@@ -30,7 +12,7 @@ int main(){
     string s,sb,separado,resto;
     listaString l;
     
->>>>>>> main
+
     int salirprograma = 0;
     
     printf (" BOOLEAN CREATOR PRO ");
@@ -43,7 +25,7 @@ int main(){
     scan(s);
     printf("\n");
     crearLista(l);
-    partirstring(s, l);
+    partirString(s, l);
     mostrarlistastring(l);
    
 
@@ -57,4 +39,4 @@ int main(){
     
     return 0;
 }
-*/
+
