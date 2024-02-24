@@ -19,3 +19,6 @@ void MostrarExp(Expresion b){
     mostrarExpresionOrden(b.info);
 }
 
+void numerarExpresion (Expresion a){
+
+}
