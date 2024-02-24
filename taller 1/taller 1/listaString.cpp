@@ -7,6 +7,10 @@
 
 #include "listaString.hpp"
 
+
+void crearLista(listaString &l){
+    l=NULL;
+}
 void insback (string separado, listaString &l){
     listaString aux=l;
     if(l==NULL){
@@ -111,4 +115,13 @@ int conversorcai (char c){
     int i;
     i = c - '0';
     return i;
+}
+
+
+void mostrarlistastring (listaString l){
+    while(l!=NULL){
+        print(l->info);
+        l=l->sig;
+       
+    }
 }
