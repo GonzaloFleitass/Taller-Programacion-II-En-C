@@ -4,7 +4,7 @@
 //
 //  Created by Gonzalo Fleitas on 23/2/24.
 //
-/*
+
 #ifndef listaDeExpresiones_hpp
 #define listaDeExpresiones_hpp
 
@@ -15,7 +15,7 @@ Nodol * sig;
 } Nodo;
 
 typedef Nodo * Lista;
-void crearLista(Lista &a);
+void crearListaExp(Lista &a);
 void insertFrontExp(Lista &a, Expresion b);
 boolean existeEnList(Lista a, int b);
 
