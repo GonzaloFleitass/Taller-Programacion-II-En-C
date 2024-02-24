@@ -18,6 +18,6 @@ typedef Nodo * Lista;
 void crearListaExp(Lista &a);
 void insertFrontExp(Lista &a, Expresion b);
 boolean existeEnList(Lista a, int b);
-
+boolean esvacia (Lista a);
 
 #endif /* listaDeExpresiones_hpp */
