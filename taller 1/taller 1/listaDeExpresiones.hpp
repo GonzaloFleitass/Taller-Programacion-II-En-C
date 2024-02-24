@@ -15,9 +15,9 @@ Nodol * sig;
 } Nodo;
 
 typedef Nodo * Lista;
-void crearLista(Lista &a);
+void crearListaExp(Lista &a);
 void insertFrontExp(Lista &a, Expresion b);
 boolean existeEnList(Lista a, int b);
-
+boolean esvacia (Lista a);
 
 #endif /* listaDeExpresiones_hpp */

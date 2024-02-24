@@ -10,6 +10,10 @@ void Crear (listaString &l){
     l=NULL;
 }
 
+
+void crearLista(listaString &l){
+    l=NULL;
+}
 void insback (string separado, listaString &l){
     listaString aux=l;
     if(l==NULL){
@@ -121,5 +125,14 @@ void MostrarLista(listaString l){
     while(l->sig!=NULL){
         print(l->info);
         l=l->sig;
+    }
+}
+
+
+void mostrarlistastring (listaString l){
+    while(l!=NULL){
+        print(l->info);
+        l=l->sig;
+       
     }
 }

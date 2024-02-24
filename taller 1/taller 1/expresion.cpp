@@ -19,3 +19,6 @@ void MostrarExp(Expresion b){
     mostrarExpresionOrden(b.info);
 }
 
+void cargaPrimNumeroExpresion (Expresion a){
+  a.num=1;
+}

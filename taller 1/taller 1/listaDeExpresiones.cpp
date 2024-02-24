@@ -6,7 +6,7 @@
 //
 
 #include "listaDeExpresiones.hpp"
-void crearLista(Lista &a){
+void crearListaExp(Lista &a){
     a=NULL;
 }
 void insertFrontExp(Lista &a, Expresion b){
@@ -28,3 +28,15 @@ boolean existeEnList(Lista a, int b){
     return existe;
 }
 
+<<<<<<< HEAD
+=======
+
+boolean esvacia(Lista a){
+ if(a==NULL);
+    return TRUE;
+    else
+    return FALSE,
+}
+
+*/
+>>>>>>> main
