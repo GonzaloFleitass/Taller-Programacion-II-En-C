@@ -25,9 +25,9 @@ void showd (Lista l, int i) {
     MostrarExp(exp);
 }
 
-boolean evaluate (Lista l, int 1){
+void evaluate (Lista l, int 1){
             Expresion exp = ObtenerExpEnList(l, i);
-            return evaluateAbbs(darexp(exp));
+            mostrarBool(evaluateAbbs(darexp(exp)));
 }
 /* show recibe entero y lista
  busca en lista con entero y recibe expresion
