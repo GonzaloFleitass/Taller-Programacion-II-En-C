@@ -94,3 +94,6 @@ tipoNodo darNodo(AbbExp a){
     return a->TiNod;
 }
 
+void instertarNodo(AbbExp &a){
+    
+}

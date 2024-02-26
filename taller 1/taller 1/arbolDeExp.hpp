@@ -16,7 +16,10 @@ tipoNodo TiNod;
 nodoA * hizq;
 nodoA * hder;
 } nodo;
+
 typedef nodo * AbbExp;
+
+void instertarNodo(AbbExp &a);
 tipoNodo darNodo(AbbExp a);
 void mostrarExpresionOrden(AbbExp a);
 void agregarParentesisA(AbbExp &a);
