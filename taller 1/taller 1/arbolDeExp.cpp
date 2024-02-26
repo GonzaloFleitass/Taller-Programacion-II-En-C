@@ -52,7 +52,7 @@ void consCompoun(AbbExp a, char c,AbbExp &e){
     }
 
 
-
+/*
 boolean evaluateAbbs(AbbExp a){
     
     switch (darTipoExp(darDiscriminante((a->TiNod)))) {
@@ -77,8 +77,7 @@ boolean evaluateAbbs(AbbExp a){
     }
 
 }
-    
-
+ */
 
 
 boolean evaluateAbbs(AbbExp a){
@@ -102,6 +101,7 @@ boolean evaluateAbbs(AbbExp a){
             }
         
     }
+    
 }
 
 
