@@ -16,12 +16,13 @@ AbbExp darexp(Expresion a){
 
    
 void MostrarExp(Expresion b){
-    mostrarRaiz(b.info);
+    mostrarExpresionOrden(b.info);
 }
 
-void cargaPrimNumeroExpresion (Expresion a){
-  a.num=1;
+void cargaNumeroExpresion (Expresion a,int n){
+    a.num=n+1;
 }
+
 void cargarExpresion(Expresion &a,AbbExp b){
     a.info=b;
 }

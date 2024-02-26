@@ -36,10 +36,12 @@ void mostrarNodo(tipoNodo a){
         case OPERADOR:
             switch(a.datos.operador){
                 case 'a':
+                    printf(" AND ");
                     break;
-                case 'o':
+                case 'o': printf(" OR ");
+                    
                     break;
-                case 'n':
+                case 'n': printf("NOT ");
                     break;
             }
             

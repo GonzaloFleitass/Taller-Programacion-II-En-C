@@ -13,9 +13,7 @@ void mostrarExpresionOrden(AbbExp a){
         mostrarExpresionOrden(a->hder);
     }
 }
-void mostrarRaiz(AbbExp a){
-    mostrarNodo(a->TiNod);
-}
+
 void agregarParentesisA(AbbExp &a){
     if(a->hizq!=NULL){
         agregarParentesisA(a->hizq);
@@ -64,23 +62,50 @@ boolean evaluateAbbs(AbbExp a){
         case OPERADOR:
             switch (darOperador(a->TiNod)) {
                 case 'a':
-                    return boolean(evaluateAbbs(a->hizq)&&evaluateAbbs(a->hder));
+                    return (boolean)(evaluateAbbs(a->hizq)&&evaluateAbbs(a->hder));
                     break;
                 case 'o':
-                    return boolean(evaluateAbbs(a->hizq)||evaluateAbbs(a->hder));
+                    return (boolean)(evaluateAbbs(a->hizq)||evaluateAbbs(a->hder));
                     break;
                     
                 case 'n':
-                    return boolean(!evaluateAbbs(a->hder));
+                    return (boolean)(!evaluateAbbs(a->hder));
                     break;
-                
             }
         case PARENTESIS:
             break;
     }
-    return evaluateAbbs(a->hizq);
-    return evaluateAbbs(a->hder);
+
 }
+    
+
+
+
+boolean evaluateAbbs(AbbExp a){
+    
+    if (darTipoExp(darDiscriminante((a->TiNod))) == VALOR) {
+        return devuelveBoolean(a->TiNod);
+    } else{
+        if (darTipoExp(darDiscriminante((a->TiNod))) == OPERADOR)
+            switch (darOperador(a->TiNod)) {
+                case 'a':
+                    return (boolean)(evaluateAbbs(a->hizq)&&evaluateAbbs(a->hder));
+                    break;
+                case 'o':
+                    return (boolean)(evaluateAbbs(a->hizq)||evaluateAbbs(a->hder));
+                    break;
+                    
+                case 'n':
+                    return (boolean)(!evaluateAbbs(a->hder));
+                    break;
+                
+            }
+        
+    }
+}
+
+
+
 
 void enumerarNodosEnOrden(AbbExp &a){
 
@@ -97,7 +122,7 @@ tipoNodo darNodo(AbbExp a){
     return a->TiNod;
 }
 //el arbol tiene que estar vacio
-void instertarNodo(AbbExp &a,tipoNodo p){
+void instertarNodo(AbbExp &a,tipoNodo p){ 
     a = new nodo;
     a -> TiNod= p;
     a -> hizq = NULL;

@@ -28,7 +28,13 @@ boolean existeEnList(Lista a, int b){
     return existe;
 }
 
-
+//preond: la expresion existe
+Expresion ObtenerExpEnList(Lista a, int b){
+    while(darNum(a->info)!=b){
+            a=a->sig;
+        }
+    return a->info;
+}
 
 
 boolean esVacia(Lista a){
@@ -47,5 +53,15 @@ void mostrarListaDeExp(Lista a){
     while(a!=NULL){
         MostrarExp(a->info);
         a=a->sig;
+    }
+}
+
+
+int darNroUltimaExp(Lista a)
+{
+    if(a==NULL){
+        return 0;
+    }else{
+        return darNum(a->info);
     }
 }

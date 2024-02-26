@@ -30,6 +30,6 @@ void consCompoun(AbbExp a, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
 void enumerarNodosEnOrden(AbbExp &a);
-void mostrarRaiz(AbbExp a);
+
 #endif /* arbolDeExp_hpp */
 
