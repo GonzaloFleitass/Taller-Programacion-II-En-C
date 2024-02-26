@@ -20,6 +20,10 @@ void atomic(boolean a, Lista &b){
     
 }
 
+void showd (Lista l, int i) {
+    Expresion exp = ObtenerExpEnList(l, i);
+    MostrarExp(exp);
+}
 /* show recibe entero y lista
  busca en lista con entero y recibe expresion
  Muestro el ABB*/
