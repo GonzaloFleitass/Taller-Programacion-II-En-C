@@ -157,3 +157,24 @@ int devolverTipoUnion(string s){
     }
     return num;
 }
+void cargarTRUE(string &l){
+    string truE;
+    strcrear(truE);
+    
+    truE[0]='t';
+    truE[1]='r';
+    truE[2]='u';
+    truE[3]='e';
+    truE[4]='\0';
+}
+void cargarFalse(string &l){
+    string falsE;
+    strcrear(falsE);
+
+    falsE[0]='f';
+    falsE[1]='a';
+    falsE[2]='l';
+    falsE[3]='s';
+    falsE[4]='e';
+    falsE[5]='\0';
+}

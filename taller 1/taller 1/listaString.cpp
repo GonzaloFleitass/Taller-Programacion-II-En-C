@@ -136,3 +136,6 @@ void mostrarlistastring (listaString l){
        
     }
 }
+string darString(listaString a){
+    return a->info;
+}

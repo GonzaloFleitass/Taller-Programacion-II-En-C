@@ -4,8 +4,7 @@
 //
 //  Created by Gonzalo Fleitas on 23/2/24.
 //
-<<<<<<< HEAD
-=======
+
 
 #include <stdio.h>
 
@@ -13,19 +12,8 @@
 
 
 int main() {
-    string s;
-    strcrear (s);
-    listaString l;
-    Crear(l);
-    cargarPalabras(l);
-    MostrarLista(l);
-}
->>>>>>> 7cbcbc435985635cb676617a85e6bd7d69491cb9
-    
-#include "stringDinamico.hpp"
-#include "listaString.hpp"
+  
 
-int main(){
     string s,sb,separado,resto;
     listaString l;
     

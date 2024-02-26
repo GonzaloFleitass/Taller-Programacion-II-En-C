@@ -26,5 +26,6 @@ void cargarPalabras(listaString &l);
 int conversorcai(char c);
 int conversorcai (char c);
 void mostrarlistastring (listaString l);
+string darString(listaString a);
 
 #endif /* listaString_hpp */
