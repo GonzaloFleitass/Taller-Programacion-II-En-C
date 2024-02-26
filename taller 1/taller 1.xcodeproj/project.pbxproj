@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C41D6D262B8CBEBC00C95792 /* comandos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41D6D252B8CBEBC00C95792 /* comandos.cpp */; };
+		C41D6D302B8CC98300C95792 /* comandos.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C41D6D2E2B8CC98300C95792 /* comandos.cpp */; };
 		C4A00CF72B892C35006ABB14 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4A00CF62B892C35006ABB14 /* main.cpp */; };
 		C4A00CFF2B892C4C006ABB14 /* boolean.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4A00CFD2B892C4C006ABB14 /* boolean.cpp */; };
 		C4A00D022B892CE4006ABB14 /* arbolDeExp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4A00D002B892CE4006ABB14 /* arbolDeExp.cpp */; };
@@ -32,8 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C41D6D252B8CBEBC00C95792 /* comandos.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = comandos.cpp; sourceTree = "<group>"; };
-		C41D6D272B8CBF5500C95792 /* comandos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comandos.h; sourceTree = "<group>"; };
+		C41D6D2E2B8CC98300C95792 /* comandos.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = comandos.cpp; sourceTree = "<group>"; };
+		C41D6D2F2B8CC98300C95792 /* comandos.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = comandos.hpp; sourceTree = "<group>"; };
 		C4A00CF32B892C35006ABB14 /* taller 1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "taller 1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A00CF62B892C35006ABB14 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4A00CFD2B892C4C006ABB14 /* boolean.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = boolean.cpp; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 				C4A00D0A2B892D76006ABB14 /* listaDeExpresiones.hpp */,
 				C4A00D072B892D1E006ABB14 /* tipoNodo.hpp */,
 				C4A00D042B892D06006ABB14 /* stringDinamico.hpp */,
-				C41D6D272B8CBF5500C95792 /* comandos.h */,
-				C41D6D252B8CBEBC00C95792 /* comandos.cpp */,
+				C41D6D2E2B8CC98300C95792 /* comandos.cpp */,
+				C41D6D2F2B8CC98300C95792 /* comandos.hpp */,
 			);
 			path = "taller 1";
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 				C4A00CF72B892C35006ABB14 /* main.cpp in Sources */,
 				C4A00D112B892DD5006ABB14 /* tipoExp.cpp in Sources */,
 				C4A00D0B2B892D76006ABB14 /* listaDeExpresiones.cpp in Sources */,
-				C41D6D262B8CBEBC00C95792 /* comandos.cpp in Sources */,
+				C41D6D302B8CC98300C95792 /* comandos.cpp in Sources */,
 				C4A00D082B892D1E006ABB14 /* tipoNodo.cpp in Sources */,
 				C4A00D142B892DFD006ABB14 /* listaString.cpp in Sources */,
 			);

@@ -90,5 +90,7 @@ void enumerarNodosEnOrden(AbbExp &a){
     }
     
 }
-
+tipoNodo darNodo(AbbExp a){
+    return a->TiNod;
+}
 

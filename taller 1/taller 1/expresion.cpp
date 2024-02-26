@@ -10,7 +10,7 @@
 int darNum(Expresion a){
     return a.num;
 }
-AbbExp darexp(Expresion a, AbbExp b){
+AbbExp darexp(Expresion a){
     return a.info;
 }
 

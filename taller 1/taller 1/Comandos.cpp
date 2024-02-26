@@ -8,18 +8,18 @@
 #include "comandos.hpp"
 
 void atomic(listaString a, Lista &b){
-    boolean a;
+    boolean c;
     string t,f;
     cargarTRUE(t);
     cargarFalse(f);
     if( streq(darString (a),t)==TRUE){
-        a=TRUE;
-        cargarBol(a,darExpresion(b));
+        c=TRUE;
+         //  cargar el boolean en lista//
     }else{
-        a=FALSE;
-        cargarBol(a,darExpresion(b));
+        c=FALSE;
+       //cargar boolean en lista en caso de q sea false el boolean//
             }
     }
-}
+
 
 
