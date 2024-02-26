@@ -10,5 +10,5 @@
 
 #include "listaString.hpp"
 #include "listaDeExpresiones.hpp"
-
+void atomic(boolean a, Lista &b);
 #endif /* comandos_hpp */

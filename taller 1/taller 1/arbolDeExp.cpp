@@ -13,6 +13,9 @@ void mostrarExpresionOrden(AbbExp a){
         mostrarExpresionOrden(a->hder);
     }
 }
+void mostrarRaiz(AbbExp a){
+    mostrarNodo(a->TiNod);
+}
 void agregarParentesisA(AbbExp &a){
     if(a->hizq!=NULL){
         agregarParentesisA(a->hizq);
@@ -85,7 +88,7 @@ void enumerarNodosEnOrden(AbbExp &a){
     
     if (a != NULL) {
         enumerarNodosEnOrden(a->hizq); // Recorrer el subárbol izquierdo
-        cargarnumero(a->TiNod, ++contador); // Asignar el número id al nodo actual
+        cargarnumero(a->TiNod, contador+1); // Asignar el número id al nodo actual
         enumerarNodosEnOrden(a->hder); // Recorrer el subárbol derecho
     }
     
@@ -93,7 +96,14 @@ void enumerarNodosEnOrden(AbbExp &a){
 tipoNodo darNodo(AbbExp a){
     return a->TiNod;
 }
+//el arbol tiene que estar vacio
+void instertarNodo(AbbExp &a,tipoNodo p){
+    a = new nodo;
+    a -> TiNod= p;
+    a -> hizq = NULL;
+    a -> hder = NULL;
+}
 
-void instertarNodo(AbbExp &a){
-    
+void crearAbb(AbbExp &a){
+    a=NULL;
 }

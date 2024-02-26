@@ -11,10 +11,10 @@ void crearListaExp(Lista &a){
 }
 void insertFrontExp(Lista &a, Expresion b){
     
-    Lista aux=new Nodo;
+    Lista aux=new NodoA;
     aux->info=b;
     aux->sig=a;
-    aux=a;
+    a=aux;
 }
 boolean existeEnList(Lista a, int b){
     boolean existe=FALSE;
@@ -42,4 +42,10 @@ boolean esVacia(Lista a){
 
 Expresion darExpresion(Lista a){
     return a->info;
+}
+void mostrarListaDeExp(Lista a){
+    while(a!=NULL){
+        MostrarExp(a->info);
+        a=a->sig;
+    }
 }

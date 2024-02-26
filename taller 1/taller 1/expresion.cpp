@@ -16,9 +16,12 @@ AbbExp darexp(Expresion a){
 
    
 void MostrarExp(Expresion b){
-    mostrarExpresionOrden(b.info);
+    mostrarRaiz(b.info);
 }
 
 void cargaPrimNumeroExpresion (Expresion a){
   a.num=1;
+}
+void cargarExpresion(Expresion &a,AbbExp b){
+    a.info=b;
 }

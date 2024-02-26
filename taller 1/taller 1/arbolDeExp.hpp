@@ -19,7 +19,8 @@ nodoA * hder;
 
 typedef nodo * AbbExp;
 
-void instertarNodo(AbbExp &a);
+void crearAbb(AbbExp &a);
+void instertarNodo(AbbExp &a,tipoNodo p);
 tipoNodo darNodo(AbbExp a);
 void mostrarExpresionOrden(AbbExp a);
 void agregarParentesisA(AbbExp &a);
@@ -29,6 +30,6 @@ void consCompoun(AbbExp a, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
 void enumerarNodosEnOrden(AbbExp &a);
-
+void mostrarRaiz(AbbExp a);
 #endif /* arbolDeExp_hpp */
 

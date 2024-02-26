@@ -6,16 +6,27 @@
 //
 
 
-#include <stdio.h>
 
+#include "comandos.hpp"
+#include "listaDeExpresiones.hpp"
 #include "listaString.hpp"
 int main() {
-    
-    
+
+    /*
     string s,sb,separado,resto;
+     */
     listaString l;
+    Crear(l);
+    boolean a=TRUE;
+    Lista b;
+    crearListaExp(b);
+    atomic(a, b);
+    mostrarListaDeExp(b);
     
     
+}
+    
+    /*
     int salirprograma = 0;
     
     printf (" BOOLEAN CREATOR PRO ");
@@ -58,3 +69,4 @@ int main() {
     return 0;
 }
 
+*/
