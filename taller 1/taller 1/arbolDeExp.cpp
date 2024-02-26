@@ -101,7 +101,7 @@ boolean evaluateAbbs(AbbExp a){
             }
         
     }
-    
+    return TRUE;
 }
 
 
