@@ -7,8 +7,7 @@
 
 #ifndef comandos_h
 #define comandos_h
-#include "listaDeExpresiones.hpp"
 #include "listaString.hpp"
-
+#include "listaDeExpresiones.hpp"
 void atomic(listaString a, lista &b);
 #endif /* comandos_h */

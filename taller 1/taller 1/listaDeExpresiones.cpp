@@ -40,3 +40,6 @@ boolean esVacia(Lista a){
 }
 
 
+Expresion darExpresion(Lista a){
+    return a->info;
+}

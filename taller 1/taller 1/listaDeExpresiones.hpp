@@ -19,5 +19,5 @@ void crearListaExp(Lista &a);
 void insertFrontExp(Lista &a, Expresion b);
 boolean existeEnList(Lista a, int b);
 boolean esVacia (Lista a);
-
+Expresion darExpresion(Lista a);
 #endif /* listaDeExpresiones_hpp */

@@ -9,8 +9,6 @@
 #include <stdio.h>
 
 #include "listaString.hpp"
-
-
 int main() {
   
 

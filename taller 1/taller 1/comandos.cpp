@@ -7,13 +7,18 @@
 
 #include "comandos.hpp"
 
-void atomic(listaString a, lista &b){
+void atomic(listaString a, Lista &b){
+    boolean a;
     string t,f;
     cargarTRUE(t);
     cargarFalse(f);
-        if( streq(darString (a),t)==TRUE){
-            boolean a=TRUE;
-            cargarBol(
+    if( streq(darString (a),t)==TRUE){
+        a=TRUE;
+        cargarBol(a,darExpresion(b));
+    }else{
+        a=FALSE;
+        cargarBol(a,darExpresion(b));
+            }
     }
 }
 
