@@ -29,6 +29,12 @@ void evaluate (Lista l, int 1){
             Expresion exp = ObtenerExpEnList(l, i);
             mostrarBool(evaluateAbbs(darexp(exp)));
 }
+
+void exit (int &i){
+
+    i = 0;
+}
+
 /* show recibe entero y lista
  busca en lista con entero y recibe expresion
  Muestro el ABB*/
