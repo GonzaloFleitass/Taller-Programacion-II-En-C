@@ -18,7 +18,7 @@ void insertFrontExp(Lista &a, Expresion b){
 }
 boolean existeEnList(Lista a, int b){
     boolean existe=FALSE;
-    while(a->sig!=NULL&&existe!=TRUE){
+    while(a!=NULL&&existe!=TRUE){
         if(darNum(a->info)==b){
             existe=TRUE;
         }else{
@@ -65,3 +65,4 @@ int darNroUltimaExp(Lista a)
         return darNum(a->info);
     }
 }
+

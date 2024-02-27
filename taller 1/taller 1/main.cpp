@@ -18,12 +18,20 @@ int main() {
     listaString l;
     Crear(l);
     boolean a=TRUE;
+    boolean c=FALSE;
+    int n=2,z=1;
+    char w='a',v='n';
     Lista b;
     crearListaExp(b);
     atomic(a, b);
+    atomic(c,b);
+    compoundOrAnd(b,n,z,w);
+    compoundNot (b,  n,  v);
     mostrarListaDeExp(b);
-    
-    
+    /*
+    compoundNot (b,n,'n');
+    mostrarListaDeExp(b);
+     */
 }
     
     /*

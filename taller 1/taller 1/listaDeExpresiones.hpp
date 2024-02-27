@@ -23,4 +23,5 @@ Expresion darExpresion(Lista a);
 void mostrarListaDeExp(Lista a);
 int darNroUltimaExp(Lista a);
 Expresion ObtenerExpEnList(Lista a, int b);
+
 #endif /* listaDeExpresiones_hpp */

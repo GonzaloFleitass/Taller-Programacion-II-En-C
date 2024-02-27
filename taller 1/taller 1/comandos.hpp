@@ -14,7 +14,7 @@ void atomic(boolean a, Lista &b);
 void show (Lista l, int i);
 void compoundOrAnd (Lista &l, int i, int a, char c);
 void compoundNot (Lista &l, int i, char c); 
-void evaluate(Lista l int i); 
+void evaluate(Lista l ,int i); 
 void save(Lista l, int i); 
 void load(); 
 void exit (int &i);

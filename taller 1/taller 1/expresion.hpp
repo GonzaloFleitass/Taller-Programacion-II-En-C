@@ -20,6 +20,6 @@ int darNum(Expresion a);
 AbbExp darexp(Expresion a);
 void crearExpresion(Expresion);
 void MostrarExp(Expresion b);
-void cargaNumeroExpresion (Expresion a,int n);
+void cargaNumeroExpresion (Expresion &a,int n);
 
 #endif /* expresion_hpp */

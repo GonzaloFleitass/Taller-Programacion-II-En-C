@@ -11,26 +11,31 @@ void mostrarExpresionOrden(AbbExp a){
         mostrarExpresionOrden(a->hizq);
         mostrarNodo(a->TiNod);
         mostrarExpresionOrden(a->hder);
+        
     }
 }
 
 void agregarParentesisA(AbbExp &a){
-    if(a->hizq!=NULL){
-        agregarParentesisA(a->hizq);
+    AbbExp aux=a;
+    if(aux!=NULL){
+        agregarParentesisA(aux->hizq);
             }
-        a = new nodo;
-        cargarParentesis('(',a->TiNod);
-        a->hizq =NULL;
-        a->hder =NULL;
+        aux = new nodo;
+        cargarParentesis('(',aux->TiNod);
+        aux->hizq =NULL;
+        aux->hder =NULL;
+    a=aux;
         }
 void agregarParentesisFin(AbbExp &a){
-    if(a->hder!=NULL){
-        agregarParentesisA(a->hder);
+    AbbExp aux=a;
+    if(aux!=NULL){
+        agregarParentesisA(aux->hder);
             }
-        a = new nodo;
-        cargarParentesis(')',a->TiNod);
-        a->hizq =NULL;
-        a->hder =NULL;
+        aux = new nodo;
+        cargarParentesis(')',aux->TiNod);
+        aux->hizq =NULL;
+        aux->hder =NULL;
+    a=aux;
         }
     
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
@@ -38,8 +43,9 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     cargarOperado(c, e->TiNod);
     e->hizq=a;
     e->hder=b;
-    agregarParentesisA(e);
-    agregarParentesisFin(e);
+    agregarParentesisA(a->hizq);
+    agregarParentesisFin(b->hder);
+
 }
 
 void consCompounNot(AbbExp a, char c,AbbExp &e){
@@ -47,8 +53,8 @@ void consCompounNot(AbbExp a, char c,AbbExp &e){
         cargarOperado(c, e->TiNod);
         e->hizq=NULL;
         e->hder=a;
-        agregarParentesisA(e);
-        agregarParentesisFin(e);
+        agregarParentesisA(a->hizq);
+        agregarParentesisFin(a->hder);
     }
 
 

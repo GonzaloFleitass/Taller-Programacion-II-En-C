@@ -17,9 +17,10 @@ AbbExp darexp(Expresion a){
    
 void MostrarExp(Expresion b){
     mostrarExpresionOrden(b.info);
+    
 }
 
-void cargaNumeroExpresion (Expresion a,int n){
+void cargaNumeroExpresion (Expresion &a,int n){
     a.num=n+1;
 }
 

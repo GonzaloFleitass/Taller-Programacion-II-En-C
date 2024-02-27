@@ -13,6 +13,7 @@ void atomic(boolean a, Lista &b){
     AbbExp ar;
     crearAbb(ar);
     instertarNodo(ar,c);
+  
     Expresion exp;
     cargarExpresion(exp, ar);
     cargaNumeroExpresion(exp,darNroUltimaExp(b));//obtengo el numero de la ultima expresion y se lo asigno a la nueva
