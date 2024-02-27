@@ -11,6 +11,7 @@ void mostrarExpresionOrden(AbbExp a){
         mostrarExpresionOrden(a->hizq);
         mostrarNodo(a->TiNod);
         mostrarExpresionOrden(a->hder);
+        printf(" ");
         
     }
 }
