@@ -38,9 +38,11 @@ void exit (int &i){
 
 void compoundOrAnd (Lista &l, int i, int a, char c){
     if((existeEnList(l,i)==TRUE)&&(existeEnList(l,a)==TRUE)){//Busca en la lista si existen las dos expresiones con los numeros enteros que recibe.
-        AbbExp e;
+        AbbExp e,aux,aux2;
         crearAbb(e);
-        consCompoun((darexp(ObtenerExpEnList(l,i))), (darexp(ObtenerExpEnList(l,a))), c, e);//Obtiene la expresion que corresponde a cada numero ingresado, devuelve el arbol de cada una de esas dos expresiones y las ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c.
+        copiarAbb(aux2,(darexp(ObtenerExpEnList(l,a))));
+        copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
+        consCompoun(aux, aux2, c, e);//Obtiene la expresion que corresponde a cada numero ingresado, devuelve el arbol de cada una de esas dos expresiones y las ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c.
         Expresion  ex;
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));
@@ -52,9 +54,10 @@ void compoundOrAnd (Lista &l, int i, int a, char c){
 
 void compoundNot (Lista &l, int i, char c){
     if(existeEnList(l,i)==TRUE){//Busca en la lista si existe la expresion con el numer entero que recibe.
-        AbbExp e;
+        AbbExp e,aux;
+        copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
         crearAbb(e);
-        consCompounNot((darexp(ObtenerExpEnList(l,i))), c, e);//Obtiene la expresion que corresponde al  numero ingresado, devuelve el arbol de  la expresion y lo ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c que es un NOT.
+        consCompounNot(aux, c, e);//Obtiene la expresion que corresponde al  numero ingresado, devuelve el arbol de  la expresion y lo ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c que es un NOT.
         Expresion  ex;
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));

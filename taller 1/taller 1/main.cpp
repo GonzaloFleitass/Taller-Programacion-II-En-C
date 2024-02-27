@@ -25,16 +25,16 @@ int main() {
     crearListaExp(b);
     atomic(a, b);
     atomic(c,b);
-    compoundOrAnd(b,n,z,w);
     
+    compoundOrAnd(b,n,z,w);
+   // show(b,3);
+   // mostrarListaDeExp(b);
     compoundNot (b,  n,  v);
-    mostrarListaDeExp(b);
-     /*
-    show(b,1);
-    /*
-    compoundNot (b,n,'n');
-    mostrarListaDeExp(b);
-     */
+    mostrarBool(evaluateAbbs(darexp(ObtenerExpEnList(b,4))));
+    
+    
+
+   // show(b,4);
 }
     
     /*
