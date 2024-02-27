@@ -30,7 +30,7 @@ int main() {
    // show(b,3);
    // mostrarListaDeExp(b);
     compoundNot (b,  n,  v);
-    mostrarBool(evaluateAbbs(darexp(ObtenerExpEnList(b,4))));
+    mostrarBool(evaluateAbbs(darexp(ObtenerExpEnList(b,3))));
     
     
 
