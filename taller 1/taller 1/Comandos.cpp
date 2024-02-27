@@ -20,20 +20,36 @@ void atomic(boolean a, Lista &b){
     
 }
 
-/* show recibe entero y lista
- busca en lista con entero y recibe expresion
- Muestro el ABB*/
 
-/* compound and / or recibe 2 enteros y el char del operador
- busca en lista con 1er entero y recibe primer expresion
- busca en lista con 2do entero y recibe segunda expresion
- 
- 
- AbbExp ar;
- crearAbb(ar);
- 
- usando darExp de modulo Expresion, obtengo el ABB de la 1er expresion
- usando darExp de modulo Expresion, obtengo el ABB de la 2da expresion
- invoco al cons con el char del operador, el arbol vacio y los arboles de las expresiones
- */
+
+void compoundOrAnd (Lista &l, int i, int a, char c){
+    if((existeEnList(l,i)==TRUE)&&(existeEnList(l,a)==TRUE)){//Busca en la lista si existen las dos expresiones con los numeros enteros que recibe.
+        AbbExp e;
+        crearAbb(e);
+        consCompoun((darexp(ObtenerExpEnList(l,i))), (darexp(ObtenerExpEnList(l,a))), c, e);//Obtiene la expresion que corresponde a cada numero ingresado, devuelve el arbol de cada una de esas dos expresiones y las ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c.
+        Expresion  ex;
+        cargarExpresion(ex, e);
+        cargaNumeroExpresion(ex,darNroUltimaExp(l));
+        insertFrontExp(l,ex);
+    }else{
+        printf("Error, las expresiones no existen");
+    }
+}
+
+void compoundNot (Lista &l, int i, char c){
+    if(existeEnList(l,i)==TRUE){//Busca en la lista si existe la expresion con el numer entero que recibe.
+        AbbExp e;
+        crearAbb(e);
+        consCompounNot((darexp(ObtenerExpEnList(l,i))), c, e);//Obtiene la expresion que corresponde al  numero ingresado, devuelve el arbol de  la expresion y lo ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c que es un NOT.
+        Expresion  ex;
+        cargarExpresion(ex, e);
+        cargaNumeroExpresion(ex,darNroUltimaExp(l));
+        insertFrontExp(l,ex);
+    }else{
+        printf("Error, la expresion no existe");
+    }
+       
+}
+
+
 
