@@ -20,6 +20,20 @@ void atomic(boolean a, Lista &b){
     
 }
 
+void showd (Lista l, int i) {
+    Expresion exp = ObtenerExpEnList(l, i);
+    MostrarExp(exp);
+}
+
+void evaluate (Lista l, int i){
+            Expresion exp = ObtenerExpEnList(l, i);
+            mostrarBool(evaluateAbbs(darexp(exp)));
+}
+
+void exit (int &i){
+
+    i = 0;
+}
 
 
 void compoundOrAnd (Lista &l, int i, int a, char c){
