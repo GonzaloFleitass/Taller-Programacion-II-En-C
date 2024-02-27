@@ -21,9 +21,8 @@ void atomic(boolean a, Lista &b){
     
 }
 
-void showd (Lista l, int i) {
-    Expresion exp = ObtenerExpEnList(l, i);
-    MostrarExp(exp);
+void show (Lista l, int i) {
+    MostrarExp( ObtenerExpEnList(l, i));
 }
 
 void evaluate (Lista l, int i){

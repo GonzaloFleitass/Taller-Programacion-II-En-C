@@ -26,8 +26,11 @@ int main() {
     atomic(a, b);
     atomic(c,b);
     compoundOrAnd(b,n,z,w);
+    
     compoundNot (b,  n,  v);
     mostrarListaDeExp(b);
+     /*
+    show(b,1);
     /*
     compoundNot (b,n,'n');
     mostrarListaDeExp(b);

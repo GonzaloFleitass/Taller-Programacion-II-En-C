@@ -44,8 +44,9 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     e->hizq=a;
     e->hder=b;
     agregarParentesisA(a->hizq);
+    agregarParentesisFin(a->hder);
+    agregarParentesisA(b->hizq);
     agregarParentesisFin(b->hder);
-
 }
 
 void consCompounNot(AbbExp a, char c,AbbExp &e){
