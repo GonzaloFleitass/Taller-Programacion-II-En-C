@@ -43,17 +43,22 @@ int main() {
     printf (" BOOLEAN CREATOR PRO ");
     printf(" - atomic: crea una nueva expresión booleana atómica (false o true) \n - compound: crea una nueva expresión booleana compuesta (contiene al menos un operador) \n - show: despliega por pantalla una expresión booleana previamente creada \n - evaluate: evalúa una expresión booleana, indicando si es verdadera o falsa \n - save: guarda en archivo una expresión booleana previamente creada  - load: recupera a memoria una expresión booleana previamente guardada en archivo  - exit: sale de la aplicación");
     string s;
-    listaString l;
+    listaString l,n;
+    crearLista(n);
+    cargarPalabras(n);
+    
     strcrear(s);
+    crearLista(l);
     printf("\n");
     printf("Ingrese un comando");
     printf("\n");
     scan(s);
     printf("\n");
-    crearLista(l);
+ 
     partirString(s, l);
     mostrarlistastring(l);
-    printf("%c",devuelveComando(l));
+    printf("%c",devuelveComando(l,n));
+  
 }
     /*
     switch(devuleveComando(l){

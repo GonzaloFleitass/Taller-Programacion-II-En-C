@@ -58,21 +58,25 @@ void scan (string &s){
 }
 
 
-boolean streq (string s1, string s2)
-{
-    int i=0;
+boolean streq(string s1, string s2) {
+    int i = 0;
     boolean iguales = TRUE;
-    while (iguales && (s1[i] != '\0') && (s2[i] != '\0')) {
 
-
-        if (s1[i] != s2[i])
+    while (iguales && s1[i] != '\0' && s2[i] != '\0') {
+        if (s1[i] != s2[i]) {
             iguales = FALSE;
+        }
         i++;
-        if ((s1[i] != '\0') || (s2[i] != '\0'))
-            iguales = FALSE;
     }
-        return iguales;
+
+    // Si alguna cadena todavía tiene elementos, no son iguales
+    if (s1[i] != '\0' || s2[i] != '\0') {
+        iguales = FALSE;
     }
+
+    return iguales;
+}
+
 
 boolean esVacio (string s){
     if (s[0]=='\0'){

@@ -27,5 +27,5 @@ int conversorcai(char c);
 int conversorcai (char c);
 void mostrarlistastring (listaString l);
 string darString(listaString a);
-
+char devuelveComando(listaString l,listaString n);
 #endif /* listaString_hpp */
