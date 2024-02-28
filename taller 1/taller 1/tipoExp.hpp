@@ -10,9 +10,15 @@
 
 #include <stdio.h>
 
-typedef enum{VALOR,OPERADOR,PARENTESIS}tipoExp;
+// Definición de la enumeración tipoExp, que representa el tipo de una expresión
+typedef enum {
+    VALOR,      // Valor de la expresión
+    OPERADOR,   // Operador de la expresión
+    PARENTESIS  // Paréntesis de la expresión
+} tipoExp; // El tipo de dato es tipoExp
 
-tipoExp darTipoExp (tipoExp a);//Devuelve el tipo de expresion.
+// Prototipo de función
+tipoExp darTipoExp(tipoExp a); // Devuelve el tipo de expresión
 
 
 #endif /* tipoExp_hpp */
