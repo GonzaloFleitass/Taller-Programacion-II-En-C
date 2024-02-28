@@ -127,3 +127,26 @@ void instertarNodo(AbbExp &a,tipoNodo p){
 void crearAbb(AbbExp &a){
     a=NULL;
 }
+
+void bajarArbol(AbbExp  a,FILE * f){
+    if(a!=NULL){
+        bajarNodo(a->TiNod,f);
+        bajarArbol(a->hizq,f);
+        bajarArbol(a->hder,f);
+    }
+
+}
+
+void SaveArbol (AbbExp a){
+    FILE * f = fopen ("nombrearchivo.dat", "wb");
+    if (f!=NULL){
+        char c;
+        printf("El archivo ya existe. Desea sobreescribirlo? \n Ingrese (S)i o (N)o");
+        scanf("%c", &c);
+        if (c == 's' || c == 'S') {
+            bajarArbol(a, f);
+            fclose(f);
+        }else
+            fclose(f);
+    }
+}

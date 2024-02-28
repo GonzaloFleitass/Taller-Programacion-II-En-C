@@ -73,3 +73,20 @@ int darNumero(tipoNodo a){
     return a.numero;
 }
 
+
+void bajarNodo (tipoNodo a, FILE * f){
+    switch(a.discriminante){
+   
+        case VALOR:
+            fwrite(&a.datos.bol, sizeof(boolean),1,f);
+            break;
+        case PARENTESIS:
+            fwrite(&a.datos.parentesis, sizeof(char),1,f);
+            break;
+        case OPERADOR:
+            fwrite(&a.datos.operador, sizeof(char),1,f);
+            break;
+            }
+    }
+
+   

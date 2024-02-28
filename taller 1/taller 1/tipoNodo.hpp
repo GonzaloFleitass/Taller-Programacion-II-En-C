@@ -32,6 +32,6 @@ boolean devuelveBoolean (tipoNodo a);
 char darOperador (tipoNodo a);
 void cargarnumero(tipoNodo &a,int i);
 int darNumero(tipoNodo a);
-
+void bajarNodo (tipoNodo a, FILE * f);
 #endif /* tipoNodo_hpp */
 

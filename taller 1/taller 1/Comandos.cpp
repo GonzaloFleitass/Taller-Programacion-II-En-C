@@ -42,7 +42,7 @@ void compoundOrAnd (Lista &l, int i, int a, char c){
         crearAbb(e);
         copiarAbb(aux2,(darexp(ObtenerExpEnList(l,a))));
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
-        consCompoun(aux, aux2, c, e);//Obtiene la expresion que corresponde a cada numero ingresado, devuelve el arbol de cada una de esas dos expresiones y las ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c.
+        consCompoun(aux, aux2, c, e);
         Expresion  ex;
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));
@@ -57,7 +57,7 @@ void compoundNot (Lista &l, int i, char c){
         AbbExp e,aux;
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
         crearAbb(e);
-        consCompounNot(aux, c, e);//Obtiene la expresion que corresponde al  numero ingresado, devuelve el arbol de  la expresion y lo ingresa en el consCompound para formar un nuevo arbol con el operador que recibe del char c que es un NOT.
+        consCompounNot(aux, c, e);
         Expresion  ex;
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));
@@ -69,4 +69,11 @@ void compoundNot (Lista &l, int i, char c){
 }
 
 
-
+void save(Lista l, int i){
+    if(existeEnList(l,i)==TRUE){
+        AbbExp  aux;
+        copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
+        enumerarNodosEnOrden(aux);
+        SaveArbol(aux);
+    }
+}
