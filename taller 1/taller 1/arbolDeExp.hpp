@@ -31,7 +31,8 @@ void consCompounNot(AbbExp a, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
 void enumerarNodosEnOrden(AbbExp &a);
-
+void SaveArbol (AbbExp a);
+void bajarArbol(AbbExp  a,FILE * f);
 
 #endif /* arbolDeExp_hpp */
 

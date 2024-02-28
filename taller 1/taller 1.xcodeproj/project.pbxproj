@@ -91,15 +91,15 @@
 				C4A00D012B892CE4006ABB14 /* arbolDeExp.hpp */,
 				C4A00D032B892D06006ABB14 /* stringDinamico.cpp */,
 				C4A00D062B892D1E006ABB14 /* tipoNodo.cpp */,
+				C4A00D072B892D1E006ABB14 /* tipoNodo.hpp */,
+				C4A00D102B892DD5006ABB14 /* tipoExp.hpp */,
 				C4A00D092B892D76006ABB14 /* listaDeExpresiones.cpp */,
 				C4A00D0A2B892D76006ABB14 /* listaDeExpresiones.hpp */,
 				C4A00D0C2B892DBD006ABB14 /* expresion.cpp */,
 				C4A00D0F2B892DD5006ABB14 /* tipoExp.cpp */,
 				C4A00D122B892DFD006ABB14 /* listaString.cpp */,
 				C4A00D132B892DFD006ABB14 /* listaString.hpp */,
-				C4A00D102B892DD5006ABB14 /* tipoExp.hpp */,
 				C4A00D0D2B892DBD006ABB14 /* expresion.hpp */,
-				C4A00D072B892D1E006ABB14 /* tipoNodo.hpp */,
 				C4A00D042B892D06006ABB14 /* stringDinamico.hpp */,
 				C41D6D2E2B8CC98300C95792 /* comandos.cpp */,
 				C41D6D2F2B8CC98300C95792 /* comandos.hpp */,
@@ -299,7 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LZJL334PC;
+				DEVELOPMENT_TEAM = F878S4GD94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,7 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4LZJL334PC;
+				DEVELOPMENT_TEAM = F878S4GD94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
