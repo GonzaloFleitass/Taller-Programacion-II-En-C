@@ -71,7 +71,7 @@ void cargarPalabras(listaString &l){
     a[6]='\0';
     insback(a,l);
     
-<<<<<<< HEAD
+
     c[0] = 'c';
     c[1] = 'o';
     c[2] = 'm';
@@ -82,7 +82,7 @@ void cargarPalabras(listaString &l){
     c[7] = 'd';
     c[8] = '\0';
     insback(c, l);
-=======
+
     c[0]='c';
     c[1]='o';
     c[2]='m';
@@ -93,7 +93,7 @@ void cargarPalabras(listaString &l){
     c[7]='d';
     c[8]='\0';
     insback(c,l);
->>>>>>> 06bed9f27bef4365180d1ba939b7df7c9d953e76
+
     
     e[0]='e';
     e[1]='v';
