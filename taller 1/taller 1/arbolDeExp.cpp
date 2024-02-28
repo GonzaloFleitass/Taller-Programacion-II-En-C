@@ -150,3 +150,11 @@ void SaveArbol (AbbExp a){
             fclose(f);
     }
 }
+
+void LoadArbol(FILE * f, AbbExp &a){
+    FILE * f;
+    f = fopen (“nombrearchivo.txt”, “rb”);
+    int num;
+    fread (&num, sizeof(int), 1, f);
+}
+    
