@@ -77,3 +77,19 @@ void save(Lista l, int i){
         SaveArbol(aux);
     }
 }
+char devuelveComando(listaString l){
+    listaString n;
+    boolean encontre=FALSE;
+    cargarPalabras(n);
+    while(n!=NULL&&encontre!=TRUE){
+        if(streq(darString(n),darString( l))){
+            encontre=TRUE;
+            return darPrimerLetra(darString(l));
+        }else{
+            n=n->sig;
+        }
+    }
+    return 'n';
+            
+}
+

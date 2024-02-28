@@ -18,6 +18,6 @@ void dividirString(string s, string &separado, string &resto); // Divide una cad
 int devolverTipoUnion(string s); // Devuelve el tipo de expresión de una cadena de caracteres
 void cargarTRUE(string &l); // Carga el valor "TRUE" en una cadena de caracteres
 void cargarFalse(string &l); // Carga el valor "FALSE" en una cadena de caracteres
-
+char darPrimerLetra(string l);
 #endif /* stringDinamico_hpp */ // Fin de la directiva del preprocesador ifndef
 

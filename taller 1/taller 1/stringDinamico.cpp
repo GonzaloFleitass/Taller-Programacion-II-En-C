@@ -178,3 +178,6 @@ void cargarFalse(string &l){
     falsE[4]='e';
     falsE[5]='\0';
 }
+char darPrimerLetra(string l){
+    return l[0];
+}

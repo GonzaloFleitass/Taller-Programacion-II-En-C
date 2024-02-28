@@ -18,4 +18,5 @@ void evaluate(Lista l ,int i);
 void save(Lista l, int i); 
 void load(); 
 void exit (int &i);
+char devuelveComando(listaString l);
 #endif /* comandos_hpp */
