@@ -13,7 +13,7 @@
 
 typedef struct NodoL {
     string info;    
-    Nodo *sig;      
+    NodoL *sig;
 } Nodo;
 
 // Alias para un puntero a Nodo, representando una lista de cadenas
