@@ -33,7 +33,6 @@ boolean evaluateAbbs(AbbExp a);
 void enumerarNodosEnOrden(AbbExp &a);
 void SaveArbol (AbbExp a);
 void bajarArbol(AbbExp  a,FILE * f);
-void LoadArbol(FILE * f, AbbExp &a);
 
 #endif /* arbolDeExp_hpp */
 
