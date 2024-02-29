@@ -69,6 +69,10 @@ int main() {
 
         e: exit(salirprograma);
              break;
+
+        default:
+                printf("Comando no reconocido.");
+                break;
         }
     }
      
