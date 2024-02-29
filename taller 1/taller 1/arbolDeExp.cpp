@@ -136,7 +136,7 @@ void bajarArbol(AbbExp  a,FILE * f){
 
 }
 //crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
-/*
+
 void SaveArbol (AbbExp a,string nombreArchivo){
     int contador=0;
     FILE * f = fopen (nombreArchivo, "rb");
@@ -172,4 +172,5 @@ void LoadArbol(FILE * f, AbbExp &a){
     int num;
     fread (&num, sizeof(int), 1, f);
 }
-    */
+    
+*/

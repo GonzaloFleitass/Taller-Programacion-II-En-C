@@ -73,7 +73,6 @@ int darNumero(tipoNodo a){
     return a.numero;
 }
 
-/*
 void bajarNodo (tipoNodo a, FILE * f){
     fwrite(&a.numero,sizeof(int),1,f);
     fwrite(&a.discriminante,sizeof(tipoExp),1,f);
@@ -91,6 +90,7 @@ void bajarNodo (tipoNodo a, FILE * f){
             break;
             }
     }
+
 
 void levantarNodo(tipoNodo &a,FILE *f){
     fread(&a.numero,sizeof(int),1,f);
@@ -110,5 +110,3 @@ void levantarNodo(tipoNodo &a,FILE *f){
             }
     }
 
- */
-   
