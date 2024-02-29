@@ -75,6 +75,7 @@ int main() {
                 }
                 break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         c : 
             
@@ -99,6 +100,8 @@ int main() {
         default:
                 printf("Comando no reconocido.");
                 break;
+=======
+>>>>>>> parent of 4a2c8a9 (Update main.cpp)
 =======
 >>>>>>> parent of 4a2c8a9 (Update main.cpp)
         }
