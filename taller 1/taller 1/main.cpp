@@ -67,7 +67,9 @@ int main() {
 
         l:
 
-        e: exit(salirprograma);
+        e:     printf("Saliendo del programa...\n");
+                exit(&salirprograma);
+         
              break;
 
         default:
