@@ -10,22 +10,45 @@
 
 #include "stringDinamico.hpp"
 
-typedef struct NodoL {
-     string info;
-     NodoL * sig;
-    } Nodo;
 
+typedef struct NodoL {
+    string info;    
+    Nodo *sig;      
+} Nodo;
+
+// Alias para un puntero a Nodo, representando una lista de cadenas
 typedef Nodo * listaString;
 
-void Crear (listaString &l);
+// Declaraciones de funciones
+
+// Función para crear una lista enlazada vacía
+void Crear(listaString &l);
+
+// Función para mostrar los elementos de la lista enlazada
 void MostrarLista(listaString l);
+
+// Función para crear una lista enlazada vacía
 void crearLista(listaString &l);
-void insback (string s, listaString &l);
+
+// Función para insertar una cadena al final de la lista enlazada
+void insback(string s, listaString &l);
+
+// Función para dividir una cadena en palabras y agregar cada palabra a la lista enlazada
 void partirString(string s, listaString &l);
+
+// Función para cargar palabras en la lista enlazada
 void cargarPalabras(listaString &l);
+
+// Función para convertir un carácter en su valor ASCII
 int conversorcai(char c);
-int conversorcai (char c);
-void mostrarlistastring (listaString l);
+
+// Función para mostrar los elementos de una lista de cadenas
+void mostrarlistastring(listaString l);
+
+// Función para obtener una cadena concatenada a partir de la lista enlazada
 string darString(listaString a);
-char devuelveComando(listaString l,listaString n);
+
+// Función para devolver un comando de la lista enlazada
+char devuelveComando(listaString l, listaString n);
+
 #endif /* listaString_hpp */
