@@ -51,14 +51,7 @@ int main() {
             
             int i, a;
          
-                printf("Ingrese el primer número de expresión: ");
-                scanf("%d", &i);
-                printf("Ingrese el segundo número de expresión: ");
-                scanf("%d", &a);
-                printf("Ingrese el operador (and, or, not): ");
-                char op;
-                scanf(" %c", &op);
-                compoundOrAnd(&l, i, a, op);
+                
          
                 break;
 
