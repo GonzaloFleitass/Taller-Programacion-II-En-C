@@ -34,6 +34,7 @@ char darOperador (tipoNodo a);
 void cargarnumero(tipoNodo &a,int i);
 int darNumero(tipoNodo a);
 void bajarNodo (tipoNodo a, FILE * f);
+void levantarNodo(tipoNodo &a,FILE *f);
 // Prototipos de funciones
 void cargarBol(boolean a, tipoNodo &b); // Carga el dato booleano en un nodo
 void cargarOperado(char op, tipoNodo &b); // Carga el dato operador en un nodo
@@ -45,7 +46,6 @@ boolean devuelveBoolean(tipoNodo a); // Devuelve el valor booleano almacenado en
 char darOperador(tipoNodo a); // Devuelve el operador almacenado en un nodo
 void cargarNumero(tipoNodo &a, int i); // Carga un número en un nodo
 int darNumero(tipoNodo a); // Devuelve el número almacenado en un nodo
-
 
 #endif /* tipoNodo_hpp */
 

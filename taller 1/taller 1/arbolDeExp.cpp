@@ -102,14 +102,13 @@ boolean evaluateAbbs(AbbExp a){
 
 
 
-void enumerarNodosEnOrden(AbbExp &a){
+void enumerarNodosEnOrden(AbbExp &a,int &contador){
 
-    int contador = 0;
     
     if (a != NULL) {
-        enumerarNodosEnOrden(a->hizq); // Recorrer el subárbol izquierdo
+        enumerarNodosEnOrden(a->hizq,contador); // Recorrer el subárbol izquierdo
         cargarnumero(a->TiNod, contador+1); // Asignar el número id al nodo actual
-        enumerarNodosEnOrden(a->hder); // Recorrer el subárbol derecho
+        enumerarNodosEnOrden(a->hder,contador); // Recorrer el subárbol derecho
     }
     
 }
@@ -136,18 +135,34 @@ void bajarArbol(AbbExp  a,FILE * f){
     }
 
 }
-
-void SaveArbol (AbbExp a){
-    FILE * f = fopen ("nombrearchivo.dat", "wb");
+//crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
+/*
+void SaveArbol (AbbExp a,string nombreArchivo){
+    int contador=0;
+    FILE * f = fopen (nombreArchivo, "rb");
     if (f!=NULL){
+        fclose(f);
         char c;
         printf("El archivo ya existe. Desea sobreescribirlo? \n Ingrese (S)i o (N)o");
         scanf("%c", &c);
         if (c == 's' || c == 'S') {
+            f = fopen (nombreArchivo, "wb");
+           
+            enumerarNodosEnOrden(a,contador);
             bajarArbol(a, f);
+            
             fclose(f);
+            printf("El Archivo se Sobreescribio");
         }else
+            printf("El Archivo no se guardo");
             fclose(f);
+    }else{
+        fclose(f);
+        f = fopen (nombreArchivo, "wb");
+       
+        enumerarNodosEnOrden(a,contador);
+        bajarArbol(a, f);
+        fclose(f);
     }
 }
 /*

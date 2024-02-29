@@ -183,5 +183,19 @@ void cargarFalse(string &l){
     falsE[5]='\0';
 }
 char darPrimerLetra(string l){
-    return l[0];
+    char letra=l[0];
+    switch(letra){
+        case 'e':
+            if(l[1]=='x'){
+                letra='x';
+            }
+            break;
+        case 's':
+            if(l[1]=='h'){
+                letra='h';
+                break;
+            }
+            
+    }
+    return letra;
 }

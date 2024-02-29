@@ -14,7 +14,7 @@ int main() {
     
     
     string s,sb,separado,resto;
-    
+    string comando;
     listaString l;
     Crear(l);
     boolean a=TRUE;
@@ -28,79 +28,83 @@ int main() {
     
     compoundOrAnd(b,n,z,w);
     // show(b,3);
-    // mostrarListaDeExp(b);
     compoundNot (b,  n,  v);
-    mostrarBool(evaluateAbbs(darexp(ObtenerExpEnList(b,3))));
+    mostrarListaDeExp(b);
     
-}
-     
-     // show(b,4);
-     
-     
-     /*
+    
+    // show(b,4);
+    
+    
+    
     int salirprograma = 0;
     
     printf (" BOOLEAN CREATOR PRO ");
+    
+    
     printf(" - atomic: crea una nueva expresión booleana atómica (false o true) \n - compound: crea una nueva expresión booleana compuesta (contiene al menos un operador) \n - show: despliega por pantalla una expresión booleana previamente creada \n - evaluate: evalúa una expresión booleana, indicando si es verdadera o falsa \n - save: guarda en archivo una expresión booleana previamente creada  - load: recupera a memoria una expresión booleana previamente guardada en archivo  - exit: sale de la aplicación");
     
-  
-}
-    /*
-    switch(devuleveComando(l){
-        a:  boolean c;
+    listaString comandoBoolean,palabrasClaves;
+    cargarPalabras(palabrasClaves);
+    strcrear(comando);
+    printf("Ingrese Comando:");
+    scan(comando);
+    Lista listaDeExpresion;
+    partirString(comando, comandoBoolean);
+    crearListaExp(listaDeExpresion);
+    
+    
+    
+    do {
+        switch(devuelveComando(comandoBoolean,palabrasClaves)){
+            a:  boolean c;
                 string t,f;
                 cargarTRUE(t);
                 cargarFalse(f);
                 if( streq(darString (l),t)==TRUE){
                     c=TRUE;
+                    
                     //  cargar el boolean en lista//
                 }else{
-                    c=FALSE;
-                    //cargar boolean en lista en caso de q sea false el boolean//
+                    if(streq(darString(l),f)==TRUE){
+                        
+                        c=FALSE;
+                        //cargar boolean en lista en caso de q sea false el boolean//
+                    }else{
+                        printf("Expresion Invalida");
+                    }
+                    break;
+                    
+                    
+                    c :
+                    
+                    
+                    
+                    
+                    break;
+                    
+                e:
+                    break;
+                    
+                s:
+                    break;
+                    
+                l:
+                    break;
+                ex:     printf("Saliendo del programa...\n");
+                    
+                    
+                    break;
+                    
+                default:
+                    printf("Comando no reconocido.");
+                    break;
+                    
                 }
-                break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        c : 
-            
-         
-                
-         
-                break;
-
-        s:
-
-        e:
-
-        s:
-
-        l:
-
-        e:     printf("Saliendo del programa...\n");
-                exit(&salirprograma);
-         
-             break;
-
-        default:
-                printf("Comando no reconocido.");
-                break;
-=======
->>>>>>> parent of 4a2c8a9 (Update main.cpp)
-=======
->>>>>>> parent of 4a2c8a9 (Update main.cpp)
         }
-    }
+        }while ( salirprograma != 0);
         
-
+        
+        return 0;
+    }
     
-   // do {}
-
-      //  while ( salirprograma != 0);
-
-    
-    return 0;
-}
-
-*/
 

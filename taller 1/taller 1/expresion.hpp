@@ -33,5 +33,6 @@ void MostrarExp(Expresion b);
 // Función para cargar un número en una estructura de expresión
 void cargaNumeroExpresion (Expresion &a, int n);
 
+void bajarExpresion(Expresion a,string archivo);
 
 #endif /* expresion_hpp */

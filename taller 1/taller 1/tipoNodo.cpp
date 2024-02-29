@@ -73,8 +73,11 @@ int darNumero(tipoNodo a){
     return a.numero;
 }
 
-
+/*
 void bajarNodo (tipoNodo a, FILE * f){
+    fwrite(&a.numero,sizeof(int),1,f);
+    fwrite(&a.discriminante,sizeof(tipoExp),1,f);
+    
     switch(a.discriminante){
    
         case VALOR:
@@ -89,4 +92,23 @@ void bajarNodo (tipoNodo a, FILE * f){
             }
     }
 
+void levantarNodo(tipoNodo &a,FILE *f){
+    fread(&a.numero,sizeof(int),1,f);
+    fread(&a.discriminante,sizeof(tipoExp),1,f);
+    
+    switch(a.discriminante){
+   
+        case VALOR:
+            fread(&a.datos.bol, sizeof(boolean),1,f);
+            break;
+        case PARENTESIS:
+            fread(&a.datos.parentesis, sizeof(char),1,f);
+            break;
+        case OPERADOR:
+            fread(&a.datos.operador, sizeof(char),1,f);
+            break;
+            }
+    }
+
+ */
    

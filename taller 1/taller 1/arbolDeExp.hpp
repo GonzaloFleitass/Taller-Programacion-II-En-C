@@ -9,7 +9,7 @@
 #define arbolDeExp_hpp
 
 #include "tipoNodo.hpp"
-
+#include "stringDinamico.hpp"
 
 typedef struct nodoA {
 tipoNodo TiNod;
@@ -30,7 +30,7 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e);
 void consCompounNot(AbbExp a, char c,AbbExp &e);
 boolean darBoolizq (AbbExp a);
 boolean evaluateAbbs(AbbExp a);
-void enumerarNodosEnOrden(AbbExp &a);
+void enumerarNodosEnOrden(AbbExp &a,int &contador);
 void SaveArbol (AbbExp a);
 void bajarArbol(AbbExp  a,FILE * f);
 

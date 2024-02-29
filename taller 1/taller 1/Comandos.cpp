@@ -71,9 +71,10 @@ void compoundNot (Lista &l, int i, char c){
 
 void save(Lista l, int i){
     if(existeEnList(l,i)==TRUE){
+        int contador=0;
         AbbExp  aux;
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
-        enumerarNodosEnOrden(aux);
+        enumerarNodosEnOrden(aux,contador);
         SaveArbol(aux);
     }
 }
