@@ -49,7 +49,6 @@ int main() {
 
         c : 
             
-            int i, a;
          
                 
          
