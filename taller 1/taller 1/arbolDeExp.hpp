@@ -10,7 +10,7 @@
 
 #include "tipoNodo.hpp"
 #include "stringDinamico.hpp"
-#include "expresion.hpp"
+
 
 typedef struct nodoA {
 tipoNodo TiNod;
