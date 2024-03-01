@@ -135,6 +135,23 @@ void bajarArbol(AbbExp  a,FILE * f){
     }
 
 }
+
+void insertarAbb(AbbExp &a,tipoNodo b){
+    if (a == NULL)
+    {
+        a = new nodo;
+        a -> TiNod = b;
+        a -> hizq = NULL;
+        a -> hder = NULL;
+    }
+    else
+    {
+        if (darNumero(a->TiNod) < darNumero(b))
+            insertarAbb(a -> hizq, b);
+        else
+            insertarAbb(a -> hder, b);
+    }
+}
 //crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
 
 void SaveArbol (AbbExp a,string nombreArchivo){
@@ -165,12 +182,24 @@ void SaveArbol (AbbExp a,string nombreArchivo){
         fclose(f);
     }
 }
-/*
-void LoadArbol(FILE * f, AbbExp &a){
-    FILE * f;
-    f = fopen (“nombrearchivo.txt”, “rb”);
-    int num;
-    fread (&num, sizeof(int), 1, f);
+
+void levantarArbol(AbbExp &a,FILE * f){
+    tipoNodo b;
+    levantarNodo(b, f);
+    while(!feof(f)){
+        insertarAbb(a, b);
+        levantarNodo(b, f);
+    }
+    
 }
     
-*/
+void loadArbol (AbbExp &a,string nomarchivo){
+    crearAbb(a);
+    FILE  * f = fopen (nomarchivo, "rb");
+    if (f!=NULL)
+    {
+       levantarArbol(a, f);
+    }
+    
+    
+}

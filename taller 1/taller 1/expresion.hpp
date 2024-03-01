@@ -24,15 +24,11 @@ int darNum(Expresion a);
 // Función para obtener la expresión almacenada en una estructura de expresión
 AbbExp darexp(Expresion a);
 
-// Función para crear una expresión (parece que falta el tipo de dato de la expresión)
-void crearExpresion(Expresion);
-
 // Función para mostrar una expresión por pantalla
 void MostrarExp(Expresion b);
 
 // Función para cargar un número en una estructura de expresión
 void cargaNumeroExpresion (Expresion &a, int n);
 
-void bajarExpresion(Expresion a,string archivo);
 
 #endif /* expresion_hpp */

@@ -75,6 +75,6 @@ void save(Lista l, int i){
         AbbExp  aux;
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
         enumerarNodosEnOrden(aux,contador);
-        SaveArbol(aux);
+        //SaveArbol(aux);
     }
 }
