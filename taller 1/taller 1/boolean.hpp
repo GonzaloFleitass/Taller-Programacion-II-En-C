@@ -15,6 +15,6 @@ typedef enum {FALSE,TRUE}boolean;
 // Función para mostrar un valor booleano por pantalla
 void mostrarBool(boolean a);
 
-
+                
 #endif /* boolean_hpp */
 

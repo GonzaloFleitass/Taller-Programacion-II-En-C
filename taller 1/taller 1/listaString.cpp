@@ -164,7 +164,7 @@ char devuelveComando(listaString l,listaString n) {
     while (n != NULL && !encontre) {
         if (streq(darString(n), palabraL)) {
             encontre = TRUE;
-            return darPrimerLetra(palabraL);
+            return darPrimerLetra(darString(l));
         } else {
             n = n->sig;
         }
@@ -172,3 +172,5 @@ char devuelveComando(listaString l,listaString n) {
 
     return 'n';
 }
+
+

@@ -6,6 +6,7 @@
 //
 
 #include "arbolDeExp.hpp"
+
 void mostrarExpresionOrden(AbbExp a){
     if (a!=NULL){
         mostrarExpresionOrden(a->hizq);
@@ -100,21 +101,20 @@ boolean evaluateAbbs(AbbExp a){
 }
 
 
-
-
-void enumerarNodosEnOrden(AbbExp &a,int &contador){
-
-    
+void enumerarNodosEnOrden(AbbExp &a, int &contador) {
     if (a != NULL) {
-        enumerarNodosEnOrden(a->hizq,contador); // Recorrer el subárbol izquierdo
-        cargarnumero(a->TiNod, contador+1); // Asignar el número id al nodo actual
-        enumerarNodosEnOrden(a->hder,contador); // Recorrer el subárbol derecho
+        enumerarNodosEnOrden(a->hizq, contador); // Recorrer el subárbol izquierdo
+        cargarNumero(a->TiNod, contador +1 );     // Asignar el número id al nodo actual
+        enumerarNodosEnOrden(a->hder, contador); // Recorrer el subárbol derecho
     }
-    
 }
+
+ 
 tipoNodo darNodo(AbbExp a){
     return a->TiNod;
 }
+ 
+ 
 //el arbol tiene que estar vacio
 void instertarNodo(AbbExp &a,tipoNodo p){ 
     a = new nodo;
@@ -136,6 +136,7 @@ void bajarArbol(AbbExp  a,FILE * f){
 
 }
 
+
 void insertarAbb(AbbExp &a,tipoNodo b){
     if (a == NULL)
     {
@@ -152,6 +153,7 @@ void insertarAbb(AbbExp &a,tipoNodo b){
             insertarAbb(a -> hder, b);
     }
 }
+
 //crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
 
 void SaveArbol (AbbExp a,string nombreArchivo){
@@ -182,6 +184,7 @@ void SaveArbol (AbbExp a,string nombreArchivo){
         fclose(f);
     }
 }
+
 
 void levantarArbol(AbbExp &a,FILE * f){
     tipoNodo b;

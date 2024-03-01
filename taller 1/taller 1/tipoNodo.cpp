@@ -66,9 +66,10 @@ char darOperador (tipoNodo a){
     return a.datos.operador;
 }
 
-void cargarnumero(tipoNodo &a,int i){
-    a.numero=i;
+void cargarNumero(tipoNodo &a,int num){
+    a.numero=num;
 }
+ 
 int darNumero(tipoNodo a){
     return a.numero;
 }
@@ -92,7 +93,8 @@ void bajarNodo (tipoNodo a, FILE * f){
     }
 
 
-void levantarNodo(tipoNodo &a,FILE *f){
+
+ void levantarNodo(tipoNodo &a,FILE *f){
     fread(&a.numero,sizeof(int),1,f);
     fread(&a.discriminante,sizeof(tipoExp),1,f);
     
