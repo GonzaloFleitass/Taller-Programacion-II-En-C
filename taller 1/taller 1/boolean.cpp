@@ -6,6 +6,7 @@
 //
 
 #include "boolean.hpp"
+/*
 boolean andd(boolean a, boolean b) {
     return (a == TRUE && b == TRUE) ? TRUE : FALSE;
 }
@@ -17,12 +18,12 @@ boolean ord(boolean a, boolean b) {
 boolean notd(boolean a) {
     return (a == TRUE) ? FALSE : TRUE;
 }
-
-void mostrarBool (boolean a){
-    if ( a == TRUE){
-            printf( "TRUE");
-                } else {
-                            printf ("FALSE");
+*/
+void mostrarBool(boolean a) {
+    if (a == TRUE) {
+        printf("TRUE");
+    } else {
+        printf("FALSE");
     }
 }
 

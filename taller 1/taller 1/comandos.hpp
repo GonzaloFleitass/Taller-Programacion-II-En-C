@@ -27,13 +27,9 @@ void compoundNot (Lista &l, int i, char c);
 void evaluate(Lista l ,int i); 
 
 // Función para guardar el estado de la lista en la posición especificada
-void save(Lista l, int i); 
-
-// Función para cargar arbol desde archivo
-void load(); 
+void save(Lista l, int i);
 
 // Función para salir del programa y actualizar el valor de la variable entera i
 void exit (int &i);
-
 
 #endif /* comandos_hpp */

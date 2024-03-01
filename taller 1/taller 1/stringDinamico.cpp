@@ -42,7 +42,7 @@ void strcop(string s, string &b){
     b[i]='\0';
 }
 
-void scan (string &s){
+void scan(string &s){
     string aux= new char[MAX];
     int i=0;
     char c;
@@ -104,7 +104,7 @@ void eliminarBlancosPrincipio(string s, string &sb){
 }
 
 
-void dividirString (string s, string &separado, string &resto){
+void dividirString(string s, string &separado, string &resto){
     if (esVacio(s)==FALSE){
         int i=0;
         
@@ -161,8 +161,8 @@ int devolverTipoUnion(string s){
     }
     return num;
 }
-void cargarTRUE(string &l){
-    string truE;
+void cargarTrue(string &truE){
+   
     strcrear(truE);
     
     truE[0]='t';
@@ -172,30 +172,25 @@ void cargarTRUE(string &l){
     truE[4]='\0';
 }
 void cargarFalse(string &l){
-    string falsE;
-    strcrear(falsE);
+    strcrear(l);
 
-    falsE[0]='f';
-    falsE[1]='a';
-    falsE[2]='l';
-    falsE[3]='s';
-    falsE[4]='e';
-    falsE[5]='\0';
+    l[0]='f';
+    l[1]='a';
+    l[2]='l';
+    l[3]='s';
+    l[4]='e';
+    l[5]='\0';
 }
-char darPrimerLetra(string l){
-    char letra=l[0];
-    switch(letra){
-        case 'e':
-            if(l[1]=='x'){
-                letra='x';
-            }
-            break;
-        case 's':
-            if(l[1]=='h'){
-                letra='h';
-                break;
-            }
-            
+char darPrimerLetra(string l) {
+    char letra = l[0];
+
+    // Verifica si la primera letra es 'e' y la siguiente es 'x'
+    if (letra == 'e' && l[1] == 'x') {
+        letra = 'x';
+    } else if (letra == 's' && l[1] == 'h') {
+        // Verifica si la primera letra es 's' y la siguiente es 'h'
+        letra = 'h';
     }
+
     return letra;
 }
