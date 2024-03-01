@@ -34,6 +34,6 @@ char darOperador(tipoNodo a); // Devuelve el operador almacenado en un nodo
 void cargarNumero(tipoNodo &a,int num); // Carga un número en un nodo
 int darNumero(tipoNodo a); // Devuelve el número almacenado en un nodo
 void bajarNodo (tipoNodo a, FILE * f);
-
+void levantarNodo(tipoNodo &a,FILE *f);
 #endif /* tipoNodo_hpp */
 

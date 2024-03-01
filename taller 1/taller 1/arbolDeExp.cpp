@@ -188,10 +188,10 @@ void SaveArbol (AbbExp a,string nombreArchivo){
 
 void levantarArbol(AbbExp &a,FILE * f){
     tipoNodo b;
-   // levantarNodo(b, f);
+    levantarNodo(b, f);
     while(!feof(f)){
         insertarAbb(a, b);
-       // levantarNodo(b, f);
+       levantarNodo(b, f);
     }
     
 }
