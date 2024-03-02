@@ -64,7 +64,7 @@ void bajarArbol(AbbExp  a,FILE * f);
 void save(string nombreArchivo,AbbExp a);
 // Función para enumerar los nodos en orden dentro del árbol de expresiones
 void enumerarNodosEnOrden(AbbExp &a,int &contador );
-boolean existenombrearchivo (string nombre);
+
 
 
 

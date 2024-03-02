@@ -55,13 +55,15 @@ void partirString(string s, listaString &l){
 
     
 void cargarPalabras(listaString &l){
-    string a,c,e,s,L,m;
+    string a,c,e,s,L,m,h;
     strcrear(a);
     strcrear(m);
     strcrear(c);
     strcrear(e);
     strcrear(s);
     strcrear(L);
+    strcrear(h);
+    
     a[0]='a';
     a[1]='t';
     a[2]='o';
@@ -72,16 +74,24 @@ void cargarPalabras(listaString &l){
     insback(a,l);
     
 
-    c[0] = 'c';
-    c[1] = 'o';
-    c[2] = 'm';
-    c[3] = 'p';
-    c[4] = 'o';
-    c[5] = 'u';
-    c[6] = 'n';
-    c[7] = 'd';
-    c[8] = '\0';
+    c[0]='c';
+    c[1]='o';
+    c[2]='m';
+    c[3]='p';
+    c[4]='o';
+    c[5]='u';
+    c[6]='n';
+    c[7]='d';
+    c[8]='\0';
     insback(c, l);
+    
+    
+    h[0]='s';
+    h[1]='h';
+    h[2]='o';
+    h[3]='w';
+    h[4]='\0';
+    insback(h, l);
     
     e[0]='e';
     e[1]='v';
@@ -116,12 +126,19 @@ void cargarPalabras(listaString &l){
     
 }
 
-int conversorcai (char c){
-    int i;
-    i = 0- '0';
-    return i;
-}
+int conversorcai (string s){
+    
+        int resu=0, pot=1;
+        for(int i=strlar(s)-1; i>=0; i--)
+        {
+            resu= (s[i]-'0') * pot + resu;
+            pot=pot * 10;
+        }
+        return resu;
+    }
 
+  
+	
 void MostrarLista(listaString l){
     while(l->sig!=NULL){
         print(l->info);
@@ -144,12 +161,16 @@ char devuelveComando(listaString l, listaString n) {
     boolean encontre = FALSE;
     int i=0;
     // Almacena el valor de darString(l) antes del bucle
-    string palabraL = darString(l,i);
+    string palabraL;
+    darString(l,i,palabraL);
 
     while (n != NULL && !encontre) {
-        if (streq(darString(n,i), palabraL)) {
+        string aux;
+        darString(n,i,aux);
+        if (streq(aux, palabraL)) {
             encontre = TRUE;
-            return darPrimerLetra(darString(n,i));
+            
+            return darPrimerLetra(aux);
         } else {
             n = n->sig;
             i++;
@@ -159,20 +180,16 @@ char devuelveComando(listaString l, listaString n) {
     return 'n';
 }
 //debe de existir en lista
-string darString(listaString l, int i) {
-    int a = 0;
-
+void darString(listaString l, int i, string &s) {
+     int a = 0;
+    strcrear(s);
     while (a != i && l != NULL) {
         l = l->sig;
         a++;
     }
-
-    if (l != NULL) {
-        return l->info;
-    } else {
-        return l->info;
-    }
+    strcop(l->info,s);
 }
+
 void borrarLista(listaString &L) {
         if (L != NULL) {
             listaString aux = L;

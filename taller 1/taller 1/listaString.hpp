@@ -39,8 +39,8 @@ void partirString(string s, listaString &l);
 // Función para cargar palabras en la lista enlazada
 void cargarPalabras(listaString &l);
 
-// Función para convertir un carácter en su valor ASCII
-int conversorcai(char c);
+// Función para convertir un string en su valor ASCII
+int conversorcai(string s);
 
 // Función para mostrar los elementos de una lista de cadenas
 void mostrarlistastring(listaString l);
@@ -50,7 +50,7 @@ void mostrarlistastring(listaString l);
 // Función para devolver un comando de la lista enlazada
 char devuelveComando(listaString l, listaString n);
 
-string darString(listaString l, int i);
+void darString(listaString l, int i, string &s);
 
 void borrarLista(listaString &L);
 

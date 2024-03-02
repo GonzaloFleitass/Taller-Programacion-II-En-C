@@ -1,7 +1,7 @@
 #include "comandos.hpp"
 #include "listaDeExpresiones.hpp"
 #include "listaString.hpp"
-
+#include "comandos.hpp"
 int main(){
       string comando,copia;
 
@@ -9,9 +9,7 @@ int main(){
 
       Crear(l);
 
-      boolean a=TRUE;
-
-      boolean c=FALSE;
+    
 
       Lista b;
 
@@ -20,8 +18,22 @@ int main(){
       mostrarListaDeExp(b);
 
       int salirprograma = 1;
-    printf (" BOOLEAN CREATOR PRO ");
-    printf(" - atomic: crea una nueva expresión booleana atómica (false o true) \n - compound: crea una nueva expresión booleana compuesta (contiene al menos un operador) \n - show: despliega por pantalla una expresión booleana previamente creada \n - evaluate: evalúa una expresión booleana, indicando si es verdadera o falsa \n - save: guarda en archivo una expresión booleana previamente creada \n - load: recupera a memoria una expresión booleana previamente guardada en archivo \n - exit: sale de la aplicación");
+        printf("+--------------------------------------------------------------------+\n");
+        printf("|                       BOOLEAN CREATOR PRO                          |\n");
+        printf("+--------------------------------------------------------------------+\n");
+        printf("| - atomic: crea una nueva expresión booleana (false o true)         |\n");
+        printf("| - compound: crea una nueva expresión booleana compuesta            |\n");
+        printf("|             (contiene al menos un operador)                        |\n");
+        printf("| - show: despliega por pantalla una expresión booleana previamente  |\n");
+        printf("|         creada                                                     |\n");
+        printf("| - evaluate: evalúa una expresión booleana, indicando si es         |\n");
+        printf("|             verdadera o falsa                                      |\n");
+        printf("| - save: guarda en archivo una expresión booleana previamente       |\n");
+        printf("|         creada                                                     |\n");
+        printf("| - load: recupera a memoria una expresión booleana previamente      |\n");
+        printf("|         guardada en archivo                                        |\n");
+        printf("| - exit: sale de la aplicación                                      |\n");
+        printf("+--------------------------------------------------------------------+\n");
 
     listaString comandoBoolean,palabrasClaves;
     crearLista(palabrasClaves);
@@ -50,13 +62,17 @@ int main(){
                         string t,f;
                         cargarTrue(t);
                         cargarFalse(f);
-                        if( streq(darString(comandoBoolean,1),t)==TRUE){
+                        string boole;
+                        darString(comandoBoolean, 1, boole);
+                        if( streq(boole,t)==TRUE){
                             c=TRUE;
                             atomic(c,listaDeExpresion);
                             printf("\n Expresion creada");
                             
+                           
+                            
                         }else{
-                            if(streq(darString(comandoBoolean,1),f)==TRUE){
+                            if(streq(boole,f)==TRUE){
                                 c=FALSE;
                                 atomic(c,listaDeExpresion);
                                 printf("\n Expresion creada");
@@ -70,6 +86,25 @@ int main(){
                         break;
                         
                     case 'c':
+                        if(LargoRecu(comandoBoolean)==3){
+                        string Numero,Numero2,operador;
+                        darString(comandoBoolean,2,Numero);
+                        darString(comandoBoolean,1,operador);
+                        int num=conversorcai(Numero);
+                        char op=darPrimerLetra(operador);
+                        compoundNot(listaDeExpresion, num, op);
+                    }else{
+                        if(LargoRecu(comandoBoolean)==4){
+                            string Numero,Numero2,operador;
+                            darString(comandoBoolean,1,Numero);
+                            darString(comandoBoolean,3,Numero2);
+                            darString(comandoBoolean,2,operador);
+                            int num=conversorcai(Numero);
+                            int num2=conversorcai(Numero2);
+                            char op=darPrimerLetra(operador);
+                            compoundOrAnd (listaDeExpresion, num,  num2, op);
+                        }
+                    }
                         
                         break;
                         
@@ -79,8 +114,12 @@ int main(){
                     case 'h':if(LargoRecu(comandoBoolean)<2){
                         printf("Error, no puso Expresion");
                             }else{
-                            if(existeEnList(listaDeExpresion,conversorcai(darPrimerLetra(darString(comandoBoolean,1))))){
-                                show(listaDeExpresion, conversorcai(darPrimerLetra(darString(comandoBoolean,1))));
+                                string strNum;
+                                darString(comandoBoolean,1,strNum);
+                                int num=conversorcai(strNum);
+                            if(existeEnList(listaDeExpresion,num)){
+                                // show 46
+                                show(listaDeExpresion, num);
                             }else{
                                 printf("No existe expresion en Lista");
                             }
@@ -91,13 +130,20 @@ int main(){
                         if(LargoRecu(comandoBoolean)<2){
                             printf("Error, no puso Expresion");
                         }else{
+                            string strNum;
+                            darString(comandoBoolean,1,strNum);
+                            int num=conversorcai(strNum);
                             //entra en el parsing, busca el numero que es un char, lo convierte en int y se lo da al existe en lista
-                            if(existeEnList(listaDeExpresion,conversorcai(darPrimerLetra(darString(comandoBoolean,1))))){
-                                if(verificar(darString(comandoBoolean, 2))){
-                                    SaveArbol(darexp(darExpresion(listaDeExpresion)),darString(comandoBoolean, 2));
+                            if(existeEnList(listaDeExpresion,(num))){
+                                string nombreArchivo;
+                                darString(comandoBoolean, 2,nombreArchivo);
+                                if(verificar(nombreArchivo)){
+                                    SaveArbol(darexp(darExpresion(listaDeExpresion)),nombreArchivo);
                                 }else{
                                     printf("El archivo debe ser .dat, Por favor ingrese todo nuevamente");
                                 }
+                            }else{
+                                printf("La expresion no existe en Lista");
                             }
                         }
                         

@@ -208,4 +208,14 @@ boolean verificar(string s) {
 
     return ok;
 }
+boolean existenombrearchivo (string nombre){
+    boolean b = FALSE;
 
+    FILE * f = fopen (nombre, "rb");
+    if (f != NULL){
+        b = TRUE;
+    }
+    fclose(f);
+
+    return b;
+    }

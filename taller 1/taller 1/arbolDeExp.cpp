@@ -162,17 +162,7 @@ void save(string nombreArchivo,AbbExp a){
     bajarArbol(a, f);
     fclose(f);
 }
-boolean existenombrearchivo (string nombre){
-    boolean b = FALSE;
 
-    FILE * f = fopen (nombre, "rb");
-    if (f != NULL){
-        b = TRUE;
-    }
-    fclose(f);
-
-    return b;
-    }
 void SaveArbol (AbbExp a,string nombreArchivo){
     int contador=0;
     FILE * f = fopen (nombreArchivo, "rb");
