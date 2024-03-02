@@ -156,6 +156,7 @@ void insertarAbb(AbbExp &a,tipoNodo b){
 
 //crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
 
+
 void SaveArbol (AbbExp a,string nombreArchivo){
     int contador=0;
     FILE * f = fopen (nombreArchivo, "rb");
@@ -191,7 +192,7 @@ void levantarArbol(AbbExp &a,FILE * f){
     levantarNodo(b, f);
     while(!feof(f)){
         insertarAbb(a, b);
-        levantarNodo(b, f);
+       levantarNodo(b, f);
     }
     
 }
