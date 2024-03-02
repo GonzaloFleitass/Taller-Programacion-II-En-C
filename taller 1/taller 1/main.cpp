@@ -21,7 +21,7 @@ int main(){
 
       int salirprograma = 1;
     printf (" BOOLEAN CREATOR PRO ");
-    printf(" - atomic: crea una nueva expresión booleana atómica (false o true) \n - compound: crea una nueva expresión booleana compuesta (contiene al menos un operador) \n - show: despliega por pantalla una expresión booleana previamente creada \n - evaluate: evalúa una expresión booleana, indicando si es verdadera o falsa \n - save: guarda en archivo una expresión booleana previamente creada  - load: recupera a memoria una expresión booleana previamente guardada en archivo  - exit: sale de la aplicación");
+    printf(" - atomic: crea una nueva expresión booleana atómica (false o true) \n - compound: crea una nueva expresión booleana compuesta (contiene al menos un operador) \n - show: despliega por pantalla una expresión booleana previamente creada \n - evaluate: evalúa una expresión booleana, indicando si es verdadera o falsa \n - save: guarda en archivo una expresión booleana previamente creada \n - load: recupera a memoria una expresión booleana previamente guardada en archivo \n - exit: sale de la aplicación");
 
     listaString comandoBoolean,palabrasClaves;
     crearLista(palabrasClaves);
@@ -36,7 +36,7 @@ int main(){
     
     
     do {
-        printf("Ingrese Comando:");
+        printf("\nIngrese Comando:");
         scan(comando);
         partirString(comando, comandoBoolean);
         
