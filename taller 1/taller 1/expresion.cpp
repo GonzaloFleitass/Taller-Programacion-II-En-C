@@ -1,10 +1,3 @@
-//
-//  expresion.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "expresion.hpp"
 
 int darNum(Expresion a){
