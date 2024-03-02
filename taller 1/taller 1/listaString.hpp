@@ -1,10 +1,3 @@
-//
-//  listaString.hpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #ifndef listaString_hpp
 #define listaString_hpp
 
