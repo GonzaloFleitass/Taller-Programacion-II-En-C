@@ -1,10 +1,3 @@
-//
-//  expresion.hpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #ifndef expresion_hpp
 #define expresion_hpp
 
