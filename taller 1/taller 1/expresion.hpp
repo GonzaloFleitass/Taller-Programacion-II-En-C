@@ -24,9 +24,6 @@ int darNum(Expresion a);
 // Función para obtener la expresión almacenada en una estructura de expresión
 AbbExp darexp(Expresion a);
 
-
-
-
 // Función para mostrar una expresión por pantalla
 void MostrarExp(Expresion b);
 
