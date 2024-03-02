@@ -87,25 +87,27 @@ int main(){
                         
                     case 'c':
                         if(LargoRecu(comandoBoolean)==3){
-                        string Numero,Numero2,operador;
+                        string Numero,operador;
+                            strcrear(Numero);
+                            strcrear(operador);
                         darString(comandoBoolean,2,Numero);
                         darString(comandoBoolean,1,operador);
                         int num=conversorcai(Numero);
                         char op=darPrimerLetra(operador);
                         compoundNot(listaDeExpresion, num, op);
-                    }else{
-                        if(LargoRecu(comandoBoolean)==4){
-                            string Numero,Numero2,operador;
-                            darString(comandoBoolean,1,Numero);
-                            darString(comandoBoolean,3,Numero2);
-                            darString(comandoBoolean,2,operador);
-                            int num=conversorcai(Numero);
-                            int num2=conversorcai(Numero2);
-                            char op=darPrimerLetra(operador);
-                            compoundOrAnd (listaDeExpresion, num,  num2, op);
+                        }else{
+                            if(LargoRecu(comandoBoolean)==4){
+                                string Numero,Numero2,operador;
+                                darString(comandoBoolean,1,Numero);
+                                darString(comandoBoolean,3,Numero2);
+                                darString(comandoBoolean,2,operador);
+                                int num=conversorcai(Numero);
+                                int num2=conversorcai(Numero2);
+                                char op=darPrimerLetra(operador);
+                                compoundOrAnd (listaDeExpresion, num,  num2, op);
+                                
+                            }
                         }
-                    }
-                        
                         break;
                         
                     case 'e':
