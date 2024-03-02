@@ -183,7 +183,10 @@ int main(){
                         
                     }
             }
-            }
+            }else{
+                        printf("comando no existente");
+                    }
+    
             borrarLista(comandoBoolean);
             strdestruir(comando);
             strcrear(comando);
