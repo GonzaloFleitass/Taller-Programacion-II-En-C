@@ -1,13 +1,5 @@
-//
-//  tipoExp.hpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #ifndef tipoExp_hpp
 #define tipoExp_hpp
-
 #include <stdio.h>
 
 // Definición de la enumeración tipoExp, que representa el tipo de una expresión
