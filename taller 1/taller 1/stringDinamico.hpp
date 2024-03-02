@@ -1,8 +1,7 @@
-
 #ifndef stringDinamico_hpp
 #define stringDinamico_hpp
-
 #include "boolean.hpp"
+
 const int MAX = 80;
 typedef char* string;
 
