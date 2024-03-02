@@ -1,13 +1,5 @@
-//
-//  tipoNodo.hpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #ifndef tipoNodo_hpp
 #define tipoNodo_hpp
-
 #include "tipoExp.hpp"
 #include "boolean.hpp"
 
