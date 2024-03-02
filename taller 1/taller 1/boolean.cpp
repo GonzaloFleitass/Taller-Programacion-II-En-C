@@ -1,24 +1,5 @@
-//
-//  boolean.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "boolean.hpp"
-/*
-boolean andd(boolean a, boolean b) {
-    return (a == TRUE && b == TRUE) ? TRUE : FALSE;
-}
 
-boolean ord(boolean a, boolean b) {
-    return (a == TRUE || b == TRUE) ? TRUE : FALSE;
-}
-
-boolean notd(boolean a) {
-    return (a == TRUE) ? FALSE : TRUE;
-}
-*/
 void mostrarBool(boolean a) {
     if (a == TRUE) {
         printf("TRUE");
@@ -27,3 +8,17 @@ void mostrarBool(boolean a) {
     }
 }
 
+boolean verificar(string s) {
+    boolean ok = false;
+    int largo = strlar(s); 
+
+    if (largo >= 5) {
+        if (s[largo - 1] == 't' && s[largo - 2] == 'a' && s[largo - 3] == 'd' && s[largo - 4] == '.') {
+            ok = true;
+        }
+    } else {
+        ok = false;
+    }
+
+    return ok;
+}
