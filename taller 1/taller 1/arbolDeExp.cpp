@@ -155,23 +155,33 @@ void insertarAbb(AbbExp &a,tipoNodo b){
 }
 
 //crear una funcion para el prinicpio de este procedimiento que comrpuebe si esta vacio o no
+void save(string nombreArchivo,AbbExp a){
+    int contador=0;
+    FILE *f=fopen (nombreArchivo,"wb");
+    enumerarNodosEnOrden(a,contador);
+    bajarArbol(a, f);
+    fclose(f);
+}
+boolean existenombrearchivo (string nombre){
+    boolean b = FALSE;
 
+    FILE * f = fopen (nombre, "rb");
+    if (f != NULL){
+        b = TRUE;
+    }
+    fclose(f);
 
+    return b;
+    }
 void SaveArbol (AbbExp a,string nombreArchivo){
     int contador=0;
     FILE * f = fopen (nombreArchivo, "rb");
-    if (f!=NULL){
-        fclose(f);
+    if (existenombrearchivo (nombreArchivo)){
         char c;
         printf("El archivo ya existe. Desea sobreescribirlo? \n Ingrese (S)i o (N)o");
         scanf("%c", &c);
         if (c == 's' || c == 'S') {
-            f = fopen (nombreArchivo, "wb");
-           
-            enumerarNodosEnOrden(a,contador);
-            bajarArbol(a, f);
-            
-            fclose(f);
+            save(nombreArchivo,a);
             printf("El Archivo se Sobreescribio");
         }else
             printf("El Archivo no se guardo");
