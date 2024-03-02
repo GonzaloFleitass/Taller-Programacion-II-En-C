@@ -46,9 +46,15 @@ int conversorcai(char c);
 void mostrarlistastring(listaString l);
 
 // Función para obtener una cadena concatenada a partir de la lista enlazada
-string darString(listaString a);
 
 // Función para devolver un comando de la lista enlazada
 char devuelveComando(listaString l, listaString n);
+
+string darString(listaString l, int i);
+
+void borrarLista(listaString &L);
+
+int LargoRecu (listaString L);
+
 
 #endif /* listaString_hpp */

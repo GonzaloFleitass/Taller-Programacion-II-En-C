@@ -41,4 +41,5 @@ int darNroUltimaExp(Lista a);
 // Función para obtener la expresión que se encuentra en una posición específica de la lista
 Expresion ObtenerExpEnList(Lista a, int b);
 
+
 #endif /* listaDeExpresiones_hpp */

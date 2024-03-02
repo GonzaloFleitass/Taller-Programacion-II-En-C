@@ -5,7 +5,7 @@
 typedef enum {FALSE,TRUE}boolean;
 
 void mostrarBool(boolean a);
-bool verificar(string s);
+
 
                 
 #endif /* boolean_hpp */

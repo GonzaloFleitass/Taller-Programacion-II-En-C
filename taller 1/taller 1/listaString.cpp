@@ -118,7 +118,7 @@ void cargarPalabras(listaString &l){
 
 int conversorcai (char c){
     int i;
-    i =c - '0'; 
+    i = 0- '0';
     return i;
 }
 
@@ -137,28 +137,55 @@ void mostrarlistastring (listaString l){
        
     }
 }
-string darString(listaString a){
-    return a->info;
-}
 
-char devuelveComando(listaString l,listaString n) {
 
+
+char devuelveComando(listaString l, listaString n) {
     boolean encontre = FALSE;
-    
-
+    int i=0;
     // Almacena el valor de darString(l) antes del bucle
-    string palabraL = darString(l);
+    string palabraL = darString(l,i);
 
     while (n != NULL && !encontre) {
-        if (streq(darString(n), palabraL)) {
+        if (streq(darString(n,i), palabraL)) {
             encontre = TRUE;
-            return darPrimerLetra(darString(l));
+            return darPrimerLetra(darString(n,i));
         } else {
             n = n->sig;
+            i++;
         }
     }
 
     return 'n';
 }
+//debe de existir en lista
+string darString(listaString l, int i) {
+    int a = 0;
 
+    while (a != i && l != NULL) {
+        l = l->sig;
+        a++;
+    }
+
+    if (l != NULL) {
+        return l->info;
+    } else {
+        return l->info;
+    }
+}
+void borrarLista(listaString &L) {
+        if (L != NULL) {
+            listaString aux = L;
+            L = L->sig;
+            delete aux;
+            borrarLista(L);
+        }
+}
+int LargoRecu (listaString L)
+{
+if (L == NULL)
+return 0;
+else
+return 1 + LargoRecu (L -> sig);
+}
 
