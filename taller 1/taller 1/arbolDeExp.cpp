@@ -1,10 +1,3 @@
-//
-//  arbolDeExp.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "arbolDeExp.hpp"
 
 void mostrarExpresionOrden(AbbExp a){
