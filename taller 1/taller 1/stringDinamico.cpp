@@ -1,10 +1,3 @@
-//
-//  stringDinamico.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "stringDinamico.hpp"
 void strcrear (string &s){
     s = new char [1];
