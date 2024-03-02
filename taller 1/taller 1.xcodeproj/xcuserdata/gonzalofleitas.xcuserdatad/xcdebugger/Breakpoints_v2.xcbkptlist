@@ -3,4 +3,70 @@
    uuid = "44AEEDFA-2A77-4DF7-A347-FFA03F280CA7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6BFF00A-4B5C-4F71-B71E-0158680A7E59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "taller 1/listaString.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "devuelveComando(l, n)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "C6BFF00A-4B5C-4F71-B71E-0158680A7E59 - a9674959e4cfec3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "devuelveComando(NodoL*, NodoL*)"
+                  moduleName = "taller 1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gonzalofleitas/Desktop/Taller/taller%201/taller%201/listaString.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "C6BFF00A-4B5C-4F71-B71E-0158680A7E59 - a9674959e4cfec1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "devuelveComando(NodoL*, NodoL*)"
+                  moduleName = "taller 1"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gonzalofleitas/Desktop/Taller/taller%201/taller%201/listaString.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "174"
+                  endingLineNumber = "174"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DB3B647-1121-4AEA-B491-56151A730F65"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "taller 1/main.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "main()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

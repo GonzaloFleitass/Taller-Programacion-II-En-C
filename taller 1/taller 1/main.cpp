@@ -110,7 +110,19 @@ int main(){
                         }
                         break;
                         
-                    case 'e':
+                    case 'e':if (LargoRecu(comandoBoolean) < 2) {
+                        printf("Error, comando escrito incorrectamente");
+                    } else {
+                        string numero;
+                        darString(comandoBoolean, 1, numero);
+                        int num = conversorcai(numero);
+                        if (existeEnList(listaDeExpresion, num)) {
+                            evaluate(listaDeExpresion, num);
+                        } else {
+                            printf("No existe expresion en Lista");
+                        }
+                    }
+                    break;
                         break;
                         
                     case 'h':if(LargoRecu(comandoBoolean)<2){
