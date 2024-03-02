@@ -57,7 +57,7 @@ void cargarPalabras(listaString &l) {
     strcrear(s);
     strcrear(L);
     strcrear(h);
-    
+  
     a[0] = 'a';
     a[1] = 't';
     a[2] = 'o';
@@ -116,7 +116,8 @@ void cargarPalabras(listaString &l) {
     m[3] = 't';
     m[4] = '\0';
     insback(m, l);
-  
+    
+   
 }
 
 
@@ -173,15 +174,20 @@ char devuelveComando(listaString l, listaString n) {
 
     return 'n';
 }
+
+
+void darSTring(listaString a,string &b){
+    strcop(a->info, b);
+}
 //debe de existir en lista
 void darString(listaString l, int i, string &s) {
-     int a = 0;
+    int a = 0;
     strcrear(s);
     while (a != i && l != NULL) {
         l = l->sig;
         a++;
     }
-    strcop(l->info,s);
+        strcop(l->info,s);
 }
 
 void borrarLista(listaString &L) {
@@ -200,3 +206,14 @@ else
 return 1 + LargoRecu (L -> sig);
 }
 
+boolean ExisteComando(listaString a, string b){
+   boolean existe=FALSE;
+    while(a!=NULL&&existe!=TRUE){
+        if(streq(a->info,b)){
+            existe=TRUE;
+        }else{
+            a=a->sig;
+        }
+    }
+    return existe;
+}

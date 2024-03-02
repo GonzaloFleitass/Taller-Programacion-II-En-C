@@ -3,38 +3,38 @@
 #include "listaString.hpp"
 #include "comandos.hpp"
 int main(){
-      string comando,copia;
-
-      listaString l;
-
-      Crear(l);
-
+    string comando,copia;
     
-
-      Lista b;
-
-      crearListaExp(b);
-
-      mostrarListaDeExp(b);
-
-      int salirprograma = 1;
-        printf("+--------------------------------------------------------------------+\n");
-        printf("|                       BOOLEAN CREATOR PRO                          |\n");
-        printf("+--------------------------------------------------------------------+\n");
-        printf("| - atomic: crea una nueva expresión booleana (false o true)         |\n");
-        printf("| - compound: crea una nueva expresión booleana compuesta            |\n");
-        printf("|             (contiene al menos un operador)                        |\n");
-        printf("| - show: despliega por pantalla una expresión booleana previamente  |\n");
-        printf("|         creada                                                     |\n");
-        printf("| - evaluate: evalúa una expresión booleana, indicando si es         |\n");
-        printf("|             verdadera o falsa                                      |\n");
-        printf("| - save: guarda en archivo una expresión booleana previamente       |\n");
-        printf("|         creada                                                     |\n");
-        printf("| - load: recupera a memoria una expresión booleana previamente      |\n");
-        printf("|         guardada en archivo                                        |\n");
-        printf("| - exit: sale de la aplicación                                      |\n");
-        printf("+--------------------------------------------------------------------+\n");
-
+    listaString l;
+    
+    Crear(l);
+    
+    
+    
+    Lista b;
+    
+    crearListaExp(b);
+    
+    mostrarListaDeExp(b);
+    
+    int salirprograma = 1;
+    printf("+--------------------------------------------------------------------+\n");
+    printf("|                       BOOLEAN CREATOR PRO                          |\n");
+    printf("+--------------------------------------------------------------------+\n");
+    printf("| - atomic: crea una nueva expresión booleana (false o true)         |\n");
+    printf("| - compound: crea una nueva expresión booleana compuesta            |\n");
+    printf("|             (contiene al menos un operador)                        |\n");
+    printf("| - show: despliega por pantalla una expresión booleana previamente  |\n");
+    printf("|         creada                                                     |\n");
+    printf("| - evaluate: evalúa una expresión booleana, indicando si es         |\n");
+    printf("|             verdadera o falsa                                      |\n");
+    printf("| - save: guarda en archivo una expresión booleana previamente       |\n");
+    printf("|         creada                                                     |\n");
+    printf("| - load: recupera a memoria una expresión booleana previamente      |\n");
+    printf("|         guardada en archivo                                        |\n");
+    printf("| - exit: sale de la aplicación                                      |\n");
+    printf("+--------------------------------------------------------------------+\n");
+    
     listaString comandoBoolean,palabrasClaves;
     crearLista(palabrasClaves);
     crearLista(comandoBoolean);
@@ -42,18 +42,21 @@ int main(){
     strcrear(comando);
     
     Lista listaDeExpresion;
-  
+    
     crearListaExp(listaDeExpresion);
-
+    
     
     
     do {
         printf("\nIngrese Comando:");
         scan(comando);
         partirString(comando, comandoBoolean);
-        
-     
-            switch(devuelveComando(comandoBoolean,palabrasClaves)){
+        string copi;
+        strcrear(copi);
+        darString(comandoBoolean, 0, copi);
+        boolean a=  ExisteComando(palabrasClaves,copi );
+        if(a==TRUE){
+            switch(devuelveComando(comandoBoolean, palabrasClaves)){
                 case 'a':
                     if(LargoRecu(comandoBoolean)<2){
                         printf("Error, no puso boolean");
@@ -69,7 +72,7 @@ int main(){
                             atomic(c,listaDeExpresion);
                             printf("\n Expresion creada");
                             
-                           
+                            
                             
                         }else{
                             if(streq(boole,f)==TRUE){
@@ -82,19 +85,19 @@ int main(){
                                 
                             }
                         }
-                    
+                        
                         break;
                         
                     case 'c':
                         if(LargoRecu(comandoBoolean)==3){
-                        string Numero,operador;
+                            string Numero,operador;
                             strcrear(Numero);
                             strcrear(operador);
-                        darString(comandoBoolean,2,Numero);
-                        darString(comandoBoolean,1,operador);
-                        int num=conversorcai(Numero);
-                        char op=darPrimerLetra(operador);
-                        compoundNot(listaDeExpresion, num, op);
+                            darString(comandoBoolean,2,Numero);
+                            darString(comandoBoolean,1,operador);
+                            int num=conversorcai(Numero);
+                            char op=darPrimerLetra(operador);
+                            compoundNot(listaDeExpresion, num, op);
                         }else{
                             if(LargoRecu(comandoBoolean)==4){
                                 string Numero,Numero2,operador;
@@ -122,22 +125,22 @@ int main(){
                             printf("No existe expresion en Lista");
                         }
                     }
-                    break;
+                        break;
                         break;
                         
                     case 'h':if(LargoRecu(comandoBoolean)<2){
                         printf("Error, no puso Expresion");
-                            }else{
-                                string strNum;
-                                darString(comandoBoolean,1,strNum);
-                                int num=conversorcai(strNum);
-                            if(existeEnList(listaDeExpresion,num)){
-                                // show 46
-                                show(listaDeExpresion, num);
-                            }else{
-                                printf("No existe expresion en Lista");
-                            }
+                    }else{
+                        string strNum;
+                        darString(comandoBoolean,1,strNum);
+                        int num=conversorcai(strNum);
+                        if(existeEnList(listaDeExpresion,num)){
+                            // show 46
+                            show(listaDeExpresion, num);
+                        }else{
+                            printf("No existe expresion en Lista");
                         }
+                    }
                         break;
                         
                     case 's':
@@ -180,12 +183,15 @@ int main(){
                         
                     }
             }
-        borrarLista(comandoBoolean);
-        strdestruir(comando);
-        strcrear(comando);
+            }
+            borrarLista(comandoBoolean);
+            strdestruir(comando);
+            strcrear(comando);
+            strdestruir(copi);
+            strcrear(copi);
         }while ( salirprograma != 0);
         
-
+        
         return 0;
     }
 

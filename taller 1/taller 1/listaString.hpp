@@ -50,5 +50,6 @@ void borrarLista(listaString &L);
 
 int LargoRecu (listaString L);
 
+boolean ExisteComando(listaString a, string b);
 
 #endif /* listaString_hpp */
