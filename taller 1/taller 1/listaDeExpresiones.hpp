@@ -1,13 +1,11 @@
 #ifndef listaDeExpresiones_hpp
 #define listaDeExpresiones_hpp
-
 #include "expresion.hpp"
+
 typedef struct Nodol{
 Expresion info;
 Nodol * sig;
 } NodoA ;
-
-
 typedef NodoA * Lista;
 
 // Función para crear una lista de expresiones vacía

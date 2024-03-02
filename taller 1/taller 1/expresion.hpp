@@ -1,6 +1,5 @@
 #ifndef expresion_hpp
 #define expresion_hpp
-
 #include "arbolDeExp.hpp"
 
 typedef struct {
