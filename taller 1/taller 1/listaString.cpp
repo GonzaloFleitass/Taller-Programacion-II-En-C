@@ -1,10 +1,3 @@
-//
-//  listaString.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "listaString.hpp"
 void Crear (listaString &l){
     l=NULL;
