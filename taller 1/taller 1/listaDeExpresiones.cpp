@@ -1,10 +1,3 @@
-//
-//  listaDeExpresiones.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "listaDeExpresiones.hpp"
 void crearListaExp(Lista &a){
     a=NULL;
