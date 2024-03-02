@@ -181,6 +181,7 @@ void cargarFalse(string &l){
     l[4]='e';
     l[5]='\0';
 }
+
 char darPrimerLetra(string l) {
     char letra = l[0];
 

@@ -123,8 +123,7 @@ void cargarPalabras(listaString &l) {
     m[3] = 't';
     m[4] = '\0';
     insback(m, l);
-
-   
+  
 }
 
 
@@ -174,7 +173,7 @@ char devuelveComando(listaString l, listaString n) {
             
             return darPrimerLetra(aux);
         } else {
-            n = n->sig;
+        
             i++;
         }
     }

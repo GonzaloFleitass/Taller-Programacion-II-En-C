@@ -12,7 +12,8 @@
 
 
 typedef struct NodoL {
-    string info;    
+    int num;
+    string info;
     NodoL *sig;
 } Nodo;
 
