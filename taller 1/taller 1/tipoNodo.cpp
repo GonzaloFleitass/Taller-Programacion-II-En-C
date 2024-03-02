@@ -1,10 +1,3 @@
-//
-//  tipoNodo.cpp
-//  taller 1
-//
-//  Created by Gonzalo Fleitas on 23/2/24.
-//
-
 #include "tipoNodo.hpp"
 
 void cargarBol(boolean a,tipoNodo &b){
