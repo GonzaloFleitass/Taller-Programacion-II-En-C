@@ -115,13 +115,13 @@ void cargarPalabras(listaString &l){
     insback(m, l);
     
 }
+
 int conversorcai (char c){
     int i;
-    i =c - '0';
-    
-    
+    i =c - '0'; 
     return i;
 }
+
 void MostrarLista(listaString l){
     while(l->sig!=NULL){
         print(l->info);
