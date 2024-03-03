@@ -167,8 +167,16 @@ int main(){
                         
                         break;
                         
-                    case 'l':
-                        break;
+                    case 'l': if (LargoRecu(comandoBoolean) < 2) {
+                            printf("Error, no se proporcionó el nombre del archivo\n");
+                        } else {
+                            AbbExp a;
+                            string nombreArchivo;
+                            darString(comandoBoolean, 2, nombreArchivo);
+                            loadArbol(a, nombreArchivo);
+                            printf("Archivo cargado correctamente...")
+                        }
+                        break;
                         
                     case 'x':
                         exit(salirprograma);
