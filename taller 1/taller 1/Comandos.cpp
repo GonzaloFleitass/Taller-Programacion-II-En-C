@@ -55,8 +55,6 @@ void compoundOrAnd(Lista &l, int i, int a, char c) {
         
         // Suponiendo que insertFrontExp inserta la expresión al frente de la lista.
         insertFrontExp(l, ex);
-    } else {
-        printf("Error, las expresiones no existen\n");
         // Dependiendo del contexto, podrías lanzar una excepción o retornar un código de error.
     }
 }
