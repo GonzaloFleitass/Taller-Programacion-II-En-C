@@ -142,8 +142,8 @@ int main(){
                         break;
                         
                     case 's':
-                        if(LargoRecu(comandoBoolean)!=2){
-                            printf("\nError, no puso Expresion\n");
+                        if(LargoRecu(comandoBoolean)!=3){
+                            printf("\nError, no puso comando correctamnete, debe poner 'save' 'numero de expresion' 'nombre de archivo'\n");
                         }else{
                             string strNum;
                             darString(comandoBoolean,1,strNum);
