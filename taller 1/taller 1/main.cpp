@@ -1,23 +1,20 @@
-#include "comandos.hpp"
-#include "listaDeExpresiones.hpp"
-#include "listaString.hpp"
+
 #include "comandos.hpp"
 int main(){
     string comando;
-    
     listaString l;
-    
     Crear(l);
-    
-    
-    
     Lista b;
-    
     crearListaExp(b);
-    
     mostrarListaDeExp(b);
-    
     int salirprograma = 1;
+    listaString comandoBoolean,palabrasClaves;
+    crearLista(palabrasClaves);
+    crearLista(comandoBoolean);
+    cargarPalabras(palabrasClaves);
+    strcrear(comando);
+    Lista listaDeExpresion;
+    crearListaExp(listaDeExpresion);
     printf("+--------------------------------------------------------------------+\n");
     printf("|                       BOOLEAN CREATOR PRO                          |\n");
     printf("+--------------------------------------------------------------------+\n");
@@ -34,20 +31,8 @@ int main(){
     printf("|         guardada en archivo                                        |\n");
     printf("| - exit: sale de la aplicación                                      |\n");
     printf("+--------------------------------------------------------------------+\n");
-    
-    listaString comandoBoolean,palabrasClaves;
-    crearLista(palabrasClaves);
-    crearLista(comandoBoolean);
-    cargarPalabras(palabrasClaves);
-    strcrear(comando);
-    
-    Lista listaDeExpresion;
-    
-    crearListaExp(listaDeExpresion);
-    
-    
-    
     do {
+        
         printf("\nIngrese Comando:");
         scan(comando);
         partirString(comando, comandoBoolean);
@@ -59,7 +44,7 @@ int main(){
             switch(devuelveComando(comandoBoolean, palabrasClaves)){
                 case 'a':
                     if(LargoRecu(comandoBoolean)!=2){
-                        printf("Error, Comando mal ingresado");
+                        printf("\nError, Comando mal ingresado\n");
                     }else{
                         boolean c;
                         string t,f;
@@ -70,7 +55,7 @@ int main(){
                         if( streq(boole,t)==TRUE){
                             c=TRUE;
                             atomic(c,listaDeExpresion);
-                            printf("\n Expresion creada");
+                            printf("\nExpresion creada\n");
                             
                             
                             
@@ -78,10 +63,10 @@ int main(){
                             if(streq(boole,f)==TRUE){
                                 c=FALSE;
                                 atomic(c,listaDeExpresion);
-                                printf("\n Expresion creada");
+                                printf("\nExpresion creada\n");
                                 
                             }else{
-                                printf("Expresion Invalida");
+                                printf("\nExpresion Invalida\n");
                                 
                             }
                         }
@@ -98,7 +83,7 @@ int main(){
                             int num=conversorcai(Numero);
                             char op=darPrimerLetra(operador);
                             compoundNot(listaDeExpresion, num, op);
-                            printf("Expresion creada");
+                            printf("\nExpresion creada\n");
                         }else{
                             if(LargoRecu(comandoBoolean)==4){
                                 string Numero,Numero2,operador;
@@ -109,14 +94,15 @@ int main(){
                                 int num2=conversorcai(Numero2);
                                 char op=darPrimerLetra(operador);
                                 compoundOrAnd (listaDeExpresion, num,  num2, op);
-                                printf("Expresion creada");
+                                printf("\nExpresion cread\n");
                                 
                             }
+                            else{ printf("\nComando no valido\n");}
                         }
                         break;
                         
-                    case 'e':if (LargoRecu(comandoBoolean) < 2) {
-                        printf("Error, comando escrito incorrectamente");
+                    case 'e':if (LargoRecu(comandoBoolean) != 2) {
+                        printf("\nError, comando escrito incorrectamente\n");
                     } else {
                         string numero;
                         darString(comandoBoolean, 1, numero);
@@ -124,86 +110,79 @@ int main(){
                         if (existeEnList(listaDeExpresion, num)) {
                             evaluate(listaDeExpresion, num);
                         } else {
-                            printf("No existe expresion en Lista");
+                            printf("\nNo existe expresion en Lista\n");
                         }
                     }
                         break;
                         break;
                         
-                    case 'h':if(LargoRecu(comandoBoolean)<2){
-                        printf("Error, no puso Expresion");
+                    case 'h':if(LargoRecu(comandoBoolean)!=2){
+                        printf("\nError, no puso Expresion\n");
                     }else{
                         string strNum;
                         darString(comandoBoolean,1,strNum);
                         int num=conversorcai(strNum);
                         if(existeEnList(listaDeExpresion,num)){
-                            // show 46
                             show(listaDeExpresion, num);
                         }else{
-                            printf("No existe expresion en Lista");
+                            printf("\nNo existe expresion en Lista\n");
                         }
                     }
                         break;
                         
                     case 's':
                         if(LargoRecu(comandoBoolean)<2){
-                            printf("Error, no puso Expresion");
+                            printf("\nError, no puso Expresion\n");
                         }else{
                             string strNum;
                             darString(comandoBoolean,1,strNum);
                             int num=conversorcai(strNum);
-                            //entra en el parsing, busca el numero que es un char, lo convierte en int y se lo da al existe en lista
                             if(existeEnList(listaDeExpresion,(num))){
                                 string nombreArchivo;
                                 darString(comandoBoolean, 2,nombreArchivo);
                                 if(verificar(nombreArchivo)){
                                     SaveArbol(darexp(darExpresion(listaDeExpresion)),nombreArchivo);
-                                    printf("Archivo Guardado Exiostosamente");
+                                    printf("\nArchivo Guardado Exiostosamente\n");
                                 }else{
-                                    printf("El archivo debe ser .dat, Por favor ingrese todo nuevamente");
+                                    printf("\nEl archivo debe ser .dat, Por favor ingrese todo nuevamente\n");
                                 }
                             }else{
-                                printf("La expresion no existe en Lista");
+                                printf("\nLa expresion no existe en Lista\n");
                             }
                         }
                         
                         break;
                         
                     case 'l': if (LargoRecu(comandoBoolean) < 2) {
-                        printf("Error, no se proporcionó el nombre del archivo\n");
+                        printf("\nError, no se proporcionó el nombre del archivo\n");
                     } else {
                         AbbExp a;
                         string nombreArchivo;
                         darString(comandoBoolean, 2, nombreArchivo);
                         loadArbol(a, nombreArchivo);
-                        printf("Archivo cargado correctamente...");
+                        printf("\nArchivo cargado correctamente...\n");
                     }
                         break;
                     case 'x':
                         exit(salirprograma);
-                        printf("Saliendo del programa...\n");
+                        printf("\nSaliendo del programa\n");
                         
                         
                         break;
                         
                     default:
-                        printf("Comando no reconocido.");
+                        printf("\nComando no reconocido.\n");
                         break;
-                        
                     }
             }
             }else{
-                        printf("comando no existente");
+                        printf("\ncomando no existente\n");
                     }
-    
             borrarLista(comandoBoolean);
             strdestruir(comando);
             strcrear(comando);
             strdestruir(copi);
             strcrear(copi);
         }while ( salirprograma != 0);
-        
-        
-        return 0;
     }
 

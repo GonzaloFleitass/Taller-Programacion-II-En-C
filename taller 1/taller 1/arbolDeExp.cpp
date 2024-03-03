@@ -147,7 +147,7 @@ void SaveArbol (AbbExp a,string nombreArchivo){
             save(nombreArchivo,a);
             printf("El Archivo se Sobreescribio");
         }else
-            printf("El Archivo no se guardo");
+            printf("\nEl Archivo no se guardo\n");
             fclose(f);
     }else{
         fclose(f);

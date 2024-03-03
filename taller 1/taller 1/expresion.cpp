@@ -9,7 +9,9 @@ AbbExp darexp(Expresion a){
 
    
 void MostrarExp(Expresion b){
+    printf("\n");
     mostrarExpresionOrden(b.info);
+    printf("\n");
     
 }
 

@@ -77,8 +77,8 @@
             filePath = "taller 1/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -93,8 +93,8 @@
             filePath = "taller 1/main.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "main()"
             landmarkType = "9">
          </BreakpointContent>
@@ -109,8 +109,8 @@
             filePath = "taller 1/expresion.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "cargarExpresion(a, b)"
             landmarkType = "9">
          </BreakpointContent>
