@@ -55,8 +55,6 @@ void compoundOrAnd(Lista &l, int i, int a, char c) {
         
         // Suponiendo que insertFrontExp inserta la expresión al frente de la lista.
         insertFrontExp(l, ex);
-    } else {
-        printf("Error, las expresiones no existen\n");
         // Dependiendo del contexto, podrías lanzar una excepción o retornar un código de error.
     }
 }
@@ -72,12 +70,9 @@ void compoundNot (Lista &l, int i, char c){
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));
         insertFrontExp(l,ex);
-    }else{
-        printf("Error, la expresion no existe");
+        
     }
-       
 }
-
 
 void save(Lista l, int i){
     if(existeEnList(l,i)==TRUE){

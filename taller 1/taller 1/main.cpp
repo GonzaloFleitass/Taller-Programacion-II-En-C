@@ -80,25 +80,36 @@ int main(){
                             strcrear(operador);
                             darString(comandoBoolean,2,Numero);
                             darString(comandoBoolean,1,operador);
+                            
                             int num=conversorcai(Numero);
-                            char op=darPrimerLetra(operador);
-                            compoundNot(listaDeExpresion, num, op);
-                            printf("\nExpresion creada\n");
-                        }else{
-                            if(LargoRecu(comandoBoolean)==4){
-                                string Numero,Numero2,operador;
-                                darString(comandoBoolean,1,Numero);
-                                darString(comandoBoolean,3,Numero2);
-                                darString(comandoBoolean,2,operador);
-                                int num=conversorcai(Numero);
-                                int num2=conversorcai(Numero2);
+                            if(existeEnList(listaDeExpresion, num)){
                                 char op=darPrimerLetra(operador);
-                                compoundOrAnd (listaDeExpresion, num,  num2, op);
-                                printf("\nExpresion cread\n");
-                                
+                                compoundNot(listaDeExpresion, num, op);
+                                printf("\nExpresion creada\n");
+                            }else{
+                                printf("No existe expresion en Lista");
                             }
-                            else{ printf("\nComando no valido\n");}
-                        }
+                        }else{
+                                    if(LargoRecu(comandoBoolean)==4){
+                                        string Numero,Numero2,operador;
+                                        darString(comandoBoolean,1,Numero);
+                                        darString(comandoBoolean,3,Numero2);
+                                        int num=conversorcai(Numero);
+                                        int num2=conversorcai(Numero2);
+                                        if( existeEnList(listaDeExpresion, num) && existeEnList(listaDeExpresion, num2)){
+                                            darString(comandoBoolean,2,operador);
+                                            char op=darPrimerLetra(operador);
+                                            compoundOrAnd (listaDeExpresion, num,  num2, op);
+                                            printf("\nExpresion creada\n");
+                                        }else{
+                                            printf("No existe expresion en Lista");
+                                        }
+                                    }
+                                    else{ printf("\nComando no valido\n");
+                                    }
+                                }
+                            
+                    
                         break;
                         
                     case 'e':if (LargoRecu(comandoBoolean) != 2) {
@@ -131,8 +142,8 @@ int main(){
                         break;
                         
                     case 's':
-                        if(LargoRecu(comandoBoolean)<2){
-                            printf("\nError, no puso Expresion\n");
+                        if(LargoRecu(comandoBoolean)!=3){
+                            printf("\nError, no puso comando correctamnete, debe poner 'save' 'numero de expresion' 'nombre de archivo'\n");
                         }else{
                             string strNum;
                             darString(comandoBoolean,1,strNum);
@@ -153,7 +164,7 @@ int main(){
                         
                         break;
                         
-                    case 'l': if (LargoRecu(comandoBoolean) < 2) {
+                    case 'l': if (LargoRecu(comandoBoolean) !=2) {
                         printf("\nError, no se proporcionó el nombre del archivo\n");
                     } else {
                         AbbExp a;
