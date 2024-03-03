@@ -70,12 +70,9 @@ void compoundNot (Lista &l, int i, char c){
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));
         insertFrontExp(l,ex);
-    }else{
-        printf("Error, la expresion no existe");
+        
     }
-       
 }
-
 
 void save(Lista l, int i){
     if(existeEnList(l,i)==TRUE){

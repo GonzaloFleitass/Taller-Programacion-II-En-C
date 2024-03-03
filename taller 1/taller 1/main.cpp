@@ -80,28 +80,35 @@ int main(){
                             strcrear(operador);
                             darString(comandoBoolean,2,Numero);
                             darString(comandoBoolean,1,operador);
+                            
                             int num=conversorcai(Numero);
-                            char op=darPrimerLetra(operador);
-                            compoundNot(listaDeExpresion, num, op);
-                            printf("\nExpresion creada\n");
-                        }else{
-                            if(LargoRecu(comandoBoolean)==4){
-                                string Numero,Numero2,operador;
-                                darString(comandoBoolean,1,Numero);
-                                darString(comandoBoolean,3,Numero2);
-                                int num=conversorcai(Numero);
-                                int num2=conversorcai(Numero2);
-                                if( existeEnList(listaDeExpresion, num) && existeEnList(listaDeExpresion, num2)){
-                                    darString(comandoBoolean,2,operador);
-                                    char op=darPrimerLetra(operador);
-                                    compoundOrAnd (listaDeExpresion, num,  num2, op);
-                                    printf("\nExpresion creada\n");
-                                }else{
-                                    printf("No existe expresion en Lista");
-                                }
+                            if(existeEnList(listaDeExpresion, num)){
+                                char op=darPrimerLetra(operador);
+                                compoundNot(listaDeExpresion, num, op);
+                                printf("\nExpresion creada\n");
+                            }else{
+                                printf("No existe expresion en Lista");
                             }
-                            else{ printf("\nComando no valido\n");}
-                        }
+                        }else{
+                                    if(LargoRecu(comandoBoolean)==4){
+                                        string Numero,Numero2,operador;
+                                        darString(comandoBoolean,1,Numero);
+                                        darString(comandoBoolean,3,Numero2);
+                                        int num=conversorcai(Numero);
+                                        int num2=conversorcai(Numero2);
+                                        if( existeEnList(listaDeExpresion, num) && existeEnList(listaDeExpresion, num2)){
+                                            darString(comandoBoolean,2,operador);
+                                            char op=darPrimerLetra(operador);
+                                            compoundOrAnd (listaDeExpresion, num,  num2, op);
+                                            printf("\nExpresion creada\n");
+                                        }else{
+                                            printf("No existe expresion en Lista");
+                                        }
+                                    }
+                                    else{ printf("\nComando no valido\n");
+                                    }
+                                }
+                            
                     
                         break;
                         
