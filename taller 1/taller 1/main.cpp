@@ -94,7 +94,7 @@ int main(){
                                 int num2=conversorcai(Numero2);
                                 char op=darPrimerLetra(operador);
                                 compoundOrAnd (listaDeExpresion, num,  num2, op);
-                                printf("\nExpresion cread\n");
+                                printf("\nExpresion creada\n");
                                 
                             }
                             else{ printf("\nComando no valido\n");}
@@ -131,7 +131,7 @@ int main(){
                         break;
                         
                     case 's':
-                        if(LargoRecu(comandoBoolean)<2){
+                        if(LargoRecu(comandoBoolean)!=2){
                             printf("\nError, no puso Expresion\n");
                         }else{
                             string strNum;
@@ -153,7 +153,7 @@ int main(){
                         
                         break;
                         
-                    case 'l': if (LargoRecu(comandoBoolean) < 2) {
+                    case 'l': if (LargoRecu(comandoBoolean) !=2) {
                         printf("\nError, no se proporcionó el nombre del archivo\n");
                     } else {
                         AbbExp a;
