@@ -29,21 +29,38 @@ void exit (int &i){
 }
 
 
-void compoundOrAnd (Lista &l, int i, int a, char c){
-    if((existeEnList(l,i)==TRUE)&&(existeEnList(l,a)==TRUE)){//Busca en la lista si existen las dos expresiones con los numeros enteros que recibe.
-        AbbExp e,aux,aux2;
+void compoundOrAnd(Lista &l, int i, int a, char c) {
+    if (existeEnList(l, i) == TRUE && existeEnList(l, a) == TRUE) {
+        AbbExp e, aux, aux2;
+
+        // Suponiendo que crearAbb inicializa una estructura de árbol de expresiones vacía.
         crearAbb(e);
-        copiarAbb(aux2,(darexp(ObtenerExpEnList(l,a))));
-        copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
+        crearAbb(aux);
+        crearAbb(aux2);
+
+        // Suponiendo que darexp devuelve la expresión almacenada en un nodo de la lista.
+        copiarAbb(aux2, darexp(ObtenerExpEnList(l, a)));
+        copiarAbb(aux, darexp(ObtenerExpEnList(l, i)));
+        
+        // Suponiendo que consCompoun realiza la operación compuesta (AND/OR).
         consCompoun(aux, aux2, c, e);
-        Expresion  ex;
+
+        Expresion ex;
+        
+        // Suponiendo que cargarExpresion carga una expresión en una estructura de datos.
         cargarExpresion(ex, e);
-        cargaNumeroExpresion(ex,darNroUltimaExp(l));
-        insertFrontExp(l,ex);
-    }else{
-        printf("Error, las expresiones no existen");
+        
+        // Suponiendo que cargaNumeroExpresion asigna un número a la expresión.
+        cargaNumeroExpresion(ex, darNroUltimaExp(l));
+        
+        // Suponiendo que insertFrontExp inserta la expresión al frente de la lista.
+        insertFrontExp(l, ex);
+    } else {
+        printf("Error, las expresiones no existen\n");
+        // Dependiendo del contexto, podrías lanzar una excepción o retornar un código de error.
     }
 }
+
 
 void compoundNot (Lista &l, int i, char c){
     if(existeEnList(l,i)==TRUE){//Busca en la lista si existe la expresion con el numer entero que recibe.
@@ -68,8 +85,6 @@ void save(Lista l, int i){
         AbbExp  aux;
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
         enumerarNodosEnOrden(aux,contador);
-
-        //SaveArbol(aux);
 
         //SaveArbol(aux,); falta el nombre del archivo
 

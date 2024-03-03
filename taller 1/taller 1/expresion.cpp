@@ -18,5 +18,5 @@ void cargaNumeroExpresion (Expresion &a,int n){
 }
 
 void cargarExpresion(Expresion &a,AbbExp b){
-    a.info=b;
+    copiarAbb(a.info, b);
 }

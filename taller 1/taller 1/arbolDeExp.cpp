@@ -1,39 +1,22 @@
 #include "arbolDeExp.hpp"
 
 void mostrarExpresionOrden(AbbExp a){
-    if (a!=NULL){
-        mostrarExpresionOrden(a->hizq);
-        mostrarNodo(a->TiNod);
-        mostrarExpresionOrden(a->hder);
-        printf(" ");
-        
-    }
-}
+    if (a != NULL) {
+            if (a->hizq != NULL || a->hder != NULL) {
+                printf("(");
+            }
 
-void agregarParentesisA(AbbExp &a){
-    AbbExp aux=a;
-    if(aux!=NULL){
-        agregarParentesisA(aux->hizq);
+            mostrarExpresionOrden(a->hizq);
+            mostrarNodo(a->TiNod);
+            mostrarExpresionOrden(a->hder);
+
+            if (a->hizq != NULL || a->hder != NULL) {
+                printf(")");
             }
-        aux = new nodo;
-        cargarParentesis('(',aux->TiNod);
-        aux->hizq =NULL;
-        aux->hder =NULL;
-    
-    a=aux;
-    
         }
-void agregarParentesisFin(AbbExp &a){
-    AbbExp aux=a;
-    if(aux!=NULL){
-        agregarParentesisA(aux->hder);
-            }
-        aux = new nodo;
-        cargarParentesis(')',aux->TiNod);
-        aux->hizq =NULL;
-        aux->hder =NULL;
-        a=aux;
-        }
+    }
+
+
     
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     e= new nodo;
@@ -41,20 +24,19 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     cargarOperado(c, e->TiNod);
     e->hizq=a;
     e->hder=b;
-    
-    agregarParentesisA(a->hizq);
-    agregarParentesisFin(b->hder);
+ 
     
 }
+
 
 void consCompounNot(AbbExp a, char c,AbbExp &e){
         e= new nodo;
         cargarOperado(c, e->TiNod);
         e->hizq=NULL;
         e->hder=a;
-        agregarParentesisA(e->hizq);
-        agregarParentesisFin(a->hder);
+       
     }
+
 
 void copiarAbb(AbbExp &a,AbbExp b){
         if (b == NULL) {
@@ -66,8 +48,6 @@ void copiarAbb(AbbExp &a,AbbExp b){
             copiarAbb(a->hder, b->hder);
         }
     }
-
-
 
 boolean evaluateAbbs(AbbExp a){
     
@@ -190,9 +170,9 @@ void levantarArbol(AbbExp &a,FILE * f){
     
 }
     
-void loadArbol (AbbExp &a,string nomarchivo){
+void loadArbol (AbbExp &a,string nombreArchivo){
     crearAbb(a);
-    FILE  * f = fopen (nomarchivo, "rb");
+    FILE  * f = fopen (nombreArchivo, "rb");
     if (f!=NULL)
     {
        levantarArbol(a, f);

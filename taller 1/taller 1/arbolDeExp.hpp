@@ -17,7 +17,7 @@ typedef nodo * AbbExp;
 void crearAbb(AbbExp &a);
 
 // Función para copiar un árbol de expresiones en otro
-void copiarAbb(AbbExp &a, AbbExp b);
+void copiarAbb(AbbExp &a,AbbExp b);
 
 // Función para insertar un nodo en el árbol de expresiones
 void instertarNodo(AbbExp &a, tipoNodo p);
@@ -50,7 +50,7 @@ void enumerarNodosEnOrden(AbbExp &a,int &contador);
 void SaveArbol (AbbExp a,string nombreArchivo);
 void bajarArbol(AbbExp  a,FILE * f);
 void levantarArbol (AbbExp &a, FILE * f);
-void loadArbol (AbbExp &a);
+void loadArbol (AbbExp &a, string nombreArchivo);
 void SaveArbol (AbbExp a,string nombreArchivo);
 void bajarArbol(AbbExp  a,FILE * f);
 

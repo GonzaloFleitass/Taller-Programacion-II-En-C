@@ -3,7 +3,7 @@
 #include "listaString.hpp"
 #include "comandos.hpp"
 int main(){
-    string comando,copia;
+    string comando;
     
     listaString l;
     
@@ -58,8 +58,8 @@ int main(){
         if(a==TRUE){
             switch(devuelveComando(comandoBoolean, palabrasClaves)){
                 case 'a':
-                    if(LargoRecu(comandoBoolean)<2){
-                        printf("Error, no puso boolean");
+                    if(LargoRecu(comandoBoolean)!=2){
+                        printf("Error, Comando mal ingresado");
                     }else{
                         boolean c;
                         string t,f;
@@ -98,6 +98,7 @@ int main(){
                             int num=conversorcai(Numero);
                             char op=darPrimerLetra(operador);
                             compoundNot(listaDeExpresion, num, op);
+                            printf("Expresion creada");
                         }else{
                             if(LargoRecu(comandoBoolean)==4){
                                 string Numero,Numero2,operador;
@@ -108,6 +109,7 @@ int main(){
                                 int num2=conversorcai(Numero2);
                                 char op=darPrimerLetra(operador);
                                 compoundOrAnd (listaDeExpresion, num,  num2, op);
+                                printf("Expresion creada");
                                 
                             }
                         }
@@ -168,16 +170,15 @@ int main(){
                         break;
                         
                     case 'l': if (LargoRecu(comandoBoolean) < 2) {
-                            printf("Error, no se proporcionó el nombre del archivo\n");
-                        } else {
-                            AbbExp a;
-                            string nombreArchivo;
-                            darString(comandoBoolean, 2, nombreArchivo);
-                            loadArbol(a, nombreArchivo);
-                            printf("Archivo cargado correctamente...")
-                        }
-                        break;
-                        
+                        printf("Error, no se proporcionó el nombre del archivo\n");
+                    } else {
+                        AbbExp a;
+                        string nombreArchivo;
+                        darString(comandoBoolean, 2, nombreArchivo);
+                        loadArbol(a, nombreArchivo);
+                        printf("Archivo cargado correctamente...");
+                    }
+                        break;
                     case 'x':
                         exit(salirprograma);
                         printf("Saliendo del programa...\n");
