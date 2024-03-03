@@ -50,7 +50,6 @@ void enumerarNodosEnOrden(AbbExp &a,int &contador);
 void SaveArbol (AbbExp a,string nombreArchivo);
 void bajarArbol(AbbExp  a,FILE * f);
 void levantarArbol (AbbExp &a, FILE * f);
-void loadArbol (AbbExp &a, string nombreArchivo);
 void SaveArbol (AbbExp a,string nombreArchivo);
 void bajarArbol(AbbExp  a,FILE * f);
 

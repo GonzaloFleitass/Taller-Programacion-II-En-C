@@ -170,13 +170,4 @@ void levantarArbol(AbbExp &a,FILE * f){
     
 }
     
-void loadArbol (AbbExp &a,string nombreArchivo){
-    crearAbb(a);
-    FILE  * f = fopen (nombreArchivo, "rb");
-    if (f!=NULL)
-    {
-       levantarArbol(a, f);
-    }
-    
-    
-}
+

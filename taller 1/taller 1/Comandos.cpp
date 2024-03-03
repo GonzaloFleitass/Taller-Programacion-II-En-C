@@ -90,3 +90,15 @@ void save(Lista l, int i){
 
     }
 }
+void loadArbol (AbbExp &a,Lista &l,string nombreArchivo){
+    crearAbb(a);
+    FILE  * f = fopen (nombreArchivo, "rb");
+    if (f!=NULL)
+    {
+       levantarArbol(a, f);
+    }
+    Expresion   e;
+    cargaNumeroExpresion(e, darNroUltimaExp(l));
+    cargarExpresion(e, a);
+    insertFrontExp(l, e);
+}

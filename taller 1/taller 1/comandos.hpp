@@ -24,5 +24,6 @@ void save(Lista l, int i);
 
 // Función para salir del programa y actualizar el valor de la variable entera i
 void exit (int &i);
-
+//Funcion para cargar una ex[resion previamente guardada.
+void loadArbol (AbbExp &a,Lista &l, string nombreArchivo);
 #endif /* comandos_hpp */
