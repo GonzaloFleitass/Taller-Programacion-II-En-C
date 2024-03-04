@@ -167,6 +167,13 @@ int main(){
                     case 'l': if (LargoRecu(comandoBoolean) !=2) {
                         printf("\nError, no se proporcionó el nombre del archivo correctamente\n");
                     } else {
+
+                        AbbExp a;
+                        string nombreArchivo;
+                        darString(comandoBoolean, 1, nombreArchivo);
+                        loadArbol(a,listaDeExpresion, nombreArchivo);
+                        printf("\nArchivo cargado correctamente...\n");
+
                         
                         string archi;
                         darString(comandoBoolean, 1, archi);
@@ -177,6 +184,7 @@ int main(){
                             loadArbol(a,listaDeExpresion, nombreArchivo);
                             printf("\nArchivo cargado correctamente...\n");
                         }printf("No existe archivo");
+
                     }
                         break;
                     case 'x':
