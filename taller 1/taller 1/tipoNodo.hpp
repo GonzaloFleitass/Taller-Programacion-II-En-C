@@ -13,8 +13,6 @@ typedef struct {
     } datos; // El miembro datos de tipo unión
 } tipoNodo; // El tipo de dato es tipoNodo
 
-
-
 void cargarBol(boolean a, tipoNodo &b); // Carga el dato booleano en un nodo
 void cargarOperado(char op, tipoNodo &b); // Carga el dato operador en un nodo
 void cargarParentesis(char a, tipoNodo &b); // Carga el dato paréntesis en un nodo
@@ -25,7 +23,8 @@ boolean devuelveBoolean(tipoNodo a); // Devuelve el valor booleano almacenado en
 char darOperador(tipoNodo a); // Devuelve el operador almacenado en un nodo
 void cargarNumero(tipoNodo &a,int num); // Carga un número en un nodo
 int darNumero(tipoNodo a); // Devuelve el número almacenado en un nodo
-void bajarNodo (tipoNodo a, FILE * f);
-void levantarNodo(tipoNodo &a,FILE *f);
+void bajarNodo(tipoNodo a, FILE *f); // Función para escribir el contenido del nodo en un archivo
+void levantarNodo(tipoNodo &a, FILE *f); // Función para leer el contenido de un nodo desde un archivo
+
 #endif /* tipoNodo_hpp */
 
