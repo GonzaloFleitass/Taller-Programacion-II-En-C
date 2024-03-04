@@ -9,8 +9,6 @@ typedef enum {
     PARENTESIS  // Paréntesis de la expresión
 } tipoExp; // El tipo de dato es tipoExp
 
-// Prototipo de función
 tipoExp darTipoExp(tipoExp a); // Devuelve el tipo de expresión
-
 
 #endif /* tipoExp_hpp */
