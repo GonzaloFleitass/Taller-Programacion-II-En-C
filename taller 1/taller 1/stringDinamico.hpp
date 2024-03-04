@@ -20,7 +20,8 @@ int devolverTipoUnion(string s); // Devuelve el tipo de expresión de una cadena
 void cargarTrue(string &truE); // Carga el valor "TRUE" en una cadena de caracteres
 void cargarFalse(string &l); // Carga el valor "FALSE" en una cadena de caracteres
 char darPrimerLetra(string l); // Devuelve la primera letra de una cadena de caracteres
-boolean verificar(string s);
-boolean existenombrearchivo (string nombre);
-boolean comparaOperadores(string a);
+boolean verificar(string s); // Función para verificar si una cadena 's' cumple con cierta condición (devuelve un valor booleano)
+boolean existenombrearchivo(string nombre); // Función para verificar si existe un archivo con el nombre 'nombre' (devuelve un valor booleano)
+boolean comparaOperadores(string a); // Función para comparar operadores en una cadena 'a' y determinar si están correctamente formateados (devuelve un valor booleano)
+
 #endif /* stringDinamico_hpp */
