@@ -172,21 +172,15 @@ int main(){
                         if( existenombrearchivo (archi)){
                             AbbExp a;
                             string nombreArchivo;
-                            darString(comandoBoolean, 2, nombreArchivo);
+                            darString(comandoBoolean, 1, nombreArchivo);
                             loadArbol(a,listaDeExpresion, nombreArchivo);
                             printf("\nArchivo cargado correctamente...\n");
-                        printf("No existe archivo");
-                    }
+                            
+                        }
                         else{
-                        
-                        AbbExp a;
-                        string nombreArchivo;
-                        darString(comandoBoolean, 1, nombreArchivo);
-                        loadArbol(a,listaDeExpresion, nombreArchivo);
-                        printf("\nArchivo cargado correctamente...\n");
-                    }
-                        
-                    }
+                            printf("No existe archivo");
+                            
+                        }}
                         break;
                     case 'x':
                         exit(salirprograma);
