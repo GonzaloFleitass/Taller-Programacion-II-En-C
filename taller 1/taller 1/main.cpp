@@ -32,7 +32,7 @@ int main(){
     printf("| - exit: sale de la aplicación                                      |\n");
     printf("+--------------------------------------------------------------------+\n");
     do {
-        
+        printf("------------------------------------------------------------------");
         printf("\nIngrese Comando:");
         scan(comando);
         partirString(comando, comandoBoolean);
