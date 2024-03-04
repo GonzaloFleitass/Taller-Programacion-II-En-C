@@ -90,26 +90,26 @@ int main(){
                                 printf("No existe expresion en Lista");
                             }
                         }else{
-                                    if(LargoRecu(comandoBoolean)==4){
-                                        string Numero,Numero2,operador;
-                                        darString(comandoBoolean,1,Numero);
-                                        darString(comandoBoolean,3,Numero2);
-                                        int num=conversorcai(Numero);
-                                        int num2=conversorcai(Numero2);
-                                        if( existeEnList(listaDeExpresion, num) && existeEnList(listaDeExpresion, num2)){
-                                            darString(comandoBoolean,2,operador);
-                                            char op=darPrimerLetra(operador);
-                                            compoundOrAnd (listaDeExpresion, num,  num2, op);
-                                            printf("\nExpresion creada\n");
-                                        }else{
-                                            printf("No existe expresion en Lista");
-                                        }
-                                    }
-                                    else{ printf("\nComando no valido\n");
-                                    }
+                            if(LargoRecu(comandoBoolean)==4){
+                                string Numero,Numero2,operador;
+                                darString(comandoBoolean,1,Numero);
+                                darString(comandoBoolean,3,Numero2);
+                                int num=conversorcai(Numero);
+                                int num2=conversorcai(Numero2);
+                                if( existeEnList(listaDeExpresion, num) && existeEnList(listaDeExpresion, num2)){
+                                    darString(comandoBoolean,2,operador);
+                                    char op=darPrimerLetra(operador);
+                                    compoundOrAnd (listaDeExpresion, num,  num2, op);
+                                    printf("\nExpresion creada\n");
+                                }else{
+                                    printf("No existe expresion en Lista");
                                 }
-                            
-                    
+                            }
+                            else{ printf("\nComando no valido\n");
+                            }
+                        }
+                        
+                        
                         break;
                         
                     case 'e':if (LargoRecu(comandoBoolean) != 2) {
@@ -167,14 +167,6 @@ int main(){
                     case 'l': if (LargoRecu(comandoBoolean) !=2) {
                         printf("\nError, no se proporcionó el nombre del archivo correctamente\n");
                     } else {
-
-                        AbbExp a;
-                        string nombreArchivo;
-                        darString(comandoBoolean, 1, nombreArchivo);
-                        loadArbol(a,listaDeExpresion, nombreArchivo);
-                        printf("\nArchivo cargado correctamente...\n");
-
-                        
                         string archi;
                         darString(comandoBoolean, 1, archi);
                         if( existenombrearchivo (archi)){
@@ -183,8 +175,17 @@ int main(){
                             darString(comandoBoolean, 2, nombreArchivo);
                             loadArbol(a,listaDeExpresion, nombreArchivo);
                             printf("\nArchivo cargado correctamente...\n");
-                        }printf("No existe archivo");
-
+                        printf("No existe archivo");
+                    }
+                        else{
+                        
+                        AbbExp a;
+                        string nombreArchivo;
+                        darString(comandoBoolean, 1, nombreArchivo);
+                        loadArbol(a,listaDeExpresion, nombreArchivo);
+                        printf("\nArchivo cargado correctamente...\n");
+                    }
+                        
                     }
                         break;
                     case 'x':
