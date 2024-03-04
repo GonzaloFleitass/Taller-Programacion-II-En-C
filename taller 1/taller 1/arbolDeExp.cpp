@@ -2,36 +2,17 @@
 
 void mostrarExpresionOrden(AbbExp a){
     if (a != NULL) {
-            if (a->hizq != NULL || a->hder != NULL) {
-               // printf("(");
-            }
-
-            mostrarExpresionOrden(a->hizq);
-            mostrarNodo(a->TiNod);
-            mostrarExpresionOrden(a->hder);
-
-            if (a->hizq != NULL || a->hder != NULL) {
-              //  printf(")");
-            }
-        }
+        
+        
+        mostrarExpresionOrden(a->hizq);
+        mostrarNodo(a->TiNod);
+        mostrarExpresionOrden(a->hder);
+        
+        
     }
+}
 
-/*void cargarParentesisAbb(AbbExp &a){
-        if (a != NULL) {
-                if (a->hizq != NULL || a->hder != NULL) {
-                    cargarParentesis('(', a->TiNod);
-                }
 
-                cargarParentesisAbb(a->hizq);
-                cargarParentesisAbb(a->hder);
-
-                if (a->hizq != NULL || a->hder != NULL) {
-                    cargarParentesis(')', a->TiNod);
-                }
-            }
-        }
-
-*/
 
 void cargarParentesisAbb(AbbExp &a){
     cargarParentesisHizq(a->hizq);
