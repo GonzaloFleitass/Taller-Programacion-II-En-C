@@ -165,7 +165,7 @@ int main(){
                         break;
                         
                     case 'l': if (LargoRecu(comandoBoolean) !=2) {
-                        printf("\nError, no se proporcionó el nombre del archivo\n");
+                        printf("\nError, no se proporcionó el nombre del archivo correctamente\n");
                     } else {
 
                         AbbExp a;
