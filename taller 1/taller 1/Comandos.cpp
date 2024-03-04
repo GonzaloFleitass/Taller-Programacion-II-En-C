@@ -44,7 +44,7 @@ void compoundOrAnd(Lista &l, int i, int a, char c) {
         
  
         consCompoun(aux, aux2, c, e);
-        
+        cargarParentesisAbb(e);
       
         Expresion ex;
        
@@ -65,6 +65,7 @@ void compoundNot (Lista &l, int i, char c){
         copiarAbb(aux,darexp(ObtenerExpEnList(l,i) ));
         crearAbb(e);
         consCompounNot(aux, c, e);
+        cargarParentesisAbb(e);
         Expresion  ex;
         cargarExpresion(ex, e);
         cargaNumeroExpresion(ex,darNroUltimaExp(l));

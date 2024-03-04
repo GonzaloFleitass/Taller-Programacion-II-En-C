@@ -3,7 +3,7 @@
 void mostrarExpresionOrden(AbbExp a){
     if (a != NULL) {
             if (a->hizq != NULL || a->hder != NULL) {
-                printf("(");
+               // printf("(");
             }
 
             mostrarExpresionOrden(a->hizq);
@@ -11,12 +11,12 @@ void mostrarExpresionOrden(AbbExp a){
             mostrarExpresionOrden(a->hder);
 
             if (a->hizq != NULL || a->hder != NULL) {
-                printf(")");
+              //  printf(")");
             }
         }
     }
 
-void cargarParentesisAbb(AbbExp &a){
+/*void cargarParentesisAbb(AbbExp &a){
         if (a != NULL) {
                 if (a->hizq != NULL || a->hder != NULL) {
                     cargarParentesis('(', a->TiNod);
@@ -31,9 +31,35 @@ void cargarParentesisAbb(AbbExp &a){
             }
         }
 
+*/
 
-
+void cargarParentesisAbb(AbbExp &a){
+    cargarParentesisHizq(a->hizq);
+    cargarParentesisHder(a->hder);
+}
+void cargarParentesisHizq(AbbExp &a){
+    if(a==NULL){
+        a = new nodo;
+        cargarParentesis('(', a->TiNod);
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+    else{
+        cargarParentesisHizq(a->hizq);
+    }
+}
     
+void cargarParentesisHder(AbbExp &a){
+    if(a==NULL){
+        a = new nodo;
+        cargarParentesis(')', a->TiNod);
+        a->hizq = NULL;
+        a->hder = NULL;
+    }
+    else{
+        cargarParentesisHder(a->hder);
+    }
+}
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     e= new nodo;
     
@@ -92,8 +118,9 @@ boolean evaluateAbbs(AbbExp a){
 
 void enumerarNodosEnOrden(AbbExp &a, int &contador) {
     if (a != NULL) {
-        enumerarNodosEnOrden(a->hizq, contador); // Recorrer el subárbol izquierdo
-        cargarNumero(a->TiNod, contador +1 );     // Asignar el número id al nodo actual
+        enumerarNodosEnOrden(a->hizq, contador);// Recorrer el subárbol izquierdo
+        contador++;
+        cargarNumero(a->TiNod, contador);     // Asignar el número id al nodo actual
         enumerarNodosEnOrden(a->hder, contador); // Recorrer el subárbol derecho
     }
 }
@@ -136,7 +163,7 @@ void insertarAbb(AbbExp &a,tipoNodo b){
     }
     else
     {
-        if (darNumero(a->TiNod) < darNumero(b))
+        if (darNumero(a->TiNod) > darNumero(b))
             insertarAbb(a -> hizq, b);
         else
             insertarAbb(a -> hder, b);
@@ -153,25 +180,20 @@ void save(string nombreArchivo,AbbExp a){
 }
 
 void SaveArbol (AbbExp a,string nombreArchivo){
-    int contador=0;
-    FILE * f = fopen (nombreArchivo, "rb");
     if (existenombrearchivo (nombreArchivo)){
         char c;
-        printf("El archivo ya existe. Desea sobreescribirlo? \n Ingrese (S)i o (N)o");
+        printf("El archivo ya existe. Desea sobreescribirlo? \n Ingrese (S)i o (N)o: ");
         scanf("%c", &c);
         if (c == 's' || c == 'S') {
+            
             save(nombreArchivo,a);
             printf("El Archivo se Sobreescribio");
         }else
             printf("\nEl Archivo no se guardo\n");
-            fclose(f);
+            
     }else{
-        fclose(f);
-        f = fopen (nombreArchivo, "wb");
-       
-        enumerarNodosEnOrden(a,contador);
-        bajarArbol(a, f);
-        fclose(f);
+        save(nombreArchivo,a);
+        printf("Se guardo correctamente");
     }
 }
 

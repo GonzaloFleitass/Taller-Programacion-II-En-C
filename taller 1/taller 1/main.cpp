@@ -32,6 +32,7 @@ int main(){
     printf("| - exit: sale de la aplicación                                      |\n");
     printf("+--------------------------------------------------------------------+\n");
     do {
+        fflush(stdin);
         printf("------------------------------------------------------------------");
         printf("\nIngrese Comando:");
         scan(comando);
@@ -167,7 +168,7 @@ int main(){
                                         darString(comandoBoolean, 2,nombreArchivo);
                                         if(verificar(nombreArchivo)){
                                             SaveArbol(darexp(darExpresion(listaDeExpresion)),nombreArchivo);
-                                            printf("\nArchivo Guardado Exiostosamente\n");
+                                            
                                         }else{
                                             printf("\nEl archivo debe ser .dat, Por favor ingrese todo nuevamente\n");
                                         }
@@ -217,5 +218,7 @@ int main(){
             strdestruir(copi);
             strcrear(copi);
         }while ( salirprograma != 0);
+
     }
+
 

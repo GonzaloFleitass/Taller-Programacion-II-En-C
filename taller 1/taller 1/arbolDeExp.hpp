@@ -57,8 +57,8 @@ void save(string nombreArchivo,AbbExp a);
 // Función para enumerar los nodos en orden dentro del árbol de expresiones
 void enumerarNodosEnOrden(AbbExp &a,int &contador );
 void cargarParentesisAbb(AbbExp &a);
-
-
+void cargarParentesisHizq(AbbExp &a);
+void cargarParentesisHder(AbbExp &a);
 
 // Función para cargar un árbol de expresiones desde un archivo
 //void LoadArbol(FILE *f, AbbExp &a);
