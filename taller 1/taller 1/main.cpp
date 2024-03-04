@@ -169,7 +169,7 @@ int main(){
                     } else {
                         AbbExp a;
                         string nombreArchivo;
-                        darString(comandoBoolean, 2, nombreArchivo);
+                        darString(comandoBoolean, 1, nombreArchivo);
                         loadArbol(a,listaDeExpresion, nombreArchivo);
                         printf("\nArchivo cargado correctamente...\n");
                     }
