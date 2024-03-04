@@ -33,29 +33,28 @@ void compoundOrAnd(Lista &l, int i, int a, char c) {
     if (existeEnList(l, i) == TRUE && existeEnList(l, a) == TRUE) {
         AbbExp e, aux, aux2;
 
-        // Suponiendo que crearAbb inicializa una estructura de árbol de expresiones vacía.
+  
         crearAbb(e);
         crearAbb(aux);
         crearAbb(aux2);
 
-        // Suponiendo que darexp devuelve la expresión almacenada en un nodo de la lista.
+     
         copiarAbb(aux2, darexp(ObtenerExpEnList(l, a)));
         copiarAbb(aux, darexp(ObtenerExpEnList(l, i)));
         
-        // Suponiendo que consCompoun realiza la operación compuesta (AND/OR).
+ 
         consCompoun(aux, aux2, c, e);
-
-        Expresion ex;
         
-        // Suponiendo que cargarExpresion carga una expresión en una estructura de datos.
+      
+        Expresion ex;
+       
         cargarExpresion(ex, e);
         
-        // Suponiendo que cargaNumeroExpresion asigna un número a la expresión.
         cargaNumeroExpresion(ex, darNroUltimaExp(l));
         
-        // Suponiendo que insertFrontExp inserta la expresión al frente de la lista.
+    
         insertFrontExp(l, ex);
-        // Dependiendo del contexto, podrías lanzar una excepción o retornar un código de error.
+      
     }
 }
 

@@ -213,3 +213,18 @@ boolean existenombrearchivo (string nombre){
 
     return b;
     }
+boolean comparaOperadores(string a){
+    if(a[0]=='o'&&a[1]=='r'){
+        return TRUE;
+    }else{
+        if(a[0]=='a'&&a[1]=='n'&&a[2]=='d'){
+            return TRUE;
+        }else{
+            if(a[0]=='n'&&a[1]=='o'&&a[2]=='t'){
+                return TRUE;
+            }else{
+                return FALSE;
+            }
+        }
+    }
+}

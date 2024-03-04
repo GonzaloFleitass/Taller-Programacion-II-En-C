@@ -16,6 +16,22 @@ void mostrarExpresionOrden(AbbExp a){
         }
     }
 
+void cargarParentesisAbb(AbbExp &a){
+        if (a != NULL) {
+                if (a->hizq != NULL || a->hder != NULL) {
+                    cargarParentesis('(', a->TiNod);
+                }
+
+                cargarParentesisAbb(a->hizq);
+                cargarParentesisAbb(a->hder);
+
+                if (a->hizq != NULL || a->hder != NULL) {
+                    cargarParentesis(')', a->TiNod);
+                }
+            }
+        }
+
+
 
     
 void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
@@ -24,7 +40,7 @@ void consCompoun(AbbExp a, AbbExp b, char c,AbbExp &e){
     cargarOperado(c, e->TiNod);
     e->hizq=a;
     e->hder=b;
- 
+    //cargarParentesisAbb(e);
     
 }
 

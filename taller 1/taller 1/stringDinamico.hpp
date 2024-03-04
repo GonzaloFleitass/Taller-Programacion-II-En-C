@@ -22,4 +22,5 @@ void cargarFalse(string &l); // Carga el valor "FALSE" en una cadena de caracter
 char darPrimerLetra(string l); // Devuelve la primera letra de una cadena de caracteres
 boolean verificar(string s);
 boolean existenombrearchivo (string nombre);
+boolean comparaOperadores(string a);
 #endif /* stringDinamico_hpp */

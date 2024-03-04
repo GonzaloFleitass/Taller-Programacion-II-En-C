@@ -45,7 +45,6 @@ void partirString(string s, listaString &l){
         
     }
 }
-
     
 void cargarPalabras(listaString &l) {
     string a, c, e, s, L, m, h;

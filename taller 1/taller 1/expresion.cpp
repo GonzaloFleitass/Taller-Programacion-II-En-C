@@ -20,5 +20,6 @@ void cargaNumeroExpresion (Expresion &a,int n){
 }
 
 void cargarExpresion(Expresion &a,AbbExp b){
+    
     copiarAbb(a.info, b);
 }
