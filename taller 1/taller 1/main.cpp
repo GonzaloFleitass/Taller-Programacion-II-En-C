@@ -33,9 +33,10 @@ int main(){
     printf("+--------------------------------------------------------------------+\n");
     do {
         fflush(stdin);
-        printf("------------------------------------------------------------------");
+          
         printf("\nIngrese Comando:");
         scan(comando);
+        
         partirString(comando, comandoBoolean);
         string copi;
         strcrear(copi);

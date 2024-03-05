@@ -186,6 +186,7 @@ void darString(listaString l, int i, string &s) {
         l = l->sig;
         a++;
     }
+    
         strcop(l->info,s);
 }
 
