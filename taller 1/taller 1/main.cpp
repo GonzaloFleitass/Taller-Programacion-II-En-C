@@ -91,7 +91,7 @@ int main(){
                                     compoundNot(listaDeExpresion, num, op);
                                     printf("\nExpresion creada\n");
                                 } else {
-                                    printf("No existe expresion en Lista");
+                                    printf("\nNo existe expresion en Lista\n");
                                 }
                             }
                         } else {
@@ -114,11 +114,11 @@ int main(){
                                         compoundOrAnd(listaDeExpresion, num, num2, op);
                                         printf("\nExpresion creada\n");
                                     } else {
-                                        printf("No existe expresion en Lista");
+                                        printf("\nNo existe expresion en Lista\n");
                                     }
                                 }
                                 else {
-                                    printf("Operador invalido");
+                                    printf("\nOperador invalido\n");
                                 }
                             } else {
                                 printf("\nComando no valido\n");
@@ -194,7 +194,7 @@ int main(){
                                     
                                 }
                                 else{
-                                    printf("No existe archivo");
+                                    printf("\nNo existe archivo\n");
                                     
                                 }}
                                 break;
