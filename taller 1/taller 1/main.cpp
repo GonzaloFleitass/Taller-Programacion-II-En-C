@@ -168,7 +168,7 @@ int main(){
                                         string nombreArchivo;
                                         darString(comandoBoolean, 2,nombreArchivo);
                                         if(verificar(nombreArchivo)){
-                                            SaveArbol(darexp(darExpresion(listaDeExpresion)),nombreArchivo);
+                                            SaveArbol(darexp(darExpresion(listaDeExpresion,num)),nombreArchivo);
                                             
                                         }else{
                                             printf("\nEl archivo debe ser .dat, Por favor ingrese todo nuevamente\n");

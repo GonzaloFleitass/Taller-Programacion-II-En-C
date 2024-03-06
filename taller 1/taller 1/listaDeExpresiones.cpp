@@ -39,9 +39,16 @@ boolean esVacia(Lista a){
 }
 
 
-Expresion darExpresion(Lista a){
+Expresion darExpresion(Lista a, int b){
+ 
+    while(darNum(a->info)!=b){
+        a=a->sig;
+       
+    }
     return a->info;
 }
+
+
 void mostrarListaDeExp(Lista a){
     while(a!=NULL){
         MostrarExp(a->info);
